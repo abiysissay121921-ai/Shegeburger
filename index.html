@@ -1,1250 +1,1067 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shege Burger | ሸገ በርገር — Mekelle, Ethiopia</title>
-  <meta name="description" content="Shege Burger (ሸገ በርገር) — Premium burgers in Kebele 17, Mekelle, Ethiopia. Fresh ingredients, bold flavors, and an unforgettable dining experience. Call 0952717070." />
-  <meta name="keywords" content="Shege Burger, ሸገ በርገር, Mekelle, Kebele 17, burgers, Ethiopia, restaurant, fast food" />
-  <meta name="author" content="Shege Burger" />
-  <meta property="og:title" content="Shege Burger | ሸገ በርገር — Mekelle" />
-  <meta property="og:description" content="Premium burgers in Kebele 17, Mekelle. Fresh, bold, and delicious." />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_US" />
-  <link rel="canonical" href="https://shegeburger.com/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Shege Burger",
-    "alternateName": "ሸገ በርገር",
-    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Kebele 17",
-      "addressLocality": "Mekelle",
-      "addressCountry": "ET"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "13.4969",
-      "longitude": "39.4753"
-    },
-    "url": "https://shegeburger.com",
-    "telephone": "+251952717070",
-    "servesCuisine": "Burgers, Fast Food",
-    "priceRange": "$$",
-    "sameAs": [
-      "https://www.instagram.com/shege_burger",
-      "https://www.tiktok.com/@shege_burger"
-    ]
-  }
-  </script>
-  <style>
-    :root {
-      --bg-dark: #0c0c0c;
-      --bg-card: #161616;
-      --bg-elevated: #1e1e1e;
-      --text-primary: #f5f5f5;
-      --text-secondary: #a3a3a3;
-      --text-muted: #737373;
-      --accent: #e85d04;
-      --accent-hover: #f48c06;
-      --accent-soft: rgba(232, 93, 4, 0.15);
-      --gold: #fbbf24;
-      --cream: #faf7f2;
-      --border: rgba(255,255,255,0.08);
-      --radius: 16px;
-      --radius-sm: 10px;
-      --shadow: 0 20px 40px -12px rgba(0,0,0,0.5);
-      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      --font-display: 'Playfair Display', Georgia, serif;
-      --font-body: 'Inter', system-ui, sans-serif;
-      --font-amharic: 'Noto Sans Ethiopic', 'Inter', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shege Burger (ሸገ በርገር) - Premium, delicious burgers located in Kebele 17, Mekelle. Experience quality ingredients and a great atmosphere. Call 0952717070.">
+    <meta name="keywords" content="Shege Burger, ሸገ በርገር, Mekelle, Kebele 17, Burgers, Restaurant, Ethiopia">
+    <title>Shege Burger | ሸገ በርገር — Mekelle, Ethiopia</title>
+    
+    <!-- Google Fonts: Oswald for bold headers, Inter for readable body, Noto Sans Ethiopic for Amharic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+Ethiopic:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    <!-- Structured Data for Local Business SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Shege Burger",
+      "alternateName": "ሸገ በርገር",
+      "image": "images/burgers/burger-01.jpg",
+      "telephone": "+251952717070",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kebele 17",
+        "addressLocality": "Mekelle",
+        "addressCountry": "ET"
+      },
+      "url": "https://www.shegeburger.com",
+      "sameAs": [
+        "https://www.instagram.com/shege_burger",
+        "https://www.tiktok.com/@shege_burger"
+      ]
     }
+    </script>
 
-    body {
-      font-family: var(--font-body);
-      background: var(--bg-dark);
-      color: var(--text-primary);
-      line-height: 1.6;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
+    <style>
+        /* DESIGN SYSTEM & VARIABLES */
+        :root {
+            --primary: #E63946; /* Warm Red */
+            --primary-hover: #D62828;
+            --bg-dark: #0A0A0A; /* Deep Charcoal */
+            --bg-surface: #1A1A1A; /* Slightly lighter for cards */
+            --text-light: #F8F9FA; /* Cream/White */
+            --text-muted: #A8A8A8;
+            --accent: #F4A261; /* Subtle golden highlight */
+            
+            --font-display: 'Oswald', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-amharic: 'Noto Sans Ethiopic', sans-serif;
+            
+            --transition-fast: 0.2s ease-in-out;
+            --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-    img { max-width: 100%; height: auto; display: block; }
-    a { color: inherit; text-decoration: none; }
-    ul { list-style: none; }
-    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
 
-    .container {
-      width: min(1200px, 92%);
-      margin-inline: auto;
-    }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    /* HEADER */
-    .header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      padding: 1rem 0;
-      transition: background var(--transition), padding var(--transition), box-shadow var(--transition);
-    }
-    .header.scrolled {
-      background: rgba(12, 12, 12, 0.92);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      padding: 0.7rem 0;
-      box-shadow: 0 4px 30px rgba(0,0,0,0.4);
-    }
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-weight: 800;
-      font-size: 1.25rem;
-      letter-spacing: -0.02em;
-    }
-    .logo-mark {
-      width: 42px; height: 42px;
-      background: linear-gradient(135deg, var(--accent), #d00000);
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      font-size: 1.35rem;
-      box-shadow: 0 4px 14px rgba(232, 93, 4, 0.4);
-    }
-    .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
-    .logo-text span:last-child {
-      font-family: var(--font-amharic);
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-    }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-    .nav { display: flex; align-items: center; gap: 2rem; }
-    .nav a {
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      transition: color var(--transition);
-      position: relative;
-    }
-    .nav a:hover, .nav a.active { color: var(--text-primary); }
-    .nav a::after {
-      content: '';
-      position: absolute;
-      left: 0; bottom: -4px;
-      width: 0; height: 2px;
-      background: var(--accent);
-      transition: width var(--transition);
-    }
-    .nav a:hover::after, .nav a.active::after { width: 100%; }
+        .amharic {
+            font-family: var(--font-amharic);
+            text-transform: none;
+            letter-spacing: normal;
+        }
 
-    .header-actions { display: flex; align-items: center; gap: 0.75rem; }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.7rem 1.4rem;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: all var(--transition);
-      white-space: nowrap;
-    }
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-      box-shadow: 0 4px 18px rgba(232, 93, 4, 0.35);
-    }
-    .btn-primary:hover {
-      background: var(--accent-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(232, 93, 4, 0.45);
-    }
-    .btn-outline {
-      border: 1.5px solid rgba(255,255,255,0.25);
-      color: var(--text-primary);
-    }
-    .btn-outline:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: var(--accent-soft);
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    .menu-toggle {
-      display: none;
-      width: 44px; height: 44px;
-      border-radius: 10px;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-primary);
-      background: var(--bg-elevated);
-    }
-    .menu-toggle svg { width: 24px; height: 24px; }
+        ul {
+            list-style: none;
+        }
 
-    /* Mobile Nav */
-    .mobile-nav {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-      z-index: 999;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-    }
-    .mobile-nav.open { opacity: 1; visibility: visible; }
-    .mobile-nav-panel {
-      position: absolute;
-      top: 0; right: 0;
-      width: min(320px, 85%);
-      height: 100%;
-      background: var(--bg-card);
-      padding: 5rem 1.75rem 2rem;
-      transform: translateX(100%);
-      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .mobile-nav.open .mobile-nav-panel { transform: translateX(0); }
-    .mobile-nav a {
-      padding: 0.9rem 1rem;
-      border-radius: var(--radius-sm);
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-    }
-    .mobile-nav a:hover { background: var(--bg-elevated); color: var(--text-primary); }
-    .mobile-nav .btn { margin-top: 1.5rem; width: 100%; }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
 
-    /* HERO */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      min-height: 100dvh;
-      display: flex;
-      align-items: center;
-      padding: 7rem 0 4rem;
-      overflow: hidden;
-    }
-    .hero-bg { position: absolute; inset: 0; z-index: -2; }
-    .hero-bg img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background: linear-gradient(105deg, rgba(8,8,8,0.92) 0%, rgba(8,8,8,0.7) 45%, rgba(8,8,8,0.45) 100%);
-    }
-    .hero-content {
-      max-width: 680px;
-      animation: fadeUp 0.9s ease-out both;
-    }
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.25rem;
-    }
-    .hero-eyebrow::before {
-      content: '';
-      width: 28px; height: 2px;
-      background: var(--accent);
-    }
-    .hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.8rem, 7vw, 4.75rem);
-      font-weight: 800;
-      line-height: 1.08;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.5rem;
-    }
-    .hero-amharic {
-      font-family: var(--font-amharic);
-      font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-      font-weight: 600;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
-    }
-    .hero p {
-      font-size: clamp(1.05rem, 2vw, 1.2rem);
-      color: var(--text-secondary);
-      max-width: 520px;
-      margin-bottom: 2.25rem;
-    }
-    .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; }
-    .hero-scroll {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      animation: bounce 2s infinite;
-    }
-    .hero-scroll svg { width: 20px; height: 20px; }
+        /* REUSABLE COMPONENTS */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(8px); }
-    }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
 
-    /* SECTIONS */
-    section { padding: 5.5rem 0; }
-    .section-header {
-      text-align: center;
-      max-width: 640px;
-      margin: 0 auto 3.5rem;
-    }
-    .section-eyebrow {
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
-    }
-    .section-header h2 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4.5vw, 3rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-    }
-    .section-header p {
-      color: var(--text-secondary);
-      font-size: 1.05rem;
-    }
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
 
-    /* MENU */
-    .menu-section { background: var(--bg-dark); }
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.75rem;
-    }
-    .menu-card {
-      background: var(--bg-card);
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-      display: flex;
-      flex-direction: column;
-    }
-    .menu-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow);
-      border-color: rgba(232, 93, 4, 0.3);
-    }
-    .menu-card-img {
-      position: relative;
-      aspect-ratio: 4/3;
-      overflow: hidden;
-      background: #1a1a1a;
-    }
-    .menu-card-img img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    .menu-card:hover .menu-card-img img { transform: scale(1.06); }
-    .menu-card-badge {
-      position: absolute;
-      top: 12px; left: 12px;
-      background: var(--accent);
-      color: #fff;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 0.3rem 0.7rem;
-      border-radius: 999px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    .menu-card-body {
-      padding: 1.35rem 1.4rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-    .menu-card-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-      letter-spacing: -0.01em;
-    }
-    .menu-card-desc {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      margin-bottom: 1rem;
-      flex: 1;
-    }
-    .menu-card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.75rem;
-    }
-    .menu-price {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--gold);
-    }
-    .menu-card .btn {
-      padding: 0.55rem 1.1rem;
-      font-size: 0.85rem;
-    }
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
 
-    /* ABOUT */
-    .about-section {
-      background: linear-gradient(180deg, var(--bg-dark) 0%, #111 100%);
-    }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-    .about-img-wrap {
-      position: relative;
-      border-radius: var(--radius);
-      overflow: hidden;
-      aspect-ratio: 4/5;
-      box-shadow: var(--shadow);
-    }
-    .about-img-wrap img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-    }
-    .about-img-accent {
-      position: absolute;
-      bottom: -20px; right: -20px;
-      width: 160px; height: 160px;
-      background: var(--accent);
-      border-radius: 50%;
-      opacity: 0.2;
-      filter: blur(40px);
-      z-index: -1;
-    }
-    .about-content h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.9rem, 4vw, 2.6rem);
-      margin-bottom: 0.5rem;
-    }
-    .about-amharic {
-      font-family: var(--font-amharic);
-      font-size: 1.35rem;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
-    }
-    .about-content p {
-      color: var(--text-secondary);
-      margin-bottom: 1.1rem;
-      font-size: 1.05rem;
-    }
-    .about-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-      margin-top: 2.5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-    .stat-item strong {
-      display: block;
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: var(--accent);
-      letter-spacing: -0.02em;
-    }
-    .stat-item span {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            border: 2px solid transparent;
+        }
 
-    /* WHY CHOOSE */
-    .why-section { background: #111; }
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-    }
-    .feature-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2rem 1.75rem;
-      text-align: center;
-      transition: all var(--transition);
-    }
-    .feature-card:hover {
-      border-color: rgba(232, 93, 4, 0.35);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-    }
-    .feature-icon {
-      width: 56px; height: 56px;
-      margin: 0 auto 1.25rem;
-      background: var(--accent-soft);
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      color: var(--accent);
-    }
-    .feature-icon svg { width: 28px; height: 28px; }
-    .feature-card h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 0.6rem;
-    }
-    .feature-card p {
-      font-size: 0.92rem;
-      color: var(--text-secondary);
-    }
+        .btn-primary {
+            background-color: var(--primary);
+            color: #fff;
+        }
 
-    /* GALLERY */
-    .gallery-section { background: var(--bg-dark); }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 220px;
-      gap: 1rem;
-    }
-    .gallery-item {
-      position: relative;
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      cursor: pointer;
-    }
-    .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-    .gallery-item:nth-child(6) { grid-column: span 2; }
-    .gallery-item img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    .gallery-item:hover img { transform: scale(1.08); }
-    .gallery-item::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.5), transparent 50%);
-      opacity: 0;
-      transition: opacity var(--transition);
-    }
-    .gallery-item:hover::after { opacity: 1; }
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+        }
 
-    /* CONTACT */
-    .contact-section {
-      background: linear-gradient(180deg, #111 0%, var(--bg-dark) 100%);
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: stretch;
-    }
-    .contact-info {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2.5rem;
-    }
-    .contact-info h2 {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      margin-bottom: 0.35rem;
-    }
-    .contact-amharic {
-      font-family: var(--font-amharic);
-      color: var(--gold);
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    .contact-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.35rem;
-    }
-    .contact-item {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-    .contact-icon {
-      width: 44px; height: 44px;
-      flex-shrink: 0;
-      background: var(--accent-soft);
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      color: var(--accent);
-    }
-    .contact-icon svg { width: 20px; height: 20px; }
-    .contact-item strong {
-      display: block;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      font-weight: 500;
-      margin-bottom: 0.15rem;
-    }
-    .contact-item a, .contact-item span {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      transition: color var(--transition);
-    }
-    .contact-item a:hover { color: var(--accent); }
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--text-light);
+            color: var(--text-light);
+        }
 
-    .social-links {
-      display: flex;
-      gap: 0.75rem;
-      margin-top: 2rem;
-    }
-    .social-btn {
-      width: 46px; height: 46px;
-      border-radius: 12px;
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      display: grid;
-      place-items: center;
-      color: var(--text-secondary);
-      transition: all var(--transition);
-    }
-    .social-btn:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #fff;
-      transform: translateY(-2px);
-    }
-    .social-btn svg { width: 20px; height: 20px; }
+        .btn-outline:hover {
+            background-color: var(--text-light);
+            color: var(--bg-dark);
+        }
 
-    .map-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-    .map-placeholder {
-      flex: 1;
-      min-height: 280px;
-      background: linear-gradient(135deg, #1a1a1a, #252525);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      padding: 2rem;
-      text-align: center;
-    }
-    .map-placeholder svg {
-      width: 48px; height: 48px;
-      color: var(--accent);
-    }
-    .map-placeholder p {
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-    }
-    .map-cta {
-      padding: 1.25rem 1.5rem;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: center;
-    }
+        /* ANIMATIONS (Scroll Reveal) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
 
-    /* FOOTER */
-    .footer {
-      background: #080808;
-      border-top: 1px solid var(--border);
-      padding: 3.5rem 0 2rem;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr 1fr;
-      gap: 2.5rem;
-      margin-bottom: 3rem;
-    }
-    .footer-brand .logo { margin-bottom: 1rem; }
-    .footer-brand p {
-      color: var(--text-muted);
-      font-size: 0.92rem;
-      max-width: 280px;
-      margin-bottom: 1.25rem;
-    }
-    .footer h4 {
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 1.15rem;
-      color: var(--text-primary);
-    }
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
-    }
-    .footer-links a {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      transition: color var(--transition);
-    }
-    .footer-links a:hover { color: var(--accent); }
-    .footer-bottom {
-      padding-top: 1.75rem;
-      border-top: 1px solid var(--border);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 1rem;
-      align-items: center;
-      font-size: 0.875rem;
-      color: var(--text-muted);
-    }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    /* FLOATING CTA */
-    .floating-cta {
-      position: fixed;
-      bottom: 1.5rem;
-      right: 1.5rem;
-      z-index: 900;
-      display: none;
-      width: 56px; height: 56px;
-      border-radius: 50%;
-      background: var(--accent);
-      color: #fff;
-      box-shadow: 0 8px 24px rgba(232, 93, 4, 0.5);
-      align-items: center;
-      justify-content: center;
-      transition: transform var(--transition);
-    }
-    .floating-cta:hover { transform: scale(1.08); }
-    .floating-cta svg { width: 24px; height: 24px; }
+        /* NAVIGATION */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+            background: linear-gradient(to bottom, rgba(10,10,10,0.9), transparent);
+        }
 
-    /* REVEAL */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+        header.scrolled {
+            background-color: rgba(10, 10, 10, 0.95);
+            padding: 1rem 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
 
-    /* RESPONSIVE */
-    @media (max-width: 1024px) {
-      .about-grid { gap: 2.5rem; }
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 180px;
-      }
-      .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
-      .gallery-item:nth-child(6) { grid-column: span 1; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
-    }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    @media (max-width: 768px) {
-      .nav, .header-actions .btn-outline { display: none; }
-      .menu-toggle { display: flex; }
-      .hero { min-height: 90vh; padding: 6rem 0 3rem; }
-      .about-grid, .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-      .about-img-wrap { aspect-ratio: 16/10; max-height: 360px; }
-      .about-stats { grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
-      .stat-item strong { font-size: 1.4rem; }
-      .menu-grid { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
-      .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 160px;
-        gap: 0.75rem;
-      }
-      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .floating-cta { display: flex; }
-      section { padding: 4rem 0; }
-    }
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
-    @media (max-width: 480px) {
-      .hero h1 { font-size: 2.4rem; }
-      .hero-ctas { flex-direction: column; }
-      .hero-ctas .btn { width: 100%; }
-      .about-stats { grid-template-columns: 1fr; text-align: center; }
-      .contact-info { padding: 1.75rem; }
-      .gallery-grid { grid-auto-rows: 140px; }
-    }
-  </style>
+        .logo .en {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+            line-height: 1;
+        }
+
+        .logo .am {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            position: relative;
+            transition: var(--transition-fast);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition-fast);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-socials a {
+            font-size: 1.2rem;
+            transition: var(--transition-fast);
+        }
+
+        .nav-socials a:hover {
+            color: var(--primary);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.9)), url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero-title .amharic {
+            display: block;
+            color: var(--primary);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-top: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* ABOUT / WHY CHOOSE US */
+        .about-section {
+            padding: 6rem 0;
+            background-color: var(--bg-surface);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* MENU SECTION */
+        .menu-section {
+            padding: 6rem 0;
+            background-color: var(--bg-dark);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-card {
+            background-color: var(--bg-surface);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(230, 57, 70, 0.3);
+            box-shadow: 0 15px 40px rgba(230, 57, 70, 0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 250px;
+            background-color: #111; /* Fallback */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .menu-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .card-price {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            min-height: 45px;
+        }
+
+        .card-btn {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: rgba(255,255,255,0.05);
+            color: var(--text-light);
+            border: none;
+            border-radius: 4px;
+            font-family: var(--font-display);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .card-btn:hover {
+            background-color: var(--primary);
+        }
+
+        /* GALLERY SECTION */
+        .gallery-section {
+            padding: 6rem 0;
+            background-color: var(--bg-surface);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(230,57,70,0.8), transparent);
+            opacity: 0;
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            font-size: 2rem;
+            color: #fff;
+            transform: translateY(20px);
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item:hover .gallery-overlay i {
+            transform: translateY(0);
+        }
+
+        /* CONTACT SECTION */
+        .contact-section {
+            padding: 6rem 0;
+            background-color: var(--bg-dark);
+            position: relative;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            background-color: var(--bg-surface);
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(230, 57, 70, 0.1);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .info-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .info-content p, .info-content a {
+            color: var(--text-muted);
+            transition: var(--transition-fast);
+        }
+
+        .info-content a:hover {
+            color: var(--primary);
+        }
+
+        .map-container {
+            border-radius: 8px;
+            overflow: hidden;
+            height: 100%;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .map-placeholder {
+            flex-grow: 1;
+            background: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=800') center/cover;
+            position: relative;
+        }
+
+        .map-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10,10,10,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #050505;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand .amharic {
+            font-size: 1.2rem;
+            color: var(--primary);
+            display: block;
+            margin: 0.5rem 0 1rem;
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            max-width: 300px;
+        }
+
+        .footer-title {
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            transition: var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 1024px) {
+            .about-grid, .contact-grid {
+                gap: 2rem;
+            }
+            .contact-grid {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links, .nav-socials {
+                display: none;
+            }
+
+            /* Mobile Menu State */
+            .nav-container.active .nav-links {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-dark);
+                padding: 2rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .nav-container.active .nav-socials {
+                display: flex;
+                position: absolute;
+                top: 100%;
+                right: 2rem;
+                margin-top: 2rem;
+            }
+
+            .about-grid, .contact-grid, .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-container {
+                min-height: 250px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-ctas {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="container header-inner">
-      <a href="#home" class="logo" aria-label="Shege Burger Home">
-        <span class="logo-mark" aria-hidden="true">🍔</span>
-        <span class="logo-text">
-          <span>Shege Burger</span>
-          <span>ሸገ በርገር</span>
-        </span>
-      </a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#home" class="active">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <a href="tel:0952717070" class="btn btn-outline" aria-label="Call Shege Burger">
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call
-        </a>
-        <a href="#menu" class="btn btn-primary">Explore Menu</a>
-      </div>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </div>
-  </header>
 
-  <!-- Mobile Nav -->
-  <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile menu">
-    <div class="mobile-nav-panel">
-      <a href="#home">Home</a>
-      <a href="#menu">Menu</a>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-      <a href="tel:0952717070" class="btn btn-primary">Call 0952717070</a>
-      <a href="#menu" class="btn btn-outline">View Menu</a>
-    </div>
-  </div>
-
-  <main>
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div class="hero-bg">
-        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1920&q=80" alt="Premium juicy burger at Shege Burger" width="1920" height="1080" fetchpriority="high" />
-      </div>
-      <div class="hero-overlay"></div>
-      <div class="container">
-        <div class="hero-content">
-          <p class="hero-eyebrow">Kebele 17 · Mekelle</p>
-          <h1>Shege Burger</h1>
-          <p class="hero-amharic">ሸገ በርገር</p>
-          <p>Bold flavors. Fresh ingredients. Handcrafted burgers that hit different. Experience the best burgers in Mekelle.</p>
-          <div class="hero-ctas">
-            <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
-            <a href="tel:0952717070" class="btn btn-outline">Call 0952717070</a>
-          </div>
-        </div>
-      </div>
-      <div class="hero-scroll" aria-hidden="true">
-        <span>Scroll</span>
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-      </div>
-    </section>
-
-    <!-- Menu -->
-    <section class="menu-section" id="menu">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-eyebrow">Our Burgers</p>
-          <h2>Signature Menu</h2>
-          <p>Every burger is built with care — juicy patties, melted cheese, crisp veggies, and sauces that make you come back for more.</p>
-        </div>
-        <div class="menu-grid" id="menuGrid"></div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="about-section" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-img-wrap reveal">
-            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&q=80" alt="Fresh burger preparation at Shege Burger" loading="lazy" width="800" height="1000" />
-            <div class="about-img-accent" aria-hidden="true"></div>
-          </div>
-          <div class="about-content reveal">
-            <p class="section-eyebrow">Our Story</p>
-            <h2>Born in Mekelle.<br />Built for flavor.</h2>
-            <p class="about-amharic">ሸገ በርገር</p>
-            <p>Shege Burger started with a simple obsession: make the best burgers in Mekelle. No shortcuts, no bland patties — just honest food done right.</p>
-            <p>We source fresh ingredients daily, grill our patties to perfection, and serve every order with the kind of energy that makes you feel at home. Whether you’re grabbing a quick bite or settling in with friends, you’re part of the Shege family.</p>
-            <p>Located in Kebele 17, we’re proud to be a local favorite — a place where quality meets bold taste and every visit feels special.</p>
-            <div class="about-stats">
-              <div class="stat-item">
-                <strong>100%</strong>
-                <span>Fresh Daily</span>
-              </div>
-              <div class="stat-item">
-                <strong>Kebele 17</strong>
-                <span>Mekelle Home</span>
-              </div>
-              <div class="stat-item">
-                <strong>★ Loved</strong>
-                <span>By Locals</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose -->
-    <section class="why-section" id="why">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-eyebrow">Why Us</p>
-          <h2>Why Choose Shege Burger</h2>
-          <p>More than just a meal — an experience built around quality, flavor, and people.</p>
-        </div>
-        <div class="features-grid">
-          <div class="feature-card reveal">
-            <div class="feature-icon" aria-hidden="true">
-              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            </div>
-            <h3>Fresh Ingredients</h3>
-            <p>Quality produce and meats prepared with care every single day.</p>
-          </div>
-          <div class="feature-card reveal">
-            <div class="feature-icon" aria-hidden="true">
-              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0-6C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
-            </div>
-            <h3>Delicious Burgers</h3>
-            <p>Carefully crafted burgers with satisfying, bold flavor in every bite.</p>
-          </div>
-          <div class="feature-card reveal">
-            <div class="feature-icon" aria-hidden="true">
-              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </div>
-            <h3>Great Atmosphere</h3>
-            <p>A comfortable, energetic space to enjoy great food with friends.</p>
-          </div>
-          <div class="feature-card reveal">
-            <div class="feature-icon" aria-hidden="true">
-              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </div>
-            <h3>Customer First</h3>
-            <p>Every detail is designed around making your visit unforgettable.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery -->
-    <section class="gallery-section" id="gallery">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-eyebrow">Visual Feast</p>
-          <h2>Food Gallery</h2>
-          <p>A glimpse of the flavors, textures, and moments that define Shege Burger.</p>
-        </div>
-        <div class="gallery-grid reveal">
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80" alt="Classic cheeseburger" loading="lazy" width="800" height="600" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&q=80" alt="Double burger with fries" loading="lazy" width="600" height="400" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&q=80" alt="Juicy beef burger close-up" loading="lazy" width="600" height="400" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&q=80" alt="Burger with crispy fries" loading="lazy" width="600" height="400" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&q=80" alt="Gourmet burger stack" loading="lazy" width="600" height="400" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&q=80" alt="Fresh burger ingredients" loading="lazy" width="800" height="500" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact-section" id="contact">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-eyebrow">Find Us</p>
-          <h2>Visit Shege Burger</h2>
-          <p>We’re waiting for you in Kebele 17, Mekelle. Come hungry.</p>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-info reveal">
-            <h2>Shege Burger</h2>
-            <p class="contact-amharic">ሸገ በርገር</p>
-            <div class="contact-list">
-              <div class="contact-item">
-                <div class="contact-icon" aria-hidden="true">
-                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                </div>
-                <div>
-                  <strong>Location</strong>
-                  <span>መቐለ ቀበሌ 17 · Kebele 17, Mekelle, Ethiopia</span>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon" aria-hidden="true">
-                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                </div>
-                <div>
-                  <strong>Phone</strong>
-                  <a href="tel:0952717070">0952717070</a>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon" aria-hidden="true">
-                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                </div>
-                <div>
-                  <strong>Hours</strong>
-                  <span>Open daily — Call for today’s hours</span>
-                </div>
-              </div>
-            </div>
-            <div class="social-links">
-              <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
-                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-              </a>
-              <a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok">
-                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.11 15.5a6.34 6.34 0 0010.86 4.49V13.2a8.26 8.26 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.15-.13z"/></svg>
-              </a>
-            </div>
-          </div>
-          <div class="map-card reveal">
-            <div class="map-placeholder">
-              <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <p><strong>Kebele 17, Mekelle</strong><br />መቐለ ቀበሌ 17</p>
-              <p style="font-size:0.85rem;color:var(--text-muted)">Open in Google Maps for directions</p>
-            </div>
-            <div class="map-cta">
-              <a href="https://maps.app.goo.gl/3WNJT1KBtgordyg29" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Get Directions
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#home" class="logo">
-            <span class="logo-mark" aria-hidden="true">🍔</span>
-            <span class="logo-text">
-              <span>Shege Burger</span>
-              <span>ሸገ በርገር</span>
-            </span>
-          </a>
-          <p>Premium burgers in the heart of Mekelle. Fresh, bold, and made with passion.</p>
-          <div class="social-links">
-            <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
-              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    <!-- HEADER / NAVIGATION -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="en">SHEGE BURGER</span>
+                <span class="am amharic">ሸገ በርገር</span>
             </a>
-            <a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok">
-              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.11 15.5a6.34 6.34 0 0010.86 4.49V13.2a8.26 8.26 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.15-.13z"/></svg>
-            </a>
-          </div>
+            
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="nav-socials">
+                    <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <div class="hamburger" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
         </div>
-        <div>
-          <h4>Navigate</h4>
-          <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#menu">Menu</a>
-            <a href="#about">About</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
-          </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content reveal">
+                    <h1 class="hero-title">
+                        Experience Premium
+                        <span class="amharic">ሸገ በርገር</span>
+                    </h1>
+                    <p class="hero-subtitle">Modern, bold, and deliciously authentic. We craft the finest burgers in Mekelle using fresh, quality ingredients for an unforgettable taste.</p>
+                    <div class="hero-ctas">
+                        <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+                        <a href="tel:0952717070" class="btn btn-outline"><i class="fas fa-phone-alt" style="margin-right: 8px;"></i> Call 0952717070</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <h3>More Than Just a Burger</h3>
+                        <p>At <strong>Shege Burger (ሸገ በርገር)</strong>, we believe in the power of great food. Located in the heart of Kebele 17, Mekelle, we blend local passion with international culinary standards to serve burgers that look incredible and taste even better.</p>
+                        <p>We are a young, energetic brand dedicated to food lovers who appreciate a premium dining and delivery experience.</p>
+                        
+                        <div class="features">
+                            <div class="feature-item">
+                                <i class="fas fa-leaf"></i>
+                                <h4>Fresh Ingredients</h4>
+                                <p>Quality ingredients prepared daily with extreme care.</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-hamburger"></i>
+                                <h4>Delicious Burgers</h4>
+                                <p>Carefully constructed for the most satisfying flavor.</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-star"></i>
+                                <h4>Customer First</h4>
+                                <p>A restaurant experience built entirely around you.</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-fire"></i>
+                                <h4>Great Atmosphere</h4>
+                                <p>A modern, comfortable place to enjoy great food.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image reveal" style="border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                        <img src="https://images.unsplash.com/photo-1586816001966-79b736744398?auto=format&fit=crop&q=80&w=800" alt="Shege Burger Atmosphere" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MENU SECTION -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Our Premium Menu</h2>
+                    <p>Crafted to perfection. Choose your favorite Shege Burger.</p>
+                </div>
+                
+                <!-- JS Will Populate this Grid -->
+                <div class="menu-grid" id="menu-container">
+                    <!-- Cards are injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Food Gallery</h2>
+                    <p>Feast your eyes on the Shege Burger experience.</p>
+                </div>
+                
+                <div class="gallery-grid reveal">
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Gallery Image 1" loading="lazy"><div class="gallery-overlay"><i class="fab fa-instagram"></i></div></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1594212691516-b183656c9a33?auto=format&fit=crop&w=600&q=80" alt="Gallery Image 2" loading="lazy"><div class="gallery-overlay"><i class="fab fa-instagram"></i></div></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Gallery Image 3" loading="lazy"><div class="gallery-overlay"><i class="fab fa-instagram"></i></div></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1605007493729-e85d8525b64c?auto=format&fit=crop&w=600&q=80" alt="Gallery Image 4" loading="lazy"><div class="gallery-overlay"><i class="fab fa-instagram"></i></div></div>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Follow Us on Instagram</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Visit Us</h2>
+                    <p>We're ready to serve you the best burgers in Mekelle.</p>
+                </div>
+
+                <div class="contact-grid reveal">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-content">
+                                <h4>Location</h4>
+                                <p class="amharic">መቐለ ቀበሌ 17</p>
+                                <p>Kebele 17, Mekelle, Ethiopia</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="info-content">
+                                <h4>Phone</h4>
+                                <a href="tel:0952717070">0952717070</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-hashtag"></i></div>
+                            <div class="info-content">
+                                <h4>Social Media</h4>
+                                <p>
+                                    <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer">Instagram</a> | 
+                                    <a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer">TikTok</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <div class="map-overlay">
+                                <a href="https://maps.app.goo.gl/3WNJT1KBtgordyg29" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    <i class="fas fa-map-marked-alt" style="margin-right: 10px;"></i> Get Directions
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: #fff;">SHEGE BURGER</h3>
+                    <span class="amharic">ሸገ በርገር</span>
+                    <p class="footer-text">Premium, delicious, and energetic. Serving the finest burgers in Mekelle with quality you can taste in every bite.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <nav class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#menu">Menu</a>
+                        <a href="#about">About</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                </div>
+                <div>
+                    <h4 class="footer-title">Connect</h4>
+                    <nav class="footer-links">
+                        <a href="https://maps.app.goo.gl/3WNJT1KBtgordyg29" target="_blank"><i class="fas fa-map-marker-alt"></i> Kebele 17, Mekelle</a>
+                        <a href="tel:0952717070"><i class="fas fa-phone-alt"></i> 0952717070</a>
+                        <a href="https://www.instagram.com/shege_burger" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.tiktok.com/@shege_burger" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Shege Burger | ሸገ በርገር. All rights reserved.</p>
+            </div>
         </div>
-        <div>
-          <h4>Contact</h4>
-          <div class="footer-links">
-            <a href="tel:0952717070">0952717070</a>
-            <span style="color:var(--text-muted)">Kebele 17, Mekelle</span>
-            <span style="color:var(--text-muted);font-family:var(--font-amharic)">መቐለ ቀበሌ 17</span>
-          </div>
-        </div>
-        <div>
-          <h4>Follow</h4>
-          <div class="footer-links">
-            <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer">TikTok</a>
-            <a href="https://maps.app.goo.gl/3WNJT1KBtgordyg29" target="_blank" rel="noopener noreferrer">Google Maps</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© <span id="year"></span> Shege Burger — ሸገ በርገር. All rights reserved.</p>
-        <p>Kebele 17, Mekelle, Ethiopia</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Floating Call CTA -->
-  <a href="tel:0952717070" class="floating-cta" aria-label="Call Shege Burger">
-    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-  </a>
+    <!-- CORE FUNCTIONALITY SCRIPTS -->
+    <script>
+        // 1. Dynamic Menu Rendering (Strict adherence to image structure requirements)
+        const menuData = [
+            {
+                id: "01",
+                name: "The Shege Classic",
+                image: "images/burgers/burger-01.jpg",
+                description: "Premium beef patty, fresh lettuce, tomato, onions, and our signature Shege sauce.",
+                price: "350 ETB"
+            },
+            {
+                id: "02",
+                name: "Spicy Mekelle Fire",
+                image: "images/burgers/burger-02.jpg",
+                description: "Spicy seasoned patty, jalapeños, pepper jack cheese, and fiery mayo.",
+                price: "380 ETB"
+            },
+            {
+                id: "03",
+                name: "Double Smash Burger",
+                image: "images/burgers/burger-03.jpg",
+                description: "Two smashed beef patties, double cheddar cheese, grilled onions, pickles.",
+                price: "450 ETB"
+            },
+            {
+                id: "04",
+                name: "Crispy Chicken Deluxe",
+                image: "images/burgers/burger-04.jpg",
+                description: "Golden fried chicken breast, creamy slaw, pickles, and garlic aioli.",
+                price: "400 ETB"
+            },
+            {
+                id: "05",
+                name: "Kebele 17 Ultimate",
+                image: "images/burgers/burger-05.jpg",
+                description: "Triple beef patty, beef bacon, fried egg, loaded with melted cheese.",
+                price: "550 ETB"
+            },
+            {
+                id: "06",
+                name: "Veggie Delight",
+                image: "images/burgers/burger-06.jpg",
+                description: "Crispy plant-based patty, fresh avocado, lettuce, and vegan garlic sauce.",
+                price: "320 ETB"
+            }
+        ];
 
-  <script>
-    const burgers = [
-      {
-        id: 1,
-        name: "Shege Classic",
-        description: "Juicy beef patty, melted cheddar, crisp lettuce, tomato, pickles & our signature sauce.",
-        price: "320 ETB",
-        image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80",
-        badge: "Popular"
-      },
-      {
-        id: 2,
-        name: "Double Trouble",
-        description: "Two stacked beef patties, double cheese, caramelized onions & smoky BBQ sauce.",
-        price: "450 ETB",
-        image: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&q=80",
-        badge: "Best Seller"
-      },
-      {
-        id: 3,
-        name: "Spicy Fire",
-        description: "Seasoned beef, jalapeños, pepper jack, spicy mayo & crispy onions for serious heat.",
-        price: "380 ETB",
-        image: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&q=80",
-        badge: null
-      },
-      {
-        id: 4,
-        name: "Chicken Crunch",
-        description: "Crispy fried chicken, coleslaw, pickles & creamy garlic sauce on a toasted bun.",
-        price: "350 ETB",
-        image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&q=80",
-        badge: null
-      },
-      {
-        id: 5,
-        name: "Cheese Overload",
-        description: "Beef patty buried under cheddar, mozzarella & American cheese. Pure indulgence.",
-        price: "400 ETB",
-        image: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&q=80",
-        badge: "Cheesy"
-      },
-      {
-        id: 6,
-        name: "Veggie Delight",
-        description: "House-made veggie patty, avocado, fresh greens, tomato & herb aioli.",
-        price: "300 ETB",
-        image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&q=80",
-        badge: null
-      }
-    ];
+        const menuContainer = document.getElementById('menu-container');
 
-    const menuGrid = document.getElementById('menuGrid');
-    menuGrid.innerHTML = burgers.map(b => `
-      <article class="menu-card reveal">
-        <div class="menu-card-img">
-          <img src="${b.image}" alt="${b.name} — Shege Burger" loading="lazy" width="600" height="450" />
-          ${b.badge ? `<span class="menu-card-badge">${b.badge}</span>` : ''}
-        </div>
-        <div class="menu-card-body">
-          <h3 class="menu-card-title">${b.name}</h3>
-          <p class="menu-card-desc">${b.description}</p>
-          <div class="menu-card-footer">
-            <span class="menu-price">${b.price}</span>
-            <a href="tel:0952717070" class="btn btn-primary">Order</a>
-          </div>
-        </div>
-      </article>
-    `).join('');
+        menuData.forEach((burger, index) => {
+            // Added animation delay based on index
+            const delay = index * 100; 
+            
+            // Note: Since the exact files (images/burgers/burger-01.jpg) might not exist on initial load, 
+            // I'm implementing an onerror fallback so the UI remains beautiful during development.
+            const cardHTML = `
+                <article class="menu-card reveal" style="transition-delay: ${delay}ms;">
+                    <div class="card-image">
+                        <img src="${burger.image}" alt="${burger.name}" loading="lazy" 
+                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80';">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3 class="card-title">${burger.name}</h3>
+                            <span class="card-price">${burger.price}</span>
+                        </div>
+                        <p class="card-desc">${burger.description}</p>
+                        <a href="tel:0952717070" class="card-btn" style="text-align:center; display:block;"><i class="fas fa-phone-alt"></i> Order Now</a>
+                    </div>
+                </article>
+            `;
+            menuContainer.innerHTML += cardHTML;
+        });
 
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
+        // 2. Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navContainer = document.querySelector('.nav-container');
+        const navLinks = document.querySelectorAll('.nav-links a');
 
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileNav = document.getElementById('mobileNav');
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mobileNav.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
-    mobileNav.addEventListener('click', (e) => {
-      if (e.target === mobileNav || e.target.closest('a')) {
-        mobileNav.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      }
-    });
+        hamburger.addEventListener('click', () => {
+            navContainer.classList.toggle('active');
+            const icon = hamburger.querySelector('i');
+            if(navContainer.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
 
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav a');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(sec => {
-        if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
-      });
-      navLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
-      });
-    }, { passive: true });
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navContainer.classList.remove('active');
+                hamburger.querySelector('i').classList.remove('fa-times');
+                hamburger.querySelector('i').classList.add('fa-bars');
+            });
+        });
 
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => observer.observe(el));
+        // 3. Sticky Header Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
 
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+        // 4. Scroll Reveal Animations
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Run once
+                }
+            });
+        };
+
+        const revealOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
+        
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // 5. Set Copyright Year Dynamic
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
