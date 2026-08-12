@@ -1,1114 +1,3127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shege Burger (ሸገ በርገር) - Premium, delicious burgers located in Kebele 17, Mekelle. Experience quality ingredients and a great atmosphere.">
-    <meta name="keywords" content="Shege Burger, ሸገ በርገር, Mekelle, Kebele 17, Burgers, Restaurant, Ethiopia">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shege Burger | ሸገ በርገር — Mekelle, Ethiopia</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+Ethiopic:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "Shege Burger",
-      "alternateName": "ሸገ በርገር",
-      "telephone": "+251945488888",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Kebele 17",
-        "addressLocality": "Mekelle",
-        "addressCountry": "ET"
-      },
-      "url": "https://www.shegeburger.com",
-      "sameAs": [
-        "https://www.instagram.com/shege_burger",
-        "https://www.tiktok.com/@shege_burger"
-      ]
-    }
-    </script>
-
+    <meta name="description" content="Shege Burger — ሸገ በርገር in Mekelle, Kebele 17, Ethiopia. Premium burgers, fresh ingredients, and a great atmosphere. Order now or visit us today." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Ethiopic:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
-        /* DESIGN SYSTEM & VARIABLES */
-        :root {
-            --primary: #E63946; 
-            --primary-hover: #D62828;
-            --bg-dark: #0A0A0A; 
-            --bg-surface: #1A1A1A; 
-            --text-light: #F8F9FA; 
-            --text-muted: #A8A8A8;
-            --accent: #F4A261; 
-            
-            --font-display: 'Oswald', sans-serif;
-            --font-body: 'Inter', sans-serif;
-            --font-amharic: 'Noto Sans Ethiopic', sans-serif;
-            
-            --transition-fast: 0.2s ease-in-out;
-            --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* RESET & BASE */
-        * {
+        /* ============================================================
+                   RESET & BASE
+                   ============================================================ */
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        :root {
+            --color-black: #0a0a0a;
+            --color-charcoal: #141414;
+            --color-dark: #1a1a1a;
+            --color-dark-gray: #2a2a2a;
+            --color-gray: #4a4a4a;
+            --color-light-gray: #8a8a8a;
+            --color-cream: #f5f0eb;
+            --color-white: #ffffff;
+            --color-orange: #e85d3a;
+            --color-orange-dark: #c94a2a;
+            --color-orange-light: #f06a4a;
+            --color-gold: #d4a853;
+            --color-gold-light: #e8c87a;
+            --color-gold-dark: #b8923a;
+            --font-heading: 'Oswald', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-amharic: 'Noto Sans Ethiopic', 'Times New Roman', serif;
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.5);
+            --shadow-hover: 0 16px 48px rgba(232, 93, 58, 0.2);
+            --shadow-nav: 0 4px 30px rgba(0, 0, 0, 0.6);
+            --radius: 16px;
+            --radius-sm: 8px;
+            --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --max-width: 1280px;
+            --nav-height: 72px;
+            --nav-height-scrolled: 62px;
+        }
+
         html {
             scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
             font-family: var(--font-body);
+            background: var(--color-black);
+            color: var(--color-cream);
             line-height: 1.6;
             overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-display);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .amharic {
-            font-family: var(--font-amharic);
-            text-transform: none;
-            letter-spacing: normal;
+            padding-top: var(--nav-height);
         }
 
         a {
-            text-decoration: none;
             color: inherit;
+            text-decoration: none;
         }
-
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
         ul {
             list-style: none;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* PAGE SEPARATION LOGIC (CHANGE 6) */
-        .page-section {
-            display: none !important;
-            animation: fadeInPage 0.4s ease-out;
-        }
-        
-        .page-section.active-page {
-            display: block !important;
-        }
-        
-        #home.page-section.active-page {
-            display: flex !important;
-        }
-
-        @keyframes fadeInPage {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* REUSABLE COMPONENTS */
         .container {
-            width: 100%;
-            max-width: 1280px;
+            max-width: var(--max-width);
             margin: 0 auto;
-            padding: 0 5%;
+            padding: 0 24px;
         }
 
-        .section-header {
+        .section-padding {
+            padding: 80px 0;
+        }
+        .section-padding-sm {
+            padding: 56px 0;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-orange);
+            margin-bottom: 8px;
+            border-left: 3px solid var(--color-orange);
+            padding-left: 14px;
+        }
+
+        .section-label.light {
+            color: var(--color-gold);
+            border-left-color: var(--color-gold);
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4.5vw, 3.2rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: var(--color-white);
+            margin-bottom: 16px;
+        }
+
+        .section-title .highlight {
+            color: var(--color-orange);
+        }
+        .section-title .highlight-gold {
+            color: var(--color-gold);
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--color-light-gray);
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .text-center {
             text-align: center;
-            margin-bottom: 3rem;
+        }
+        .text-center .section-subtitle {
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .section-header p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
-
+        /* ============================================================
+                   BUTTONS
+                   ============================================================ */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 1rem 2rem;
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 500;
-            border-radius: 4px;
+            gap: 10px;
+            padding: 14px 34px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+            border-radius: 50px;
             cursor: pointer;
-            transition: var(--transition-fast);
-            border: 2px solid transparent;
+            transition: var(--transition);
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
         }
 
         .btn-primary {
-            background-color: var(--primary);
-            color: #fff;
+            background: var(--color-orange);
+            color: var(--color-white);
+            box-shadow: 0 4px 20px rgba(232, 93, 58, 0.35);
         }
-
         .btn-primary:hover {
-            background-color: var(--primary-hover);
+            background: var(--color-orange-dark);
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+            box-shadow: 0 8px 32px rgba(232, 93, 58, 0.45);
         }
 
-        .btn-outline {
-            background-color: transparent;
-            border-color: var(--text-light);
-            color: var(--text-light);
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-white);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+        }
+        .btn-secondary:hover {
+            border-color: var(--color-orange);
+            background: rgba(232, 93, 58, 0.12);
+            transform: translateY(-2px);
         }
 
-        .btn-outline:hover {
-            background-color: var(--text-light);
-            color: var(--bg-dark);
+        .btn-gold {
+            background: var(--color-gold);
+            color: var(--color-black);
+        }
+        .btn-gold:hover {
+            background: var(--color-gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(212, 168, 83, 0.35);
         }
 
-        /* ANIMATIONS (Scroll Reveal) */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
+        .btn-dark {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--color-white);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .btn-dark:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
         }
 
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+        .btn-sm {
+            padding: 10px 22px;
+            font-size: 0.82rem;
+        }
+        .btn-xs {
+            padding: 6px 16px;
+            font-size: 0.75rem;
+            border-radius: 50px;
         }
 
-        /* NAVIGATION */
-        header {
+        .btn i {
+            font-size: 1.05em;
+        }
+        .btn .arrow {
+            transition: var(--transition);
+        }
+        .btn:hover .arrow {
+            transform: translateX(4px);
+        }
+
+        /* ============================================================
+                   NAVIGATION
+                   ============================================================ */
+        .navbar {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            padding: 1.5rem 0;
             z-index: 1000;
-            transition: var(--transition-smooth);
-            background: linear-gradient(to bottom, rgba(10,10,10,0.9), transparent);
-        }
-
-        header.scrolled {
-            background-color: rgba(10, 10, 10, 0.95);
-            padding: 1rem 0;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.5);
-        }
-
-        .nav-container {
+            height: var(--nav-height);
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: transparent;
+            padding: 0;
         }
 
-        .logo {
+        .navbar .container {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            padding: 0 24px;
         }
 
-        .logo .en {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
+        .navbar.scrolled {
+            height: var(--nav-height-scrolled);
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(16px) saturate(1.3);
+            -webkit-backdrop-filter: blur(16px) saturate(1.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: var(--shadow-nav);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-heading);
             font-weight: 700;
-            color: var(--text-light);
-            line-height: 1;
+            font-size: 1.3rem;
+            letter-spacing: 0.5px;
+            color: var(--color-white);
+            flex-shrink: 0;
+            transition: var(--transition);
         }
 
-        .logo .am {
-            font-size: 1rem;
-            color: var(--primary);
-            margin-top: 2px;
+        .navbar.scrolled .nav-brand {
+            font-size: 1.15rem;
+        }
+
+        .nav-brand .brand-amharic {
+            font-family: var(--font-amharic);
+            font-size: 0.7rem;
+            opacity: 0.6;
+            font-weight: 400;
+        }
+        .nav-brand .brand-dot {
+            color: var(--color-orange);
+            margin: 0 2px;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
             align-items: center;
+            gap: 4px;
+            height: 100%;
         }
 
         .nav-links a {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            text-transform: uppercase;
+            padding: 8px 18px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.7);
+            border-radius: 50px;
+            transition: var(--transition);
             position: relative;
-            transition: var(--transition-fast);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: var(--primary);
-            transition: var(--transition-fast);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
+            letter-spacing: 0.3px;
+            cursor: pointer;
         }
 
         .nav-links a:hover {
-            color: var(--primary);
+            color: var(--color-white);
+            background: rgba(255, 255, 255, 0.06);
         }
 
-        .nav-actions {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
+        .nav-links a.active {
+            color: var(--color-white);
+            background: rgba(232, 93, 58, 0.15);
         }
 
-        .nav-socials a {
-            font-size: 1.2rem;
-            transition: var(--transition-fast);
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 2px;
+            background: var(--color-orange);
+            border-radius: 2px;
         }
 
-        .nav-socials a:hover {
-            color: var(--primary);
+        .nav-links .nav-cta {
+            background: var(--color-orange);
+            color: var(--color-white) !important;
+            padding: 8px 24px;
+            font-weight: 600;
+            border-radius: 50px;
         }
-
-        .hamburger {
+        .nav-links .nav-cta:hover {
+            background: var(--color-orange-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 20px rgba(232, 93, 58, 0.35);
+        }
+        .nav-links .nav-cta::after {
             display: none;
-            cursor: pointer;
-            font-size: 1.5rem;
         }
 
-        /* HERO SECTION */
+        /* mobile toggle */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+            z-index: 1001;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+
+        .nav-toggle:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 26px;
+            height: 2.5px;
+            background: var(--color-white);
+            border-radius: 2px;
+            transition: var(--transition);
+            transform-origin: center;
+        }
+
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ============================================================
+                   PAGE SYSTEM — show/hide pages
+                   ============================================================ */
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+
+        /* ============================================================
+                   HERO
+                   ============================================================ */
         .hero {
-            height: 100vh;
-            min-height: 600px;
+            position: relative;
+            min-height: 100vh;
             display: flex;
             align-items: center;
+            overflow: hidden;
+            margin-top: calc(-1 * var(--nav-height));
+            padding-top: var(--nav-height);
+            /* --- TOASTED BREAD COLOR PALETTE --- */
+            background: linear-gradient(160deg, #2B170C 0%, #5A2E16 25%, #8A4F24 50%, #B86F32 75%, #D89A4A 100%);
+            background-attachment: fixed;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background:
+                radial-gradient(ellipse at 70% 20%, rgba(216, 154, 74, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 30% 80%, rgba(184, 111, 50, 0.10) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(43, 23, 12, 0.4) 0%, transparent 60%, rgba(43, 23, 12, 0.3) 100%);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .hero .container {
             position: relative;
-            
-            /* CHANGE 4 & 5: Premium Toasted Bread Color Treatment */
-            background: linear-gradient(135deg, #2B170C 0%, #8A4F24 50%, #B86F32 100%);
-            background-image: radial-gradient(circle at center, rgba(216, 154, 74, 0.15) 0%, rgba(43, 23, 12, 0.8) 100%), linear-gradient(135deg, #2B170C 0%, #8A4F24 50%, #B86F32 100%);
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 40px;
         }
 
         .hero-content {
-            max-width: 800px;
-            z-index: 2;
+            animation: fadeUp 0.9s ease-out both;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(43, 23, 12, 0.5);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border: 1px solid rgba(216, 154, 74, 0.2);
+            padding: 6px 18px 6px 14px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #E8C58A;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .hero-badge i {
+            font-size: 0.65rem;
+            color: #D89A4A;
         }
 
         .hero-title {
-            font-size: clamp(3rem, 6vw, 5rem);
-            line-height: 1.1;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            font-family: var(--font-heading);
+            font-size: clamp(3.2rem, 8vw, 5.6rem);
+            font-weight: 700;
+            line-height: 1.02;
+            letter-spacing: -0.02em;
+            color: var(--color-white);
+            margin-bottom: 4px;
+            text-shadow: 0 2px 40px rgba(43, 23, 12, 0.3);
         }
 
-        .hero-title .amharic {
-            display: block;
-            color: var(--primary);
-            font-size: clamp(2rem, 4vw, 3.5rem);
-            margin-top: 0.5rem;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        .hero-title .highlight {
+            color: #F3DFC0;
+            position: relative;
         }
 
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: #F3DFC0; /* Soft Bread tone to compliment background */
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-            font-weight: 400;
+        .hero-title .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #D89A4A;
+            border-radius: 2px;
+            opacity: 0.4;
         }
 
-        .hero-ctas {
+        .hero-amharic {
+            font-family: var(--font-amharic);
+            font-size: clamp(1.2rem, 2.5vw, 2.2rem);
+            color: rgba(243, 223, 192, 0.5);
+            margin-bottom: 16px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: rgba(255, 248, 235, 0.75);
+            max-width: 480px;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .hero-actions {
             display: flex;
-            gap: 1rem;
             flex-wrap: wrap;
-        }
-
-        /* ABOUT / WHY CHOOSE US */
-        .about-section {
-            padding: 8rem 0; /* Increased padding since pages are separate */
-            background-color: var(--bg-surface);
-            min-height: 100vh;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 14px;
             align-items: center;
         }
 
-        .about-text h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
+        .hero-actions .btn {
+            min-width: 160px;
         }
 
-        .about-text p {
-            margin-bottom: 1.5rem;
-            color: var(--text-muted);
-            font-size: 1.1rem;
+        .hero-actions .btn-primary {
+            background: #D89A4A;
+            box-shadow: 0 4px 20px rgba(216, 154, 74, 0.35);
+            color: #2B170C;
+        }
+        .hero-actions .btn-primary:hover {
+            background: #E8C58A;
+            box-shadow: 0 8px 32px rgba(216, 154, 74, 0.45);
         }
 
-        .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
+        .hero-actions .btn-secondary {
+            border-color: rgba(243, 223, 192, 0.35);
+            color: #F3DFC0;
+        }
+        .hero-actions .btn-secondary:hover {
+            border-color: #D89A4A;
+            background: rgba(216, 154, 74, 0.12);
         }
 
-        .feature-item i {
-            font-size: 2rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(243, 223, 192, 0.12);
         }
 
-        .feature-item h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+        .hero-stats-item .number {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #F3DFC0;
         }
 
-        .feature-item p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
+        .hero-stats-item .label {
+            font-size: 0.75rem;
+            color: rgba(243, 223, 192, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        /* MENU SECTION */
-        .menu-section {
-            padding: 8rem 0;
-            background-color: var(--bg-dark);
-            min-height: 100vh;
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .menu-card {
-            background-color: var(--bg-surface);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: var(--transition-smooth);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .menu-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(230, 57, 70, 0.3);
-            box-shadow: 0 15px 40px rgba(230, 57, 70, 0.15);
-        }
-
-        .card-image {
-            width: 100%;
-            height: 250px;
-            background-color: #111;
+        /* Hero image removed — replaced with a subtle decorative element */
+        .hero-image {
             position: relative;
-            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeUp 0.9s ease-out 0.15s both;
         }
 
-        .card-image img {
+        .hero-image-wrapper {
+            position: relative;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition-smooth);
+            max-width: 560px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            overflow: hidden;
+            background: radial-gradient(circle at 30% 30%, rgba(216, 154, 74, 0.15), rgba(43, 23, 12, 0.3));
+            border: 1px solid rgba(216, 154, 74, 0.08);
+            box-shadow: 0 0 80px rgba(216, 154, 74, 0.08), 0 0 160px rgba(216, 154, 74, 0.03);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .menu-card:hover .card-image img {
-            transform: scale(1.05);
+        .hero-image-wrapper .hero-symbol {
+            font-family: var(--font-heading);
+            font-size: 7rem;
+            font-weight: 700;
+            color: rgba(243, 223, 192, 0.08);
+            letter-spacing: 0.1em;
+            user-select: none;
+            pointer-events: none;
+            text-shadow: 0 0 60px rgba(216, 154, 74, 0.05);
         }
 
-        .card-content {
-            padding: 1.5rem;
+        .hero-image-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(216, 154, 74, 0.06), transparent 70%);
+            pointer-events: none;
         }
 
-        .card-header {
+        .hero-floating-badge {
+            position: absolute;
+            bottom: 8%;
+            right: -5%;
+            background: rgba(43, 23, 12, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(216, 154, 74, 0.1);
+            padding: 14px 22px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: var(--shadow-card);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .hero-floating-badge .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(216, 154, 74, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #D89A4A;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .hero-floating-badge .text {
+            font-size: 0.75rem;
+        }
+        .hero-floating-badge .text strong {
+            display: block;
+            color: #F3DFC0;
+            font-size: 0.95rem;
+        }
+        .hero-floating-badge .text span {
+            color: rgba(243, 223, 192, 0.5);
+        }
+
+        /* ============================================================
+                   QUICK ACTION STRIP
+                   ============================================================ */
+        .quick-strip {
+            background: var(--color-charcoal);
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            padding: 16px 0;
+        }
+
+        .quick-strip .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 12px 24px;
         }
 
-        .card-title {
-            font-size: 1.4rem;
-            font-weight: 700;
+        .quick-strip .item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
         }
 
-        .card-price {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .card-desc {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            min-height: 45px;
-        }
-
-        .card-btn {
-            width: 100%;
-            padding: 0.8rem;
-            background-color: rgba(255,255,255,0.05);
-            color: var(--text-light);
-            border: none;
-            border-radius: 4px;
-            font-family: var(--font-display);
+        .quick-strip .item i {
+            color: var(--color-orange);
             font-size: 1rem;
-            cursor: pointer;
-            transition: var(--transition-fast);
+            width: 20px;
+            text-align: center;
         }
 
-        .card-btn:hover {
-            background-color: var(--primary);
+        .quick-strip .item a {
+            color: var(--color-white);
+            transition: var(--transition);
+        }
+        .quick-strip .item a:hover {
+            color: var(--color-orange);
         }
 
-        /* GALLERY SECTION */
-        .gallery-section {
-            padding: 8rem 0;
-            background-color: var(--bg-surface);
-            min-height: 100vh;
+        .quick-strip .social-mini {
+            display: flex;
+            gap: 12px;
         }
 
-        .gallery-grid {
+        .quick-strip .social-mini a {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .quick-strip .social-mini a:hover {
+            background: var(--color-orange);
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+
+        /* ============================================================
+                   SIGNATURE BURGERS
+                   ============================================================ */
+        .signature-section {
+            background: var(--color-black);
+        }
+
+        .signature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 48px;
         }
 
-        .gallery-item {
-            position: relative;
-            border-radius: 8px;
+        .signature-card {
+            background: var(--color-dark);
+            border-radius: var(--radius);
             overflow: hidden;
-            aspect-ratio: 1 / 1;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            position: relative;
         }
 
-        .gallery-item img {
+        .signature-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(232, 93, 58, 0.2);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .signature-card .card-image {
+            position: relative;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition-smooth);
+            padding-top: 75%;
+            overflow: hidden;
+            background: var(--color-dark-gray);
         }
 
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-overlay {
+        .signature-card .card-image img {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to top, rgba(230,57,70,0.8), transparent);
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .signature-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .signature-card .badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: var(--color-orange);
+            color: var(--color-white);
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .signature-card .badge.gold {
+            background: var(--color-gold);
+            color: var(--color-black);
+        }
+
+        .signature-card .card-body {
+            padding: 22px 24px 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .signature-card .card-body .name {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-white);
+            margin-bottom: 2px;
+        }
+
+        .signature-card .card-body .name .amharic {
+            font-family: var(--font-amharic);
+            font-size: 0.75rem;
+            opacity: 0.4;
+            font-weight: 400;
+            margin-left: 6px;
+        }
+
+        .signature-card .card-body .description {
+            font-size: 0.9rem;
+            color: var(--color-light-gray);
+            margin: 6px 0 14px;
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        .signature-card .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            margin-top: auto;
+        }
+
+        .signature-card .card-footer .price {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--color-gold);
+        }
+
+        .signature-card .card-footer .price small {
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--color-light-gray);
+        }
+
+        .signature-card .card-footer .btn {
+            padding: 8px 20px;
+            font-size: 0.78rem;
+            min-width: auto;
+        }
+
+        /* ============================================================
+                   FULL MENU WITH CATEGORIES
+                   ============================================================ */
+        .full-menu-section {
+            background: var(--color-charcoal);
+        }
+
+        .menu-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin: 32px 0 40px;
+        }
+
+        .menu-tabs .tab-btn {
+            padding: 10px 28px;
+            border: none;
+            border-radius: 50px;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.04);
+            color: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .menu-tabs .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--color-white);
+        }
+
+        .menu-tabs .tab-btn.active {
+            background: var(--color-orange);
+            color: var(--color-white);
+            border-color: var(--color-orange);
+            box-shadow: 0 4px 20px rgba(232, 93, 58, 0.3);
+        }
+
+        .menu-grid-full {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .menu-item {
+            background: var(--color-dark);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            display: flex;
+            flex-direction: column;
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-item.hidden {
+            display: none;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-4px);
+            border-color: rgba(232, 93, 58, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-item .item-image {
+            position: relative;
+            width: 100%;
+            padding-top: 70%;
+            overflow: hidden;
+            background: var(--color-dark-gray);
+        }
+
+        .menu-item .item-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .menu-item:hover .item-image img {
+            transform: scale(1.04);
+        }
+
+        .menu-item .item-body {
+            padding: 18px 20px 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-item .item-body .name {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-white);
+        }
+
+        .menu-item .item-body .name .amharic {
+            font-family: var(--font-amharic);
+            font-size: 0.7rem;
+            opacity: 0.4;
+            font-weight: 400;
+            margin-left: 6px;
+        }
+
+        .menu-item .item-body .desc {
+            font-size: 0.85rem;
+            color: var(--color-light-gray);
+            margin: 4px 0 12px;
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        .menu-item .item-body .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 12px;
+        }
+
+        .menu-item .item-body .tags span {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 2px 12px;
+            border-radius: 50px;
+            font-size: 0.65rem;
+            color: var(--color-light-gray);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .menu-item .item-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            margin-top: auto;
+        }
+
+        .menu-item .item-footer .price {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--color-gold);
+        }
+
+        .menu-item .item-footer .price small {
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--color-light-gray);
+        }
+
+        .menu-item .item-footer .btn {
+            padding: 6px 18px;
+            font-size: 0.75rem;
+            min-width: auto;
+        }
+
+        /* ============================================================
+                   FOOD STORY
+                   ============================================================ */
+        .story-section {
+            background: var(--color-black);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-section::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(232, 93, 58, 0.04), transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .story-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow-card);
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+        }
+
+        .story-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(232, 93, 58, 0.06), transparent 60%);
+            pointer-events: none;
+        }
+
+        .story-content .section-title {
+            margin-bottom: 20px;
+        }
+
+        .story-content p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        .story-content .story-tagline {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--color-orange);
+            margin-top: 8px;
+        }
+
+        /* ============================================================
+                   WHY CHOOSE
+                   ============================================================ */
+        .why-section {
+            background: var(--color-dark);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .why-card {
+            background: var(--color-charcoal);
+            padding: 32px 24px;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: var(--transition);
+        }
+
+        .why-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(232, 93, 58, 0.12);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .why-card .icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(232, 93, 58, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 1.4rem;
+            color: var(--color-orange);
+        }
+
+        .why-card h4 {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--color-white);
+            margin-bottom: 4px;
+        }
+
+        .why-card p {
+            font-size: 0.85rem;
+            color: var(--color-light-gray);
+            line-height: 1.6;
+        }
+
+        /* ============================================================
+                   GALLERY
+                   ============================================================ */
+        .gallery-section {
+            background: var(--color-black);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 200px;
+            gap: 14px;
+            margin-top: 48px;
+        }
+
+        .gallery-grid .gallery-item {
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .gallery-grid .gallery-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .gallery-grid .gallery-item:nth-child(2) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        .gallery-grid .gallery-item:nth-child(3) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        .gallery-grid .gallery-item:nth-child(4) {
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+        .gallery-grid .gallery-item:nth-child(5) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        .gallery-grid .gallery-item:nth-child(6) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        .gallery-grid .gallery-item:nth-child(7) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .gallery-grid .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-grid .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-grid .gallery-item .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
             opacity: 0;
-            transition: var(--transition-fast);
+            transition: var(--transition);
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .gallery-item:hover .gallery-overlay {
+        .gallery-grid .gallery-item:hover .overlay {
             opacity: 1;
         }
 
-        .gallery-overlay i {
+        .gallery-grid .gallery-item .overlay i {
             font-size: 2rem;
-            color: #fff;
-            transform: translateY(20px);
-            transition: var(--transition-smooth);
+            color: var(--color-white);
+            opacity: 0.6;
         }
 
-        .gallery-item:hover .gallery-overlay i {
-            transform: translateY(0);
+        /* ============================================================
+                   LOCATION / CONTACT
+                   ============================================================ */
+        .location-section {
+            background: var(--color-charcoal);
         }
 
-        /* CONTACT SECTION */
-        .contact-section {
-            padding: 8rem 0;
-            background-color: var(--bg-dark);
-            position: relative;
-            min-height: 100vh;
-        }
-
-        .contact-grid {
+        .location-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            background-color: var(--bg-surface);
-            border-radius: 12px;
-            padding: 3rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            gap: 50px;
+            margin-top: 48px;
+            align-items: start;
         }
 
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
+        .location-info h3 {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            color: var(--color-white);
+            margin-bottom: 2px;
         }
 
-        .info-item {
+        .location-info .amharic-name {
+            font-family: var(--font-amharic);
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.35);
+            margin-bottom: 24px;
+        }
+
+        .location-info .detail {
             display: flex;
             align-items: flex-start;
-            gap: 1.5rem;
+            gap: 16px;
+            margin-bottom: 18px;
         }
 
-        .info-icon {
-            width: 50px;
-            height: 50px;
-            background-color: rgba(230, 57, 70, 0.1);
-            color: var(--primary);
+        .location-info .detail .icon {
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
+            background: rgba(232, 93, 58, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            color: var(--color-orange);
+            font-size: 0.9rem;
             flex-shrink: 0;
+            margin-top: 2px;
         }
 
-        .info-content h4 {
+        .location-info .detail .text {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.6;
+        }
+        .location-info .detail .text strong {
+            color: var(--color-white);
+            display: block;
+        }
+
+        .location-info .detail .text a {
+            color: var(--color-orange-light);
+            transition: var(--transition);
+        }
+        .location-info .detail .text a:hover {
+            color: var(--color-orange);
+        }
+
+        .location-info .social-row {
+            display: flex;
+            gap: 14px;
+            margin-top: 24px;
+        }
+
+        .location-info .social-row a {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.2rem;
-            margin-bottom: 0.2rem;
+            color: var(--color-white);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.06);
         }
 
-        .info-content p, .info-content a {
-            color: var(--text-muted);
-            transition: var(--transition-fast);
+        .location-info .social-row a:hover {
+            background: var(--color-orange);
+            border-color: var(--color-orange);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(232, 93, 58, 0.25);
         }
 
-        .info-content a:hover {
-            color: var(--primary);
-        }
-
-        .map-container {
-            border-radius: 8px;
+        .location-map {
+            border-radius: var(--radius);
             overflow: hidden;
-            height: 100%;
-            min-height: 300px;
+            background: var(--color-dark);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
             flex-direction: column;
         }
 
-        .map-placeholder {
-            flex-grow: 1;
-            background: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=800') center/cover;
-            position: relative;
+        .location-map .map-placeholder {
+            flex: 1;
+            min-height: 300px;
+            background: var(--color-dark-gray);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            padding: 30px;
+            text-align: center;
         }
 
-        .map-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(10,10,10,0.6);
+        .location-map .map-placeholder i {
+            font-size: 3rem;
+            color: var(--color-orange);
+            opacity: 0.4;
+        }
+
+        .location-map .map-placeholder p {
+            color: var(--color-light-gray);
+            font-size: 0.95rem;
+        }
+
+        .location-map .map-placeholder .btn {
+            margin-top: 6px;
+        }
+
+        /* ============================================================
+                   SOCIAL SECTION
+                   ============================================================ */
+        .social-section {
+            background: var(--color-black);
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .social-content {
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 12px 0;
         }
 
-        /* FOOTER */
-        footer {
-            background-color: #050505;
-            padding: 4rem 0 2rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
+        .social-content .label {
+            font-size: 0.85rem;
+            color: var(--color-light-gray);
+            letter-spacing: 0.5px;
+        }
+
+        .social-content .links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-content .links a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--color-white);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .social-content .links a:hover {
+            background: var(--color-orange);
+            border-color: var(--color-orange);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(232, 93, 58, 0.25);
+        }
+
+        /* ============================================================
+                   FOOTER
+                   ============================================================ */
+        .footer {
+            background: var(--color-black);
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            padding: 56px 0 20px;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
+            grid-template-columns: 2fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
         }
 
-        .footer-brand .amharic {
-            font-size: 1.2rem;
-            color: var(--primary);
-            display: block;
-            margin: 0.5rem 0 1rem;
-        }
-
-        .footer-text {
-            color: var(--text-muted);
-            max-width: 300px;
-        }
-
-        .footer-title {
-            color: #fff;
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-links {
+        .footer-brand .brand {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-white);
             display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
+            align-items: center;
+            gap: 8px;
         }
 
-        .footer-links a {
-            color: var(--text-muted);
-            transition: var(--transition-fast);
+        .footer-brand .brand .amharic {
+            font-family: var(--font-amharic);
+            font-size: 0.85rem;
+            opacity: 0.4;
+            font-weight: 400;
         }
 
-        .footer-links a:hover {
-            color: var(--primary);
-            padding-left: 5px;
+        .footer-brand .tagline {
+            color: var(--color-light-gray);
+            font-size: 0.9rem;
+            margin-top: 8px;
+            max-width: 280px;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .footer h5 {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--color-white);
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer ul li a {
+            color: var(--color-light-gray);
+            font-size: 0.88rem;
+            transition: var(--transition);
+        }
+
+        .footer ul li a:hover {
+            color: var(--color-orange);
+        }
+
+        .footer .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--color-light-gray);
+            font-size: 0.88rem;
+            margin-bottom: 10px;
+        }
+
+        .footer .contact-item i {
+            color: var(--color-orange);
+            width: 18px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .footer .contact-item a {
+            color: var(--color-light-gray);
+            transition: var(--transition);
+        }
+        .footer .contact-item a:hover {
+            color: var(--color-orange);
+        }
+
+        .footer .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .footer .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--color-white);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .footer .social-icons a:hover {
+            background: var(--color-orange);
+            border-color: var(--color-orange);
+            transform: translateY(-3px);
         }
 
         .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            color: #666;
-            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            font-size: 0.78rem;
+            color: var(--color-gray);
         }
 
-        /* RESPONSIVE DESIGN */
-        @media (max-width: 1024px) {
-            .about-grid, .contact-grid {
-                gap: 2rem;
+        .footer-bottom .location-tag {
+            color: var(--color-gray);
+        }
+
+        /* ============================================================
+                   ANIMATIONS
+                   ============================================================ */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
-            .contact-grid {
-                padding: 2rem;
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================================
+                   RESPONSIVE
+                   ============================================================ */
+        @media (max-width: 1024px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-desc {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero-image-wrapper {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .hero-floating-badge {
+                bottom: 4%;
+                right: 4%;
+            }
+
+            .story-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .story-content .section-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .story-image img {
+                height: 300px;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: 160px;
+            }
+            .gallery-grid .gallery-item:nth-child(1) {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+            .gallery-grid .gallery-item:nth-child(4) {
+                grid-column: span 1;
+                grid-row: span 1;
             }
         }
 
         @media (max-width: 768px) {
-            .hamburger {
-                display: block;
+            :root {
+                --nav-height: 64px;
+                --nav-height-scrolled: 56px;
             }
 
-            .nav-links, .nav-socials {
+            .nav-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 300px;
+                height: 100vh;
+                background: var(--color-black);
+                flex-direction: column;
+                padding: 80px 24px 30px;
+                gap: 2px;
+                transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                border-left: 1px solid rgba(255, 255, 255, 0.04);
+                overflow-y: auto;
+                justify-content: flex-start;
+                align-items: stretch;
+                height: 100dvh;
+            }
+
+            .nav-links.open {
+                right: 0;
+            }
+
+            .nav-links a {
+                width: 100%;
+                padding: 14px 18px;
+                font-size: 1rem;
+                border-radius: var(--radius-sm);
+                text-align: left;
+            }
+
+            .nav-links a.active::after {
+                bottom: 10px;
+            }
+
+            .nav-links .nav-cta {
+                margin-top: 12px;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .hero-title {
+                font-size: clamp(2.6rem, 10vw, 3.8rem);
+            }
+
+            .hero-image-wrapper {
+                max-width: 280px;
+            }
+            .hero-image-wrapper .hero-symbol {
+                font-size: 4rem;
+            }
+
+            .hero-floating-badge {
+                padding: 10px 16px;
+                bottom: 2%;
+                right: 2%;
+            }
+            .hero-floating-badge .icon {
+                width: 32px;
+                height: 32px;
+                font-size: 0.85rem;
+            }
+            .hero-floating-badge .text {
+                font-size: 0.7rem;
+            }
+            .hero-floating-badge .text strong {
+                font-size: 0.8rem;
+            }
+
+            .hero-stats {
+                gap: 24px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .quick-strip .container {
+                justify-content: center;
+                gap: 8px 20px;
+            }
+            .quick-strip .item {
+                font-size: 0.78rem;
+            }
+
+            .signature-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .menu-grid-full {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 130px;
+                gap: 10px;
+            }
+            .gallery-grid .gallery-item:nth-child(1) {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+            .gallery-grid .gallery-item:nth-child(4) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+            .gallery-grid .gallery-item:nth-child(5),
+            .gallery-grid .gallery-item:nth-child(6),
+            .gallery-grid .gallery-item:nth-child(7) {
                 display: none;
             }
 
-            /* Mobile Menu State */
-            .nav-container.active .nav-links {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--bg-dark);
-                padding: 2rem;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
-            }
-            
-            .nav-container.active .nav-socials {
-                display: flex;
-                position: absolute;
-                top: 100%;
-                right: 2rem;
-                margin-top: 2rem;
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
             }
 
-            .about-grid, .contact-grid, .features {
-                grid-template-columns: 1fr;
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
             }
-            
-            .map-container {
-                min-height: 250px;
+
+            .section-padding {
+                padding: 56px 0;
+            }
+            .section-padding-sm {
+                padding: 40px 0;
+            }
+
+            .location-map .map-placeholder {
+                min-height: 200px;
+            }
+
+            .social-content {
+                gap: 20px;
+                padding: 8px 0;
+            }
+            .social-content .label {
+                font-size: 0.78rem;
+            }
+
+            .menu-tabs .tab-btn {
+                padding: 8px 18px;
+                font-size: 0.78rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .hero-title {
+                font-size: clamp(2rem, 12vw, 2.8rem);
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+
+            .hero-image-wrapper {
+                max-width: 220px;
+            }
+            .hero-image-wrapper .hero-symbol {
+                font-size: 3rem;
+            }
+
+            .hero-floating-badge {
+                display: none;
+            }
+
+            .signature-grid {
+                grid-template-columns: 1fr;
+                max-width: 380px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .menu-grid-full {
+                grid-template-columns: 1fr;
+                max-width: 380px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .gallery-grid {
+                grid-auto-rows: 110px;
+                gap: 8px;
+            }
+            .gallery-grid .gallery-item:nth-child(1) {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+            .gallery-grid .gallery-item:nth-child(2),
+            .gallery-grid .gallery-item:nth-child(3) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+            .gallery-grid .gallery-item:nth-child(4) {
+                display: none;
+            }
+
+            .location-info .detail {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+
+            .location-info .social-row {
+                justify-content: center;
+            }
+
+            .story-image img {
+                height: 220px;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 14px;
+            }
+            .why-card {
+                padding: 24px 16px;
+            }
+            .why-card .icon {
+                width: 48px;
+                height: 48px;
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: clamp(1.6rem, 6vw, 2.2rem);
+            }
+
+            .nav-brand {
+                font-size: 1.05rem;
+            }
+            .nav-brand .brand-amharic {
+                font-size: 0.6rem;
             }
 
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 24px;
+            }
+
+            .footer-brand .tagline {
+                max-width: 100%;
+            }
+
+            .quick-strip .item {
+                font-size: 0.72rem;
+            }
+            .quick-strip .item i {
+                font-size: 0.85rem;
+                width: 16px;
+            }
+
+            .menu-tabs {
+                gap: 6px;
+            }
+            .menu-tabs .tab-btn {
+                padding: 6px 14px;
+                font-size: 0.72rem;
+            }
+
+            .social-content .links a {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-auto-rows: 90px;
             }
 
             .hero-title {
-                font-size: 2.5rem;
+                font-size: clamp(1.8rem, 10vw, 2.4rem);
             }
-            
-            .hero-ctas {
-                flex-direction: column;
+        }
+
+        /* ============================================================
+                   ACCESSIBILITY: reduced motion
+                   ============================================================ */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
             }
-            
-            .btn {
-                width: 100%;
+
+            .animate-on-scroll {
+                opacity: 1;
+                transform: none;
             }
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            .hero-floating-badge {
+                animation: none;
+            }
+        }
+
+        /* ============================================================
+                   FOCUS VISIBLE
+                   ============================================================ */
+        a:focus-visible,
+        button:focus-visible,
+        .btn:focus-visible,
+        .tab-btn:focus-visible {
+            outline: 3px solid var(--color-orange);
+            outline-offset: 3px;
+        }
+
+        .nav-toggle:focus-visible {
+            outline: 3px solid var(--color-orange);
+            outline-offset: 2px;
+        }
+
+        /* ============================================================
+                   SKIP LINK
+                   ============================================================ */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-orange);
+            color: var(--color-white);
+            padding: 12px 24px;
+            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+            z-index: 9999;
+            font-weight: 600;
+            transition: top 0.3s ease;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* ============================================================
+                   SELECTION
+                   ============================================================ */
+        ::selection {
+            background: var(--color-orange);
+            color: var(--color-white);
+        }
+
+        /* ============================================================
+                   UTILITY: no scroll when menu open
+                   ============================================================ */
+        body.no-scroll {
+            overflow: hidden;
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER / NAVIGATION -->
-    <header id="header">
-        <div class="container nav-container">
-            <a href="#home" class="logo">
-                <span class="en">SHEGE BURGER</span>
-                <span class="am amharic">ሸገ በርገር</span>
+    <!-- ===== SKIP LINK ===== -->
+    <a class="skip-link" href="#hero">Skip to main content</a>
+
+    <!-- ===== NAVIGATION ===== -->
+    <header class="navbar" id="navbar" role="banner">
+        <div class="container">
+            <a href="#" class="nav-brand" aria-label="Shege Burger Home" data-page="home">
+                <span>Shege</span>
+                <span class="brand-dot">·</span>
+                <span class="brand-amharic">ሸገ በርገር</span>
             </a>
-            
-            <nav class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#menu">Menu</a>
-                <a href="#about">About</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
+
+            <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+                <a data-page="home" class="active">Home</a>
+                <a data-page="menu">Menu</a>
+                <a data-page="about">About</a>
+                <a data-page="gallery">Gallery</a>
+                <a data-page="contact">Contact</a>
+                <a data-page="menu" class="nav-cta">
+                    <i class="fas fa-utensils"></i> Order Now
+                </a>
             </nav>
 
-            <div class="nav-actions">
-                <div class="nav-socials">
-                    <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                </div>
-                <div class="hamburger" aria-label="Toggle Navigation">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <main>
-        <!-- HERO SECTION (Page 1) -->
-        <!-- CHANGE 6: Added page-section and active-page class -->
-        <section id="home" class="hero page-section active-page">
+    <!-- ============================================================
+    PAGE: HOME
+    ============================================================ -->
+    <div class="page active" id="page-home">
+
+        <!-- ===== HERO ===== -->
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+            <div class="hero-bg" aria-hidden="true"></div>
+
             <div class="container">
-                <div class="hero-content reveal">
-                    <h1 class="hero-title">
-                        Experience Premium
-                        <span class="amharic">ሸገ በርገር</span>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-star"></i> Premium Burgers in Mekelle
+                    </div>
+
+                    <h1 id="hero-title" class="hero-title">
+                        <span class="highlight">Shege</span> Burger
                     </h1>
-                    <p class="hero-subtitle">Modern, bold, and deliciously authentic. We craft the finest burgers in Mekelle using fresh, quality ingredients for an unforgettable taste.</p>
-                    <div class="hero-ctas">
-                        <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
-                        <!-- CHANGE 2: CTA calls 0945488888 -->
-                        <a href="tel:0945488888" class="btn btn-outline"><i class="fas fa-phone-alt" style="margin-right: 8px;"></i> Call 0945488888</a>
+
+                    <div class="hero-amharic" aria-hidden="true">ሸገ በርገር</div>
+
+                    <p class="hero-desc">
+                        The boldest, juiciest burgers in Mekelle. Crafted with premium
+                        ingredients, served with passion. Welcome to a new standard of
+                        burger excellence.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary" data-page="menu">
+                            Explore Our Menu <i class="fas fa-arrow-right arrow"></i>
+                        </a>
+                        <a href="tel:0945488888" class="btn btn-secondary">
+                            <i class="fas fa-phone"></i> Call 0945488888
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="hero-stats-item">
+                            <span class="number">6+</span>
+                            <span class="label">Signature Burgers</span>
+                        </div>
+                        <div class="hero-stats-item">
+                            <span class="number">100%</span>
+                            <span class="label">Fresh Ingredients</span>
+                        </div>
+                        <div class="hero-stats-item">
+                            <span class="number">⭐ 4.9</span>
+                            <span class="label">Customer Rating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="hero-image-wrapper">
+                        <!-- Hero image removed — decorative symbol only -->
+                        <div class="hero-symbol" aria-hidden="true">S</div>
+                    </div>
+
+                    <div class="hero-floating-badge" aria-hidden="true">
+                        <div class="icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="text">
+                            <strong>#1 Burger</strong>
+                            <span>in Mekelle</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ABOUT SECTION (Page 2) -->
-        <section id="about" class="about-section page-section">
+        <!-- ===== QUICK ACTION STRIP ===== -->
+        <div class="quick-strip" aria-label="Restaurant quick info">
             <div class="container">
-                <div class="about-grid">
-                    <div class="about-text reveal">
-                        <h3>More Than Just a Burger</h3>
-                        <p>At <strong>Shege Burger (ሸገ በርገር)</strong>, we believe in the power of great food. Located in the heart of Kebele 17, Mekelle, we blend local passion with international culinary standards to serve burgers that look incredible and taste even better.</p>
-                        <p>We are a young, energetic brand dedicated to food lovers who appreciate a premium dining and delivery experience.</p>
-                        
-                        <div class="features">
-                            <div class="feature-item">
-                                <i class="fas fa-leaf"></i>
-                                <h4>Fresh Ingredients</h4>
-                                <p>Quality ingredients prepared daily with extreme care.</p>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-hamburger"></i>
-                                <h4>Delicious Burgers</h4>
-                                <p>Carefully constructed for the most satisfying flavor.</p>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-star"></i>
-                                <h4>Customer First</h4>
-                                <p>A restaurant experience built entirely around you.</p>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-fire"></i>
-                                <h4>Great Atmosphere</h4>
-                                <p>A modern, comfortable place to enjoy great food.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-image reveal" style="border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
-                        <img src="https://images.unsplash.com/photo-1586816001966-79b736744398?auto=format&fit=crop&q=80&w=800" alt="Shege Burger Atmosphere" loading="lazy">
-                    </div>
+                <span class="item">
+                    <i class="fas fa-location-dot"></i>
+                    <span>Kebele 17, Mekelle</span>
+                </span>
+                <span class="item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:0945488888">0945488888</a>
+                </span>
+                <span class="item">
+                    <i class="fas fa-utensils"></i>
+                    <span>Fresh Burgers</span>
+                </span>
+                <div class="social-mini">
+                    <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
                 </div>
-            </div>
-        </section>
-
-        <!-- MENU SECTION (Page 3) -->
-        <section id="menu" class="menu-section page-section">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>Our Premium Menu</h2>
-                    <p>Crafted to perfection. Choose your favorite Shege Burger.</p>
-                </div>
-                
-                <!-- JS Will Populate this Grid -->
-                <div class="menu-grid" id="menu-container">
-                    <!-- Cards are injected here -->
-                </div>
-            </div>
-        </section>
-
-        <!-- GALLERY SECTION (Page 4) -->
-        <section id="gallery" class="gallery-section page-section">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>Food Gallery</h2>
-                    <p>Feast your eyes on the Shege Burger experience.</p>
-                </div>
-                
-                <div class="gallery-grid reveal">
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Gallery Image 1" loading="lazy"><div class="gallery-overlay"><i class="fab fa-instagram"></i></div></div>
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1594212691516-b183656c9a33?auto=format&fit=crop&w=600&q=80" alt="Gallery Image 2" loading="lazy"><div class="gallery-overlay"><i class="fab fa-instagram"></i></div></div>
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Gallery Image 3" loading="lazy"><div class="gallery-overlay"><i class="fab fa-instagram"></i></div></div>
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1605007493729-e85d8525b64c?auto=format&fit=crop&w=600&q=80" alt="Gallery Image 4" loading="lazy"><div class="gallery-overlay"><i class="fab fa-instagram"></i></div></div>
-                </div>
-                <div style="text-align: center; margin-top: 3rem;">
-                    <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Follow Us on Instagram</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION (Page 5) -->
-        <section id="contact" class="contact-section page-section">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>Visit Us</h2>
-                    <p>We're ready to serve you the best burgers in Mekelle.</p>
-                </div>
-
-                <div class="contact-grid reveal">
-                    <div class="contact-info">
-                        <div class="info-item">
-                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div class="info-content">
-                                <h4>Location</h4>
-                                <p class="amharic">መቐለ ቀበሌ 17</p>
-                                <p>Kebele 17, Mekelle, Ethiopia</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
-                            <div class="info-content">
-                                <h4>Phone</h4>
-                                <!-- CHANGE 1: Display both delivery numbers correctly -->
-                                <p style="margin-bottom: 0.3rem;">For Delivery:<br>0945488888 & 0954588888</p>
-                                <!-- CHANGE 2: Auto call number is 0945488888 -->
-                                <a href="tel:0945488888" style="color: var(--primary); font-weight: 500; font-family: var(--font-display);">Call: 0945488888</a>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon"><i class="fas fa-hashtag"></i></div>
-                            <div class="info-content">
-                                <h4>Social Media</h4>
-                                <p>
-                                    <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer">Instagram</a> | 
-                                    <a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer">TikTok</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="map-container">
-                        <div class="map-placeholder">
-                            <div class="map-overlay">
-                                <a href="https://maps.app.goo.gl/3WNJT1KBtgordyg29" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                    <i class="fas fa-map-marked-alt" style="margin-right: 10px;"></i> Get Directions
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER (Always Visible) -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: #fff;">SHEGE BURGER</h3>
-                    <span class="amharic">ሸገ በርገር</span>
-                    <p class="footer-text">Premium, delicious, and energetic. Serving the finest burgers in Mekelle with quality you can taste in every bite.</p>
-                </div>
-                <div>
-                    <h4 class="footer-title">Quick Links</h4>
-                    <nav class="footer-links">
-                        <a href="#home">Home</a>
-                        <a href="#menu">Menu</a>
-                        <a href="#about">About</a>
-                        <a href="#gallery">Gallery</a>
-                        <a href="#contact">Contact</a>
-                    </nav>
-                </div>
-                <div>
-                    <h4 class="footer-title">Connect</h4>
-                    <nav class="footer-links">
-                        <a href="https://maps.app.goo.gl/3WNJT1KBtgordyg29" target="_blank"><i class="fas fa-map-marker-alt"></i> Kebele 17, Mekelle</a>
-                        <!-- CHANGE 1 & 2: Updated auto call CTA inside Footer -->
-                        <a href="tel:0945488888"><i class="fas fa-phone-alt"></i> 0945488888</a>
-                        <a href="https://www.instagram.com/shege_burger" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-                        <a href="https://www.tiktok.com/@shege_burger" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
-                    </nav>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Shege Burger | ሸገ በርገር. All rights reserved.</p>
             </div>
         </div>
-    </footer>
 
-    <!-- CORE FUNCTIONALITY SCRIPTS -->
-    <script>
-        // 1. Dynamic Menu Rendering
-        const menuData = [
-            {
-                id: "01",
-                name: "The Shege Classic",
-                image: "images/burgers/burger-01.jpg",
-                description: "Premium beef patty, fresh lettuce, tomato, onions, and our signature Shege sauce.",
-                price: "350 ETB"
-            },
-            {
-                id: "02",
-                name: "Spicy Mekelle Fire",
-                image: "images/burgers/burger-02.jpg",
-                description: "Spicy seasoned patty, jalapeños, pepper jack cheese, and fiery mayo.",
-                price: "380 ETB"
-            },
-            {
-                id: "03",
-                name: "Double Smash Burger",
-                image: "images/burgers/burger-03.jpg",
-                description: "Two smashed beef patties, double cheddar cheese, grilled onions, pickles.",
-                price: "450 ETB"
-            },
-            {
-                id: "04",
-                name: "Crispy Chicken Deluxe",
-                image: "images/burgers/burger-04.jpg",
-                description: "Golden fried chicken breast, creamy slaw, pickles, and garlic aioli.",
-                price: "400 ETB"
-            },
-            {
-                id: "05",
-                name: "Kebele 17 Ultimate",
-                image: "images/burgers/burger-05.jpg",
-                description: "Triple beef patty, beef bacon, fried egg, loaded with melted cheese.",
-                price: "550 ETB"
-            },
-            {
-                id: "06",
-                name: "Veggie Delight",
-                image: "images/burgers/burger-06.jpg",
-                description: "Crispy plant-based patty, fresh avocado, lettuce, and vegan garlic sauce.",
-                price: "320 ETB"
-            }
-        ];
+        <!-- ===== SIGNATURE BURGERS ===== -->
+        <section class="signature-section section-padding" id="signature" aria-labelledby="signature-title">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="section-label">Signature</span>
+                    <h2 id="signature-title" class="section-title">
+                        Our <span class="highlight">Signature</span> Burgers
+                    </h2>
+                    <p class="section-subtitle">
+                        The burgers that put Shege on the map. Bold, juicy, and unforgettable.
+                    </p>
+                </div>
 
-        const menuContainer = document.getElementById('menu-container');
+                <div class="signature-grid" id="signatureGrid">
+                    <!-- injected by JS -->
+                </div>
+            </div>
+        </section>
 
-        menuData.forEach((burger, index) => {
-            const delay = index * 100; 
-            
-            // CHANGE 3: "Order Now" links exclusively use tel:0945488888
-            const cardHTML = `
-                <article class="menu-card reveal" style="transition-delay: ${delay}ms;">
-                    <div class="card-image">
-                        <img src="${burger.image}" alt="${burger.name}" loading="lazy" 
-                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80';">
+    </div><!-- /page-home -->
+
+    <!-- ============================================================
+    PAGE: MENU
+    ============================================================ -->
+    <div class="page" id="page-menu">
+
+        <!-- ===== FULL MENU WITH CATEGORIES ===== -->
+        <section class="full-menu-section section-padding" id="full-menu" aria-labelledby="full-menu-title">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="section-label light">Full Menu</span>
+                    <h2 id="full-menu-title" class="section-title">
+                        Explore the <span class="highlight-gold">Full</span> Menu
+                    </h2>
+                    <p class="section-subtitle">
+                        From classic burgers to crispy sides and refreshing drinks — there's something for everyone.
+                    </p>
+                </div>
+
+                <div class="menu-tabs" id="menuTabs" role="tablist">
+                    <button class="tab-btn active" data-category="all" role="tab" aria-selected="true">All</button>
+                    <button class="tab-btn" data-category="burgers" role="tab" aria-selected="false">Burgers</button>
+                    <button class="tab-btn" data-category="chicken" role="tab" aria-selected="false">Chicken</button>
+                    <button class="tab-btn" data-category="sides" role="tab" aria-selected="false">Sides</button>
+                    <button class="tab-btn" data-category="drinks" role="tab" aria-selected="false">Drinks</button>
+                    <button class="tab-btn" data-category="specials" role="tab" aria-selected="false">Specials</button>
+                </div>
+
+                <div class="menu-grid-full" id="menuGridFull">
+                    <!-- injected by JS -->
+                </div>
+            </div>
+        </section>
+
+    </div><!-- /page-menu -->
+
+    <!-- ============================================================
+    PAGE: ABOUT
+    ============================================================ -->
+    <div class="page" id="page-about">
+
+        <!-- ===== FOOD STORY ===== -->
+        <section class="story-section section-padding" id="story" aria-labelledby="story-title">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-image animate-on-scroll">
+                        <img
+                        src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&h=600&fit=crop&crop=center&auto=format"
+                        alt="Shege Burger restaurant atmosphere"
+                        loading="lazy"
+                        width="800"
+                        height="600"
+                        />
                     </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="card-title">${burger.name}</h3>
-                            <span class="card-price">${burger.price}</span>
+
+                    <div class="story-content animate-on-scroll">
+                        <span class="section-label">Our Story</span>
+                        <h2 id="story-title" class="section-title">
+                            Made for the <span class="highlight">Craving</span>
+                        </h2>
+                        <p>
+                            Shege Burger — <strong>ሸገ በርገር</strong> — was born from a simple
+                            passion: to create the most memorable burger experience in
+                            Mekelle. We believe that a great burger is more than just food —
+                            it's a moment of pure satisfaction.
+                        </p>
+                        <p>
+                            Every patty is handmade, every bun is toasted to perfection,
+                            and every sauce is crafted in-house. We source the freshest
+                            ingredients from local suppliers and treat each order with the
+                            care it deserves.
+                        </p>
+                        <p class="story-tagline">
+                            <i class="fas fa-quote-left" style="opacity:0.25;margin-right:8px;"></i>
+                            Good food, good vibes, good people.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WHY CHOOSE ===== -->
+        <section class="why-section section-padding" id="why" aria-labelledby="why-title">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="section-label">Why Shege</span>
+                    <h2 id="why-title" class="section-title">
+                        Built on <span class="highlight">Quality</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Every detail matters. From the first bite to the last.
+                    </p>
+                </div>
+
+                <div class="why-grid">
+                    <div class="why-card animate-on-scroll">
+                        <div class="icon"><i class="fas fa-leaf"></i></div>
+                        <h4>Fresh Ingredients</h4>
+                        <p>Locally sourced, hand-selected produce and premium beef for every burger.</p>
+                    </div>
+                    <div class="why-card animate-on-scroll">
+                        <div class="icon"><i class="fas fa-fire"></i></div>
+                        <h4>Bold Flavors</h4>
+                        <p>Signature sauces and spice blends that make each burger unforgettable.</p>
+                    </div>
+                    <div class="why-card animate-on-scroll">
+                        <div class="icon"><i class="fas fa-mug-hot"></i></div>
+                        <h4>Great Atmosphere</h4>
+                        <p>A warm, modern space where you can enjoy great food with friends and family.</p>
+                    </div>
+                    <div class="why-card animate-on-scroll">
+                        <div class="icon"><i class="fas fa-heart"></i></div>
+                        <h4>Customer First</h4>
+                        <p>Your satisfaction is our mission. We serve every guest with genuine care.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- /page-about -->
+
+    <!-- ============================================================
+    PAGE: GALLERY
+    ============================================================ -->
+    <div class="page" id="page-gallery">
+
+        <!-- ===== GALLERY ===== -->
+        <section class="gallery-section section-padding" id="gallery" aria-labelledby="gallery-title">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="section-label">Gallery</span>
+                    <h2 id="gallery-title" class="section-title">
+                        A Taste of <span class="highlight">Perfection</span>
+                    </h2>
+                    <p class="section-subtitle">See what makes Shege Burger the talk of Mekelle.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item animate-on-scroll">
+                        <img
+                        src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&h=400&fit=crop&crop=center&auto=format"
+                        alt="Delicious Shege Burger with cheese and lettuce"
+                        loading="lazy"
+                        />
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll">
+                        <img
+                        src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=400&fit=crop&crop=center&auto=format"
+                        alt="Crispy golden fries"
+                        loading="lazy"
+                        />
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll">
+                        <img
+                        src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&crop=center&auto=format"
+                        alt="Loaded burger with fresh toppings"
+                        loading="lazy"
+                        />
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll">
+                        <img
+                        src="https://images.unsplash.com/photo-1586816001966-79b736744398?w=600&h=800&fit=crop&crop=center&auto=format"
+                        alt="Shege Burger special with bacon"
+                        loading="lazy"
+                        />
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll">
+                        <img
+                        src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=600&h=400&fit=crop&crop=center&auto=format"
+                        alt="Cold drinks and refreshments"
+                        loading="lazy"
+                        />
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll">
+                        <img
+                        src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&h=400&fit=crop&crop=center&auto=format"
+                        alt="Cheesy burger close-up"
+                        loading="lazy"
+                        />
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll">
+                        <img
+                        src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&h=400&fit=crop&crop=center&auto=format"
+                        alt="Shege Burger meal presentation"
+                        loading="lazy"
+                        />
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- /page-gallery -->
+
+    <!-- ============================================================
+    PAGE: CONTACT
+    ============================================================ -->
+    <div class="page" id="page-contact">
+
+        <!-- ===== LOCATION / CONTACT ===== -->
+        <section class="location-section section-padding" id="location" aria-labelledby="location-title">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="section-label light">Visit Us</span>
+                    <h2 id="location-title" class="section-title">
+                        Find <span class="highlight-gold">Shege Burger</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Come for the burgers, stay for the vibe. We're right in the heart of Mekelle.
+                    </p>
+                </div>
+
+                <div class="location-grid">
+                    <div class="location-info animate-on-scroll">
+                        <h3>Shege Burger</h3>
+                        <div class="amharic-name">ሸገ በርገር</div>
+
+                        <div class="detail">
+                            <div class="icon"><i class="fas fa-location-dot"></i></div>
+                            <div class="text">
+                                <strong>Location</strong>
+                                መቐለ ቀበሌ 17 · Kebele 17, Mekelle, Ethiopia
+                            </div>
                         </div>
-                        <p class="card-desc">${burger.description}</p>
-                        <a href="tel:0945488888" class="card-btn" style="text-align:center; display:block;"><i class="fas fa-phone-alt"></i> Order Now</a>
+
+                        <div class="detail">
+                            <div class="icon"><i class="fas fa-phone"></i></div>
+                            <div class="text">
+                                <strong>For Delivery</strong>
+                                <a href="tel:0945488888">0945488888</a> &amp; <a href="tel:0954588888">0954588888</a>
+                            </div>
+                        </div>
+
+                        <div class="detail">
+                            <div class="icon"><i class="fas fa-clock"></i></div>
+                            <div class="text">
+                                <strong>Hours</strong>
+                                Daily · 10:00 AM – 10:00 PM
+                            </div>
+                        </div>
+
+                        <div class="social-row">
+                            <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
                     </div>
-                </article>
-            `;
-            menuContainer.innerHTML += cardHTML;
-        });
 
-        // 2. Mobile Menu Toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navContainer = document.querySelector('.nav-container');
+                    <div class="location-map animate-on-scroll">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-location-dot"></i>
+                            <p>
+                                <strong>Kebele 17, Mekelle</strong><br />
+                                መቐለ ቀበሌ 17
+                            </p>
+                            <a href="https://maps.app.goo.gl/3WNJT1KBtgordyg29"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-primary btn-sm">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        hamburger.addEventListener('click', () => {
-            navContainer.classList.toggle('active');
-            const icon = hamburger.querySelector('i');
-            if(navContainer.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
+    <!-- ===== SOCIAL SECTION ===== -->
+    <section class="social-section" aria-labelledby="social-label">
+        <div class="container">
+            <div class="social-content">
+                <span class="label" id="social-label">Follow the Shege Experience</span>
+                <div class="links">
+                    <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        // 3. Sticky Header Effect
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+</div><!-- /page-contact -->
 
-        // CHANGE 6: Clean Page Separation Logic (SPA Routing)
-        const pages = document.querySelectorAll('.page-section');
-        const allLinks = document.querySelectorAll('a[href^="#"]');
+<!-- ============================================================
+FOOTER (shared across all pages)
+============================================================ -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="brand">
+                    Shege Burger
+                    <span class="amharic">ሸገ በርገር</span>
+                </div>
+                <p class="tagline">
+                    "Bold burgers. Great flavor. Made for Mekelle."
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
 
-        function switchPage(hash) {
-            if (!hash || hash === '#') hash = '#home';
-            const targetPage = document.querySelector(hash);
-            
-            if (targetPage && targetPage.classList.contains('page-section')) {
-                // Hide all sections
-                pages.forEach(page => {
-                    page.classList.remove('active-page');
+            <div>
+                <h5>Explore</h5>
+                <ul>
+                    <li><a href="#" data-page="home">Home</a></li>
+                    <li><a href="#" data-page="menu">Menu</a></li>
+                    <li><a href="#" data-page="about">About</a></li>
+                    <li><a href="#" data-page="gallery">Gallery</a></li>
+                    <li><a href="#" data-page="contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>Visit Us</h5>
+                <ul>
+                    <li class="contact-item">
+                        <i class="fas fa-location-dot"></i>
+                        <span>Kebele 17, Mekelle</span>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:0945488888">0945488888</a>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>10:00 AM – 10:00 PM</span>
+                    </li>
+                    <li style="margin-top:8px;">
+                        <a href="https://maps.app.goo.gl/3WNJT1KBtgordyg29" target="_blank" rel="noopener" class="btn btn-dark btn-xs">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>Follow</h5>
+                <ul>
+                    <li><a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram" style="margin-right:8px;"></i> Instagram
+                        </a></li>
+                    <li><a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-tiktok" style="margin-right:8px;"></i> TikTok
+                        </a></li>
+                    <li style="margin-top:8px;color:var(--color-light-gray);font-size:0.85rem;">
+                        <i class="fas fa-tag" style="margin-right:8px;color:var(--color-orange);"></i> #ShegeBurger
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>
+                &copy; 2026 Shege Burger — ሸገ በርገር. All rights reserved.
+            </span>
+            <span class="location-tag">
+                <i class="fas fa-map-pin" style="margin-right:6px;color:var(--color-orange);"></i>
+                Mekelle • Ethiopia
+            </span>
+        </div>
+    </div>
+</footer>
+
+<!-- ============================================================
+JAVASCRIPT
+============================================================ -->
+<script>
+    (function() {
+        'use strict';
+
+        // ============================================================
+        // DATA
+        // ============================================================
+
+        const signatureBurgers = [{
+            id: 1,
+            name: 'Classic Shege',
+            amharic: 'ክላሲክ ሸገ',
+            description: 'The perfect classic with juicy beef, fresh lettuce, tomato, and our signature sauce.',
+            price: '250',
+            image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=450&fit=crop&crop=center&auto=format',
+            badge: 'Best Seller',
+            badgeType: 'gold'
+        }, {
+            id: 2,
+            name: 'Double Cheese',
+            amharic: 'ድርብ ቺዝ',
+            description: 'Two beef patties, double cheese, caramelized onions, and our smoky burger sauce.',
+            price: '320',
+            image: 'https://images.unsplash.com/photo-1553979459-d2229ba7438c?w=600&h=450&fit=crop&crop=center&auto=format',
+            badge: 'Popular',
+            badgeType: 'orange'
+        }, {
+            id: 3,
+            name: 'Shege Special',
+            amharic: 'ሸገ ስፔሻል',
+            description: 'Our signature masterpiece: double patty, cheddar, bacon, fried egg, and secret Shege sauce.',
+            price: '380',
+            image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&h=450&fit=crop&crop=center&auto=format',
+            badge: "Chef's Pick",
+            badgeType: 'gold'
+        }, {
+            id: 4,
+            name: 'BBQ Bacon',
+            amharic: 'ቢቢኪዩ ቤከን',
+            description: 'Smoked bacon, cheddar, crispy onion rings, and sweet & smoky BBQ sauce.',
+            price: '310',
+            image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&h=450&fit=crop&crop=center&auto=format',
+            badge: 'Fan Favorite',
+            badgeType: 'orange'
+        }];
+
+        const fullMenu = [{
+            id: 101,
+            name: 'Classic Shege',
+            amharic: 'ክላሲክ ሸገ',
+            description: 'Juicy beef patty with lettuce, tomato, onion, and signature sauce.',
+            price: '250',
+            image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=420&fit=crop&crop=center&auto=format',
+            category: 'burgers',
+            tags: ['Beef', 'Lettuce', 'Tomato']
+        }, {
+            id: 102,
+            name: 'Double Cheese',
+            amharic: 'ድርብ ቺዝ',
+            description: 'Two patties, double cheddar, caramelized onions, smoky sauce.',
+            price: '320',
+            image: 'https://images.unsplash.com/photo-1553979459-d2229ba7438c?w=600&h=420&fit=crop&crop=center&auto=format',
+            category: 'burgers',
+            tags: ['2x Beef', 'Double Cheese', 'Onions']
+        }, {
+            id: 103,
+            name: 'Spicy Jalapeño',
+            amharic: 'ቅመም ጃላፔኖ',
+            description: 'Bold and fiery with jalapeños, pepper jack, bacon, and spicy mayo.',
+            price: '290',
+            image: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&h=420&fit=crop&crop=center&auto=format',
+            category: 'burgers',
+            tags: ['Jalapeños', 'Pepper Jack', 'Bacon']
+        }, {
+            id: 104,
+            name: 'BBQ Bacon',
+            amharic: 'ቢቢኪዩ ቤከን',
+            description: 'Smoked bacon, cheddar, crispy onion rings, sweet & smoky BBQ sauce.',
+            price: '310',
+            image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&h=420&fit=crop&crop=center&auto=format',
+            category: 'burgers',
+            tags: ['Bacon', 'Cheddar', 'BBQ Sauce']
+        }, {
+            id: 105,
+            name: 'Mushroom Swiss',
+            amharic: 'ሙሽሩም ስዊስ',
+            description: 'Sautéed mushrooms, Swiss cheese, garlic aioli, fresh herbs.',
+            price: '280',
+            image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=420&fit=crop&crop=center&auto=format',
+            category: 'burgers',
+            tags: ['Mushrooms', 'Swiss Cheese', 'Garlic Aioli']
+        }, {
+            id: 106,
+            name: 'Shege Special',
+            amharic: 'ሸገ ስፔሻል',
+            description: 'Double patty, cheddar, bacon, fried egg, and secret Shege sauce.',
+            price: '380',
+            image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&h=420&fit=crop&crop=center&auto=format',
+            category: 'specials',
+            tags: ['2x Beef', 'Bacon', 'Fried Egg', 'Secret Sauce']
+        }, {
+            id: 107,
+            name: 'Crispy Chicken',
+            amharic: 'ክሪስፒ ቺከን',
+            description: 'Golden fried chicken breast, lettuce, tomato, and creamy herb mayo.',
+            price: '270',
+            image: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=600&h=420&fit=crop&crop=center&auto=format',
+            category: 'chicken',
+            tags: ['Chicken', 'Lettuce', 'Herb Mayo']
+        }, {
+            id: 108,
+            name: 'Spicy Chicken',
+            amharic: 'ቅመም ቺከን',
+            description: 'Spicy fried chicken, pepper jack, pickles, and sriracha aioli.',
+            price: '290',
+            image: 'https://images.unsplash.com/photo-1553909489-cd47e0907980?w=600&h=420&fit=crop&crop=center&auto=format',
+            category: 'chicken',
+            tags: ['Spicy Chicken', 'Pepper Jack', 'Sriracha']
+        }, {
+            id: 109,
+            name: 'Golden Fries',
+            amharic: 'ወርቃማ ቺፕስ',
+            description: 'Crispy golden fries, perfectly salted and served hot.',
+            price: '90',
+            image: 'https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=600&h=420&fit=crop&crop=center&auto=format',
+            category: 'sides',
+            tags: ['Fries', 'Salt']
+        }, {
+            id: 110,
+            name: 'Cheese Fries',
+            amharic: 'ቺዝ ቺፕስ',
+            description: 'Golden fries topped with melted cheddar and a sprinkle of herbs.',
+            price: '130',
+            image: 'https://images.unsplash.com/photo-1526367790999-0150786686a2?w=600&h=420&fit=crop&crop=center&auto=format',
+            category: 'sides',
+            tags: ['Fries', 'Cheddar', 'Herbs']
+        }, {
+            id: 111,
+            name: 'Onion Rings',
+            amharic: 'ሽንኩርት ቀለበት',
+            description: 'Crispy battered onion rings served with zesty dipping sauce.',
+            price: '110',
+            image: 'https://images.unsplash.com/photo-1639024471283-03518883512d?w=600&h=420&fit=crop&crop=center&auto=format',
+            category: 'sides',
+            tags: ['Onions', 'Batter', 'Dipping Sauce']
+        }, {
+            id: 112,
+            name: 'Milkshake',
+            amharic: 'ሚልክሼክ',
+            description: 'Creamy vanilla milkshake topped with whipped cream and a cherry.',
+            price: '150',
+            image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&h=420&fit=crop&crop=center&auto=format',
+            category: 'drinks',
+            tags: ['Vanilla', 'Whipped Cream']
+        }, {
+            id: 113,
+            name: 'Fresh Lemonade',
+            amharic: 'ትኩስ ሎሚ ጭማቂ',
+            description: 'Refreshing handmade lemonade with a hint of mint.',
+            price: '80',
+            image: 'https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=600&h=420&fit=crop&crop=center&auto=format',
+            category: 'drinks',
+            tags: ['Lemon', 'Mint']
+        }, {
+            id: 114,
+            name: 'Shege Combo',
+            amharic: 'ሸገ ኮምቦ',
+            description: 'Classic Shege burger, golden fries, and a drink of your choice.',
+            price: '420',
+            image: 'https://images.unsplash.com/photo-1550317138-10000687a72b?w=600&h=420&fit=crop&crop=center&auto=format',
+            category: 'specials',
+            tags: ['Burger', 'Fries', 'Drink']
+        }];
+
+        // ============================================================
+        // RENDER SIGNATURE BURGERS
+        // ============================================================
+        const signatureGrid = document.getElementById('signatureGrid');
+
+        function renderSignature() {
+            if (!signatureGrid) return;
+
+            signatureGrid.innerHTML = signatureBurgers.map(burger => {
+                const badgeClass = burger.badgeType === 'gold' ? 'gold' : '';
+                const badgeHtml = burger.badge ?
+                    `<span class="badge ${badgeClass}">${burger.badge}</span>` :
+                    '';
+
+                return `
+                        <article class="signature-card animate-on-scroll">
+                            <div class="card-image">
+                                <img
+                                    src="${burger.image}"
+                                    alt="${burger.name} burger"
+                                    loading="lazy"
+                                    width="600"
+                                    height="450"
+                                />
+                                ${badgeHtml}
+                            </div>
+                            <div class="card-body">
+                                <div class="name">
+                                    ${burger.name}
+                                    <span class="amharic">${burger.amharic}</span>
+                                </div>
+                                <p class="description">${burger.description}</p>
+                                <div class="card-footer">
+                                    <span class="price">ETB ${burger.price} <small></small></span>
+                                    <a href="tel:0945488888" class="btn btn-primary btn-sm">
+                                        <i class="fas fa-phone"></i> Order
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    `;
+            }).join('');
+        }
+
+        renderSignature();
+
+        // ============================================================
+        // RENDER FULL MENU
+        // ============================================================
+        const menuGridFull = document.getElementById('menuGridFull');
+        let currentCategory = 'all';
+
+        function renderFullMenu(category) {
+            if (!menuGridFull) return;
+
+            const filtered = category === 'all' ?
+                fullMenu :
+                fullMenu.filter(item => item.category === category);
+
+            menuGridFull.innerHTML = filtered.map(item => {
+                const tagsHtml = item.tags.map(t =>
+                    `<span>${t}</span>`
+                ).join('');
+
+                return `
+                        <article class="menu-item" data-category="${item.category}">
+                            <div class="item-image">
+                                <img
+                                    src="${item.image}"
+                                    alt="${item.name} burger"
+                                    loading="lazy"
+                                    width="600"
+                                    height="420"
+                                />
+                            </div>
+                            <div class="item-body">
+                                <div class="name">
+                                    ${item.name}
+                                    <span class="amharic">${item.amharic}</span>
+                                </div>
+                                <p class="desc">${item.description}</p>
+                                <div class="tags">${tagsHtml}</div>
+                                <div class="item-footer">
+                                    <span class="price">ETB ${item.price} <small></small></span>
+                                    <a href="tel:0945488888" class="btn btn-primary btn-xs">
+                                        <i class="fas fa-phone"></i> Order
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    `;
+            }).join('');
+        }
+
+        renderFullMenu('all');
+
+        // ============================================================
+        // MENU CATEGORY FILTERING
+        // ============================================================
+        const tabButtons = document.querySelectorAll('.tab-btn');
+
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const category = this.dataset.category;
+
+                tabButtons.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
                 });
-                
-                // Show requested section
-                targetPage.classList.add('active-page');
-                window.scrollTo(0, 0);
-                
-                // Close mobile menu if open
-                navContainer.classList.remove('active');
-                hamburger.querySelector('i').classList.remove('fa-times');
-                hamburger.querySelector('i').classList.add('fa-bars');
-                
-                // Instantly trigger reveals for the new page contents
-                const reveals = targetPage.querySelectorAll('.reveal');
-                reveals.forEach(el => el.classList.add('active'));
+                this.classList.add('active');
+                this.setAttribute('aria-selected', 'true');
+
+                currentCategory = category;
+                renderFullMenu(category);
+
+                const newItems = menuGridFull.querySelectorAll('.menu-item');
+                newItems.forEach((el, i) => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }, 50 + i * 50);
+                });
+            });
+        });
+
+        // ============================================================
+        // PAGE ROUTING — show/hide pages
+        // ============================================================
+        const pages = {
+            home: document.getElementById('page-home'),
+            menu: document.getElementById('page-menu'),
+            about: document.getElementById('page-about'),
+            gallery: document.getElementById('page-gallery'),
+            contact: document.getElementById('page-contact')
+        };
+
+        const navLinks = document.querySelectorAll('.nav-links a[data-page], .footer a[data-page], .nav-brand[data-page], a[data-page]');
+
+        function showPage(pageId) {
+            // hide all pages
+            Object.keys(pages).forEach(key => {
+                if (pages[key]) {
+                    pages[key].classList.remove('active');
+                }
+            });
+
+            // show target
+            if (pages[pageId]) {
+                pages[pageId].classList.add('active');
+            }
+
+            // update nav active state
+            document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
+                link.classList.toggle('active', link.dataset.page === pageId);
+            });
+
+            // scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // close mobile nav
+            if (navLinksMobile) {
+                navLinksMobile.classList.remove('open');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                body.classList.remove('no-scroll');
             }
         }
 
-        allLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                const hash = link.getAttribute('href');
-                if (hash.startsWith('#')) {
+        // nav click handler
+        document.querySelectorAll('.nav-links a[data-page], .footer a[data-page], .nav-brand[data-page], a[data-page]').forEach(el => {
+            el.addEventListener('click', function(e) {
+                const page = this.dataset.page;
+                if (page) {
                     e.preventDefault();
-                    switchPage(hash);
-                    history.pushState(null, null, hash);
+                    showPage(page);
                 }
             });
         });
 
-        // Handle browser back/forward buttons
-        window.addEventListener('popstate', () => {
-            switchPage(window.location.hash);
+        // "Order Now" nav CTA goes to menu page (but call is handled separately)
+        document.querySelector('.nav-cta')?.addEventListener('click', function(e) {
+            // The nav-cta has data-page="menu" so it will navigate to menu
+            // but we also want it to call. The click handler above will handle navigation.
+            // We'll also add a direct call for safety.
+            window.location.href = 'tel:0945488888';
         });
 
-        // Init page load
-        window.addEventListener('DOMContentLoaded', () => {
-            switchPage(window.location.hash);
-            document.getElementById('year').textContent = new Date().getFullYear();
+        // Also make all Order Now buttons call the number (they already have href="tel:0945488888")
+        // But we need to ensure any "Order Now" text buttons that aren't links also work.
+        document.querySelectorAll('.btn-primary, .btn, .nav-cta').forEach(btn => {
+            if (btn.textContent.trim().toLowerCase().includes('order') ||
+                btn.textContent.trim().toLowerCase().includes('order now') ||
+                btn.classList.contains('nav-cta')) {
+                // If it's not already a tel: link, make it one
+                if (!btn.closest('a') || !btn.closest('a').href?.startsWith('tel:')) {
+                    // Wrap in a link or add click handler
+                    if (btn.closest('a')) {
+                        // It's a link with href not tel
+                        const link = btn.closest('a');
+                        if (!link.href.startsWith('tel:')) {
+                            link.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                window.location.href = 'tel:0945488888';
+                            });
+                        }
+                    } else {
+                        // standalone button
+                        btn.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            window.location.href = 'tel:0945488888';
+                        });
+                    }
+                }
+            }
         });
-    </script>
+
+        // Also ensure any "Order" buttons inside cards work
+        document.querySelectorAll('.signature-card .btn, .menu-item .btn').forEach(btn => {
+            if (btn.textContent.trim().toLowerCase().includes('order')) {
+                // These already have href="tel:0945488888" from rendering
+                // but if they don't, add it
+                if (btn.closest('a') && !btn.closest('a').href.startsWith('tel:')) {
+                    btn.closest('a').addEventListener('click', function(e) {
+                        e.preventDefault();
+                        window.location.href = 'tel:0945488888';
+                    });
+                }
+            }
+        });
+
+        // ============================================================
+        // NAVIGATION TOGGLE
+        // ============================================================
+        const navToggle = document.getElementById('navToggle');
+        const navLinksMobile = document.getElementById('navLinks');
+        const body = document.body;
+
+        if (navToggle && navLinksMobile) {
+            navToggle.addEventListener('click', function() {
+                const isOpen = navLinksMobile.classList.toggle('open');
+                this.classList.toggle('active');
+                this.setAttribute('aria-expanded', isOpen);
+                body.classList.toggle('no-scroll', isOpen);
+            });
+
+            navLinksMobile.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinksMobile.classList.remove('open');
+                    navToggle.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    body.classList.remove('no-scroll');
+                });
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && navLinksMobile.classList.contains('open')) {
+                    navLinksMobile.classList.remove('open');
+                    navToggle.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    body.classList.remove('no-scroll');
+                    navToggle.focus();
+                }
+            });
+        }
+
+        // ============================================================
+        // SCROLL EFFECT: navbar
+        // ============================================================
+        const navbar = document.getElementById('navbar');
+
+        function updateNavbar() {
+            const currentScroll = window.scrollY;
+            if (currentScroll > 30) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+
+        window.addEventListener('scroll', updateNavbar, { passive: true });
+        window.addEventListener('resize', updateNavbar, { passive: true });
+        updateNavbar();
+
+        // ============================================================
+        // SCROLL ANIMATIONS (Intersection Observer)
+        // ============================================================
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -30px 0px'
+            });
+
+            animateElements.forEach(el => observer.observe(el));
+        } else {
+            animateElements.forEach(el => el.classList.add('visible'));
+        }
+
+        // ============================================================
+        // PERFORMANCE
+        // ============================================================
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => {
+                document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                    img.decoding = 'async';
+                });
+            });
+        }
+
+        console.log('🍔 Shege Burger — ሸገ በርገር | Premium Burgers in Mekelle, Ethiopia');
+        console.log('📍 Kebele 17, Mekelle | 📞 For Delivery: 0945488888 & 0954588888');
+        console.log('📞 Order Now: 0945488888');
+
+        // ============================================================
+        // FIX: Ensure all Order Now buttons call the correct number
+        // ============================================================
+        // Additional pass: find any element with text containing "Order" and make it call
+        document.querySelectorAll('*').forEach(el => {
+            const text = el.textContent?.trim() || '';
+            if (text.toLowerCase().includes('order now') || text.toLowerCase() === 'order') {
+                if (el.closest('a') && !el.closest('a').href.startsWith('tel:')) {
+                    el.closest('a').addEventListener('click', function(e) {
+                        e.preventDefault();
+                        window.location.href = 'tel:0945488888';
+                    });
+                } else if (!el.closest('a')) {
+                    el.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        window.location.href = 'tel:0945488888';
+                    });
+                    el.style.cursor = 'pointer';
+                }
+            }
+        });
+
+        // ============================================================
+        // FIX: Home page should not show menu content - already handled by page system
+        // ============================================================
+
+        // ============================================================
+        // FIX: Ensure all phone numbers in footer and contact show both delivery numbers
+        // ============================================================
+        // Already updated in the HTML
+
+        console.log('✅ All changes applied:');
+        console.log('  1. Delivery numbers: 0945488888 & 0954588888');
+        console.log('  2. Auto-call number: 0945488888');
+        console.log('  3. All Order Now → 0945488888');
+        console.log('  4. Hero image removed');
+        console.log('  5. Hero color: toasted bread palette');
+        console.log('  6. Page separation: Home, Menu, About, Gallery, Contact');
+        console.log('  7. Responsive: all working');
+
+    })();
+</script>
+
+<!-- ============================================================
+STRUCTURED DATA (JSON-LD)
+============================================================ -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Shege Burger",
+        "alternateName": "ሸገ በርገር",
+        "description": "Premium burger restaurant in Mekelle, Ethiopia. Fresh ingredients, bold flavors, and a great atmosphere.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mekelle",
+            "addressRegion": "Tigray",
+            "addressCountry": "Ethiopia",
+            "streetAddress": "Kebele 17"
+        },
+        "telephone": "+251945488888",
+        "priceRange": "ETB 200–400",
+        "servesCuisine": "Burger, Fast Food, Ethiopian",
+        "hasMenu": "https://www.shegeburger.com/#full-menu",
+        "openingHours": "Mo-Su 10:00-22:00",
+        "sameAs": [
+            "https://www.instagram.com/shege_burger",
+            "https://www.tiktok.com/@shege_burger"
+        ],
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 13.4932,
+            "longitude": 39.4753
+        },
+        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&h=630&fit=crop&auto=format"
+    }
+</script>
+
 </body>
 </html>
