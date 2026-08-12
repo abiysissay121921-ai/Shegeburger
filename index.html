@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
         /* ============================================================
-                   RESET & BASE — LIGHT YELLOW/CREAM BACKGROUND (SLIGHTLY DIMMED)
+                   RESET & BASE — MUTED YELLOW/CREAM
                    ============================================================ */
         *,
         *::before,
@@ -22,29 +22,29 @@
         }
 
         :root {
-            /* ---- MUTED YELLOW/CREAM PALETTE ---- */
-            --color-bg-primary: #FDF5E0;      /* slightly muted cream-yellow */
-            --color-bg-secondary: #FBF7EA;    /* muted warm white */
-            --color-bg-alt: #FDF3C0;          /* muted pale golden */
+            /* ---- MUTED YELLOW/CREAM PALETTE (further dimmed) ---- */
+            --color-bg-primary: #F5EDDE;      /* softer muted cream-yellow */
+            --color-bg-secondary: #F0E8D8;    /* muted warm white */
+            --color-bg-alt: #F0E5C8;          /* muted pale golden */
             --color-bg-card: #FFFFFF;         /* white cards */
-            --color-bg-footer: #FBF5E0;       /* muted light footer */
+            --color-bg-footer: #F0E8D8;       /* muted light footer */
 
             --color-text-primary: #2B1E0C;    /* dark warm brown */
             --color-text-secondary: #4A3728;  /* medium brown */
             --color-text-muted: #7A6550;      /* lighter brown */
 
-            --color-accent: #D4A017;           /* rich gold */
-            --color-accent-hover: #E8C84A;     /* lighter gold */
-            --color-accent-dark: #B8890C;
+            --color-accent: #C49A1A;           /* slightly muted gold */
+            --color-accent-hover: #DBAF2A;     /* lighter gold */
+            --color-accent-dark: #A07A0F;
 
             --color-white: #FFFFFF;
-            --color-black: #1A130A;           /* very dark brown for contrast */
+            --color-black: #1A130A;
 
             --font-heading: 'Oswald', sans-serif;
             --font-body: 'Inter', sans-serif;
             --font-amharic: 'Noto Sans Ethiopic', 'Times New Roman', serif;
             --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.08);
-            --shadow-hover: 0 16px 48px rgba(212, 160, 23, 0.12);
+            --shadow-hover: 0 16px 48px rgba(196, 154, 26, 0.12);
             --shadow-nav: 0 4px 30px rgba(0, 0, 0, 0.06);
             --radius: 16px;
             --radius-sm: 8px;
@@ -172,12 +172,12 @@
         .btn-primary {
             background: var(--color-accent);
             color: var(--color-white);
-            box-shadow: 0 4px 20px rgba(212, 160, 23, 0.35);
+            box-shadow: 0 4px 20px rgba(196, 154, 26, 0.35);
         }
         .btn-primary:hover {
             background: var(--color-accent-hover);
             transform: translateY(-2px);
-            box-shadow: 0 8px 32px rgba(212, 160, 23, 0.45);
+            box-shadow: 0 8px 32px rgba(196, 154, 26, 0.45);
             color: var(--color-white);
         }
 
@@ -199,7 +199,7 @@
         .btn-gold:hover {
             background: var(--color-accent-hover);
             transform: translateY(-2px);
-            box-shadow: 0 8px 32px rgba(212, 160, 23, 0.35);
+            box-shadow: 0 8px 32px rgba(196, 154, 26, 0.35);
         }
 
         .btn-dark {
@@ -260,7 +260,7 @@
 
         .navbar.scrolled {
             height: var(--nav-height-scrolled);
-            background: rgba(253, 245, 224, 0.95);
+            background: rgba(245, 237, 222, 0.95);
             backdrop-filter: blur(12px) saturate(1.2);
             -webkit-backdrop-filter: blur(12px) saturate(1.2);
             border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -285,7 +285,7 @@
         }
 
         .nav-brand .brand-logo {
-            height: 32px;
+            height: 36px;
             width: auto;
             display: block;
             border-radius: 4px;
@@ -293,7 +293,7 @@
         }
 
         .navbar.scrolled .nav-brand .brand-logo {
-            height: 28px;
+            height: 30px;
         }
 
         .nav-brand .brand-amharic {
@@ -333,7 +333,7 @@
 
         .nav-links a.active {
             color: var(--color-text-primary);
-            background: rgba(212, 160, 23, 0.12);
+            background: rgba(196, 154, 26, 0.12);
         }
 
         .nav-links a.active::after {
@@ -358,7 +358,7 @@
         .nav-links .nav-cta:hover {
             background: var(--color-accent-hover);
             transform: translateY(-1px);
-            box-shadow: 0 4px 20px rgba(212, 160, 23, 0.35);
+            box-shadow: 0 4px 20px rgba(196, 154, 26, 0.35);
             color: var(--color-white) !important;
         }
         .nav-links .nav-cta::after {
@@ -415,7 +415,7 @@
         }
 
         /* ============================================================
-                   HERO
+                   HERO — with darker overlay
                    ============================================================ */
         .hero {
             position: relative;
@@ -437,10 +437,10 @@
             z-index: 0;
             background:
                 linear-gradient(180deg,
-                    rgba(253, 245, 224, 0.70) 0%,
-                    rgba(253, 245, 224, 0.50) 40%,
-                    rgba(253, 245, 224, 0.70) 100%),
-                radial-gradient(ellipse at center, rgba(253, 243, 192, 0.20) 0%, transparent 70%);
+                    rgba(0, 0, 0, 0.45) 0%,
+                    rgba(0, 0, 0, 0.35) 40%,
+                    rgba(0, 0, 0, 0.50) 100%),
+                radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0%, transparent 70%);
         }
 
         .hero .container {
@@ -466,15 +466,15 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255, 255, 255, 0.6);
+            background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(4px);
-            border: 1px solid rgba(212, 160, 23, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             padding: 6px 18px 6px 14px;
             border-radius: 50px;
             font-size: 0.7rem;
             font-weight: 500;
-            color: var(--color-accent-dark);
+            color: #f0e8d8;
             margin-bottom: 20px;
             letter-spacing: 0.5px;
             text-transform: uppercase;
@@ -491,13 +491,13 @@
             font-weight: 700;
             line-height: 1.02;
             letter-spacing: -0.02em;
-            color: var(--color-text-primary);
+            color: #ffffff;
             margin-bottom: 4px;
-            text-shadow: 0 2px 20px rgba(255, 255, 255, 0.3);
+            text-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
         }
 
         .hero-title .highlight {
-            color: var(--color-accent);
+            color: #f5e6c8;
             position: relative;
         }
 
@@ -510,13 +510,13 @@
             height: 4px;
             background: var(--color-accent);
             border-radius: 2px;
-            opacity: 0.3;
+            opacity: 0.4;
         }
 
         .hero-amharic {
             font-family: var(--font-amharic);
             font-size: clamp(1.2rem, 2.5vw, 2.2rem);
-            color: var(--color-text-secondary);
+            color: rgba(255, 255, 255, 0.7);
             margin-bottom: 16px;
             font-weight: 300;
             letter-spacing: 1px;
@@ -524,10 +524,11 @@
 
         .hero-desc {
             font-size: 1.1rem;
-            color: var(--color-text-secondary);
+            color: rgba(255, 255, 255, 0.85);
             max-width: 520px;
             line-height: 1.8;
             margin: 0 auto 32px;
+            text-shadow: 0 1px 10px rgba(0,0,0,0.3);
         }
 
         .hero-actions {
@@ -545,20 +546,21 @@
         .hero-actions .btn-primary {
             background: var(--color-accent);
             color: var(--color-white);
-            box-shadow: 0 4px 20px rgba(212, 160, 23, 0.35);
+            box-shadow: 0 4px 20px rgba(196, 154, 26, 0.4);
         }
         .hero-actions .btn-primary:hover {
             background: var(--color-accent-hover);
-            box-shadow: 0 8px 32px rgba(212, 160, 23, 0.45);
+            box-shadow: 0 8px 32px rgba(196, 154, 26, 0.5);
             color: var(--color-white);
         }
 
         .hero-actions .btn-secondary {
-            border-color: var(--color-accent);
-            color: var(--color-text-primary);
+            border-color: rgba(255, 255, 255, 0.4);
+            color: #ffffff;
         }
         .hero-actions .btn-secondary:hover {
             background: var(--color-accent);
+            border-color: var(--color-accent);
             color: var(--color-white);
         }
 
@@ -580,7 +582,7 @@
             right: -10%;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(212, 160, 23, 0.04), transparent 70%);
+            background: radial-gradient(circle, rgba(196, 154, 26, 0.04), transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -611,7 +613,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(212, 160, 23, 0.04), transparent 60%);
+            background: linear-gradient(135deg, rgba(196, 154, 26, 0.04), transparent 60%);
             pointer-events: none;
         }
 
@@ -656,7 +658,7 @@
 
         .signature-card:hover {
             transform: translateY(-8px);
-            border-color: rgba(212, 160, 23, 0.2);
+            border-color: rgba(196, 154, 26, 0.2);
             box-shadow: var(--shadow-hover);
         }
 
@@ -754,7 +756,7 @@
             background: var(--color-accent);
             color: var(--color-white);
             border-color: var(--color-accent);
-            box-shadow: 0 4px 20px rgba(212, 160, 23, 0.3);
+            box-shadow: 0 4px 20px rgba(196, 154, 26, 0.3);
         }
 
         .menu-grid-full {
@@ -782,7 +784,7 @@
 
         .menu-item:hover {
             transform: translateY(-4px);
-            border-color: rgba(212, 160, 23, 0.15);
+            border-color: rgba(196, 154, 26, 0.15);
             box-shadow: var(--shadow-hover);
         }
 
@@ -895,31 +897,37 @@
         }
 
         /* ============================================================
-                   TESTIMONIALS — exactly 6 cards, horizontal scroll on mobile/tablet
+                   TESTIMONIALS — CAROUSEL
                    ============================================================ */
         .testimonials-section {
             background: var(--color-bg-secondary);
+            overflow: hidden;
         }
 
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+        .testimonials-wrapper {
+            position: relative;
             margin-top: 40px;
         }
 
+        .testimonials-track {
+            display: flex;
+            gap: 30px;
+            transition: transform 0.5s ease;
+            will-change: transform;
+        }
+
         .testimonial-card {
+            flex: 0 0 calc(33.333% - 20px);
             background: var(--color-bg-card);
             padding: 30px;
             border-radius: var(--radius);
             border: 1px solid rgba(0, 0, 0, 0.04);
             transition: var(--transition);
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(212, 160, 23, 0.12);
-            box-shadow: var(--shadow-hover);
+            box-shadow: var(--shadow-card);
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .testimonial-card p {
@@ -932,6 +940,59 @@
             margin-top: 16px;
             font-weight: 600;
             color: var(--color-text-primary);
+        }
+
+        /* Carousel controls */
+        .testimonials-controls {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .testimonials-controls .btn {
+            min-width: 120px;
+            padding: 10px 24px;
+            font-size: 0.85rem;
+            background: var(--color-bg-card);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: var(--color-text-primary);
+            box-shadow: var(--shadow-card);
+        }
+
+        .testimonials-controls .btn:hover {
+            background: var(--color-accent);
+            color: var(--color-white);
+            border-color: var(--color-accent);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive carousel */
+        @media (max-width: 1024px) {
+            .testimonial-card {
+                flex: 0 0 calc(50% - 15px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonial-card {
+                flex: 0 0 calc(100% - 20px);
+                margin: 0 10px;
+            }
+            .testimonials-track {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonial-card {
+                flex: 0 0 calc(100% - 10px);
+                margin: 0 5px;
+                padding: 20px;
+            }
+            .testimonials-track {
+                gap: 10px;
+            }
         }
 
         /* About Page - Why Choose */
@@ -957,7 +1018,7 @@
 
         .why-card:hover {
             transform: translateY(-4px);
-            border-color: rgba(212, 160, 23, 0.12);
+            border-color: rgba(196, 154, 26, 0.12);
             box-shadow: var(--shadow-hover);
         }
 
@@ -965,7 +1026,7 @@
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background: rgba(212, 160, 23, 0.08);
+            background: rgba(196, 154, 26, 0.08);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1107,7 +1168,7 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: rgba(212, 160, 23, 0.08);
+            background: rgba(196, 154, 26, 0.08);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1158,7 +1219,7 @@
             background: var(--color-accent);
             border-color: var(--color-accent);
             transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(212, 160, 23, 0.2);
+            box-shadow: 0 8px 24px rgba(196, 154, 26, 0.2);
             color: var(--color-white);
         }
 
@@ -1244,7 +1305,7 @@
             background: var(--color-accent);
             border-color: var(--color-accent);
             transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(212, 160, 23, 0.2);
+            box-shadow: 0 8px 24px rgba(196, 154, 26, 0.2);
             color: var(--color-white);
         }
 
@@ -1392,16 +1453,6 @@
             }
         }
 
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-12px);
-            }
-        }
-
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(30px);
@@ -1458,20 +1509,6 @@
             .gallery-grid .gallery-item:nth-child(4) {
                 grid-column: span 1;
                 grid-row: span 1;
-            }
-
-            /* ---- TESTIMONIALS: horizontal scroll on tablet ---- */
-            .testimonials-grid {
-                display: flex;
-                gap: 24px;
-                overflow-x: auto;
-                scroll-snap-type: x mandatory;
-                padding-bottom: 16px;
-                grid-template-columns: unset;
-            }
-            .testimonial-card {
-                flex: 0 0 300px;
-                scroll-snap-align: start;
             }
         }
 
@@ -1604,12 +1641,10 @@
                 font-size: 0.78rem;
             }
 
-            /* ---- TESTIMONIALS: horizontal scroll on mobile ---- */
-            .testimonials-grid {
-                gap: 16px;
-            }
-            .testimonial-card {
-                flex: 0 0 280px;
+            .testimonials-controls .btn {
+                min-width: 100px;
+                padding: 8px 16px;
+                font-size: 0.8rem;
             }
         }
 
@@ -1707,7 +1742,7 @@
                 font-size: 0.6rem;
             }
             .nav-brand .brand-logo {
-                height: 26px;
+                height: 28px;
             }
 
             .footer-grid {
@@ -1733,9 +1768,10 @@
                 font-size: 1rem;
             }
 
-            /* ---- TESTIMONIALS: smaller cards on small mobile ---- */
-            .testimonial-card {
-                flex: 0 0 260px;
+            .testimonials-controls .btn {
+                min-width: 80px;
+                padding: 6px 12px;
+                font-size: 0.75rem;
             }
         }
 
@@ -1752,8 +1788,10 @@
                 font-size: clamp(1.8rem, 10vw, 2.4rem);
             }
 
-            .testimonial-card {
-                flex: 0 0 240px;
+            .testimonials-controls .btn {
+                min-width: 70px;
+                padding: 5px 10px;
+                font-size: 0.7rem;
             }
         }
 
@@ -1776,6 +1814,9 @@
 
             html {
                 scroll-behavior: auto;
+            }
+            .testimonials-track {
+                transition: none;
             }
         }
 
@@ -1841,8 +1882,8 @@
     <header class="navbar" id="navbar" role="banner">
         <div class="container">
             <a href="#" class="nav-brand" aria-label="Shege Burger Home" data-page="home">
+                <img src="image/imageba.jpg" alt="Shege Burger Logo" class="brand-logo">
                 <span>Shege</span>
-                <img src="imageba.jpg" alt="Shege Burger Logo" class="brand-logo">
                 <span class="brand-dot">·</span>
                 <span class="brand-amharic">ሸገ በርገር</span>
             </a>
@@ -1965,32 +2006,40 @@
                     <span class="section-label">Testimonials</span>
                     <h2 class="section-title">What Our <span class="highlight">Guests</span> Are Saying</h2>
                 </div>
-                <div class="testimonials-grid">
-                    <!-- 6 Testimonials -->
-                    <div class="testimonial-card animate-on-scroll">
-                        <p>"The best burger I've had in Mekelle! The flavors are incredible and the service is top-notch."</p>
-                        <p class="author">— Guest</p>
+
+                <div class="testimonials-wrapper">
+                    <div class="testimonials-track" id="testimonialsTrack">
+                        <!-- 6 Testimonials -->
+                        <div class="testimonial-card">
+                            <p>"The best burger I've had in Mekelle! The flavors are incredible and the service is top-notch."</p>
+                            <p class="author">— Guest</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>"Shege Burger is a game-changer. The atmosphere is great, and the food is consistently amazing."</p>
+                            <p class="author">— Guest</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>"I love the fresh ingredients and the bold flavors. Definitely my new favorite spot in town."</p>
+                            <p class="author">— Guest</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>"The quality of the meat and the freshness of the vegetables make every bite perfect."</p>
+                            <p class="author">— Guest</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>"A true gem in Mekelle. The staff is friendly and the burgers are simply delicious."</p>
+                            <p class="author">— Guest</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <p>"Hands down the best burger experience in Ethiopia. Highly recommend the Shege Special!"</p>
+                            <p class="author">— Guest</p>
+                        </div>
                     </div>
-                    <div class="testimonial-card animate-on-scroll">
-                        <p>"Shege Burger is a game-changer. The atmosphere is great, and the food is consistently amazing."</p>
-                        <p class="author">— Guest</p>
-                    </div>
-                    <div class="testimonial-card animate-on-scroll">
-                        <p>"I love the fresh ingredients and the bold flavors. Definitely my new favorite spot in town."</p>
-                        <p class="author">— Guest</p>
-                    </div>
-                    <div class="testimonial-card animate-on-scroll">
-                        <p>"The quality of the meat and the freshness of the vegetables make every bite perfect."</p>
-                        <p class="author">— Guest</p>
-                    </div>
-                    <div class="testimonial-card animate-on-scroll">
-                        <p>"A true gem in Mekelle. The staff is friendly and the burgers are simply delicious."</p>
-                        <p class="author">— Guest</p>
-                    </div>
-                    <div class="testimonial-card animate-on-scroll">
-                        <p>"Hands down the best burger experience in Ethiopia. Highly recommend the Shege Special!"</p>
-                        <p class="author">— Guest</p>
-                    </div>
+                </div>
+
+                <div class="testimonials-controls">
+                    <button class="btn btn-dark" id="prevTestimonial"><i class="fas fa-arrow-left"></i> Previous</button>
+                    <button class="btn btn-dark" id="nextTestimonial">Next <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
         </section>
@@ -2502,7 +2551,7 @@
             }];
 
             // ============================================================
-            // RENDER SIGNATURE BURGERS (Home Page)
+            // RENDER SIGNATURE BURGERS
             // ============================================================
             const signatureGrid = document.getElementById('signatureGrid');
 
@@ -2530,7 +2579,7 @@
             renderSignature();
 
             // ============================================================
-            // RENDER FULL MENU (Menu Page)
+            // RENDER FULL MENU
             // ============================================================
             const menuGridFull = document.getElementById('menuGridFull');
             let currentCategory = 'all';
@@ -2751,6 +2800,124 @@
             } else {
                 animateElements.forEach(el => el.classList.add('visible'));
             }
+
+            // ============================================================
+            // TESTIMONIALS CAROUSEL
+            // ============================================================
+            const track = document.getElementById('testimonialsTrack');
+            const prevBtn = document.getElementById('prevTestimonial');
+            const nextBtn = document.getElementById('nextTestimonial');
+            let currentIndex = 0;
+            let autoSlideInterval;
+            const totalCards = document.querySelectorAll('.testimonial-card').length;
+
+            // Determine how many cards to show per view based on screen width
+            function getCardsPerView() {
+                const width = window.innerWidth;
+                if (width >= 1024) return 3;
+                if (width >= 768) return 2;
+                return 1;
+            }
+
+            let cardsPerView = getCardsPerView();
+            let maxIndex = Math.max(0, totalCards - cardsPerView);
+
+            function updateCarousel() {
+                cardsPerView = getCardsPerView();
+                maxIndex = Math.max(0, totalCards - cardsPerView);
+                if (currentIndex > maxIndex) currentIndex = maxIndex;
+                const cardWidth = track.querySelector('.testimonial-card').offsetWidth + 30; // gap is 30px
+                const offset = currentIndex * (cardWidth);
+                track.style.transform = `translateX(-${offset}px)`;
+            }
+
+            function goTo(index) {
+                if (index < 0) index = 0;
+                if (index > maxIndex) index = maxIndex;
+                currentIndex = index;
+                updateCarousel();
+                resetAutoSlide();
+            }
+
+            function nextSlide() {
+                if (currentIndex < maxIndex) {
+                    goTo(currentIndex + 1);
+                } else {
+                    goTo(0);
+                }
+            }
+
+            function prevSlide() {
+                if (currentIndex > 0) {
+                    goTo(currentIndex - 1);
+                } else {
+                    goTo(maxIndex);
+                }
+            }
+
+            function resetAutoSlide() {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(nextSlide, 5000); // 5 seconds
+            }
+
+            // Event listeners
+            prevBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                prevSlide();
+            });
+
+            nextBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                nextSlide();
+            });
+
+            // Touch/swipe support
+            let startX = 0;
+            let isDragging = false;
+            track.addEventListener('touchstart', function(e) {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+                clearInterval(autoSlideInterval);
+            }, { passive: true });
+
+            track.addEventListener('touchmove', function(e) {
+                if (!isDragging) return;
+                const diff = startX - e.touches[0].clientX;
+                if (Math.abs(diff) > 30) {
+                    if (diff > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                    isDragging = false;
+                    resetAutoSlide();
+                }
+            }, { passive: true });
+
+            track.addEventListener('touchend', function() {
+                isDragging = false;
+                resetAutoSlide();
+            }, { passive: true });
+
+            // Window resize
+            let resizeTimer;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    updateCarousel();
+                }, 200);
+            });
+
+            // Initialize
+            setTimeout(() => {
+                updateCarousel();
+                resetAutoSlide();
+            }, 300);
+
+            // Also update when images load (layout shift)
+            window.addEventListener('load', function() {
+                setTimeout(updateCarousel, 500);
+            });
 
             // ============================================================
             // PERFORMANCE
