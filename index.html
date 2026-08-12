@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
         /* ============================================================
-                   RESET & BASE — LIGHT YELLOW/CREAM BACKGROUND
+                   RESET & BASE — LIGHT YELLOW/CREAM BACKGROUND (SLIGHTLY DIMMED)
                    ============================================================ */
         *,
         *::before,
@@ -22,12 +22,12 @@
         }
 
         :root {
-            /* ---- NEW LIGHT PALETTE ---- */
-            --color-bg-primary: #FFF9E8;      /* soft cream-yellow */
-            --color-bg-secondary: #FFFDF3;    /* very light warm white */
-            --color-bg-alt: #FFF5C7;          /* pale golden */
+            /* ---- MUTED YELLOW/CREAM PALETTE ---- */
+            --color-bg-primary: #FDF5E0;      /* slightly muted cream-yellow */
+            --color-bg-secondary: #FBF7EA;    /* muted warm white */
+            --color-bg-alt: #FDF3C0;          /* muted pale golden */
             --color-bg-card: #FFFFFF;         /* white cards */
-            --color-bg-footer: #FDF7E6;       /* light footer */
+            --color-bg-footer: #FBF5E0;       /* muted light footer */
 
             --color-text-primary: #2B1E0C;    /* dark warm brown */
             --color-text-secondary: #4A3728;  /* medium brown */
@@ -96,7 +96,7 @@
         }
 
         /* ============================================================
-                   SECTION LABELS & TITLES — updated colors
+                   SECTION LABELS & TITLES
                    ============================================================ */
         .section-label {
             display: inline-block;
@@ -233,7 +233,7 @@
         }
 
         /* ============================================================
-                   NAVIGATION — light background when scrolled
+                   NAVIGATION — with logo image
                    ============================================================ */
         .navbar {
             position: fixed;
@@ -260,7 +260,7 @@
 
         .navbar.scrolled {
             height: var(--nav-height-scrolled);
-            background: rgba(255, 249, 232, 0.95);
+            background: rgba(253, 245, 224, 0.95);
             backdrop-filter: blur(12px) saturate(1.2);
             -webkit-backdrop-filter: blur(12px) saturate(1.2);
             border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -282,6 +282,18 @@
 
         .navbar.scrolled .nav-brand {
             font-size: 1.15rem;
+        }
+
+        .nav-brand .brand-logo {
+            height: 32px;
+            width: auto;
+            display: block;
+            border-radius: 4px;
+            object-fit: contain;
+        }
+
+        .navbar.scrolled .nav-brand .brand-logo {
+            height: 28px;
         }
 
         .nav-brand .brand-amharic {
@@ -403,7 +415,7 @@
         }
 
         /* ============================================================
-                   HERO — keep image, warm overlay
+                   HERO
                    ============================================================ */
         .hero {
             position: relative;
@@ -425,10 +437,10 @@
             z-index: 0;
             background:
                 linear-gradient(180deg,
-                    rgba(255, 249, 232, 0.70) 0%,
-                    rgba(255, 249, 232, 0.50) 40%,
-                    rgba(255, 249, 232, 0.70) 100%),
-                radial-gradient(ellipse at center, rgba(255, 245, 199, 0.20) 0%, transparent 70%);
+                    rgba(253, 245, 224, 0.70) 0%,
+                    rgba(253, 245, 224, 0.50) 40%,
+                    rgba(253, 245, 224, 0.70) 100%),
+                radial-gradient(ellipse at center, rgba(253, 243, 192, 0.20) 0%, transparent 70%);
         }
 
         .hero .container {
@@ -551,7 +563,7 @@
         }
 
         /* ============================================================
-                   SECTIONS — LIGHT BACKGROUNDS
+                   SECTIONS
                    ============================================================ */
 
         /* Our Story */
@@ -882,14 +894,16 @@
             margin-right: auto;
         }
 
-        /* Testimonials */
+        /* ============================================================
+                   TESTIMONIALS — exactly 6 cards, horizontal scroll on mobile/tablet
+                   ============================================================ */
         .testimonials-section {
             background: var(--color-bg-secondary);
         }
 
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin-top: 40px;
         }
@@ -1235,7 +1249,7 @@
         }
 
         /* ============================================================
-                   FOOTER — light background
+                   FOOTER
                    ============================================================ */
         .footer {
             background: var(--color-bg-footer);
@@ -1445,6 +1459,20 @@
                 grid-column: span 1;
                 grid-row: span 1;
             }
+
+            /* ---- TESTIMONIALS: horizontal scroll on tablet ---- */
+            .testimonials-grid {
+                display: flex;
+                gap: 24px;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                padding-bottom: 16px;
+                grid-template-columns: unset;
+            }
+            .testimonial-card {
+                flex: 0 0 300px;
+                scroll-snap-align: start;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1576,11 +1604,12 @@
                 font-size: 0.78rem;
             }
 
+            /* ---- TESTIMONIALS: horizontal scroll on mobile ---- */
             .testimonials-grid {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-                margin-left: auto;
-                margin-right: auto;
+                gap: 16px;
+            }
+            .testimonial-card {
+                flex: 0 0 280px;
             }
         }
 
@@ -1677,6 +1706,9 @@
             .nav-brand .brand-amharic {
                 font-size: 0.6rem;
             }
+            .nav-brand .brand-logo {
+                height: 26px;
+            }
 
             .footer-grid {
                 grid-template-columns: 1fr;
@@ -1701,8 +1733,9 @@
                 font-size: 1rem;
             }
 
-            .testimonials-grid {
-                grid-template-columns: 1fr;
+            /* ---- TESTIMONIALS: smaller cards on small mobile ---- */
+            .testimonial-card {
+                flex: 0 0 260px;
             }
         }
 
@@ -1717,6 +1750,10 @@
 
             .hero-title {
                 font-size: clamp(1.8rem, 10vw, 2.4rem);
+            }
+
+            .testimonial-card {
+                flex: 0 0 240px;
             }
         }
 
@@ -1805,6 +1842,7 @@
         <div class="container">
             <a href="#" class="nav-brand" aria-label="Shege Burger Home" data-page="home">
                 <span>Shege</span>
+                <img src="imageba.jpg" alt="Shege Burger Logo" class="brand-logo">
                 <span class="brand-dot">·</span>
                 <span class="brand-amharic">ሸገ በርገር</span>
             </a>
@@ -1928,6 +1966,7 @@
                     <h2 class="section-title">What Our <span class="highlight">Guests</span> Are Saying</h2>
                 </div>
                 <div class="testimonials-grid">
+                    <!-- 6 Testimonials -->
                     <div class="testimonial-card animate-on-scroll">
                         <p>"The best burger I've had in Mekelle! The flavors are incredible and the service is top-notch."</p>
                         <p class="author">— Guest</p>
@@ -1938,6 +1977,18 @@
                     </div>
                     <div class="testimonial-card animate-on-scroll">
                         <p>"I love the fresh ingredients and the bold flavors. Definitely my new favorite spot in town."</p>
+                        <p class="author">— Guest</p>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"The quality of the meat and the freshness of the vegetables make every bite perfect."</p>
+                        <p class="author">— Guest</p>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"A true gem in Mekelle. The staff is friendly and the burgers are simply delicious."</p>
+                        <p class="author">— Guest</p>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"Hands down the best burger experience in Ethiopia. Highly recommend the Shege Special!"</p>
                         <p class="author">— Guest</p>
                     </div>
                 </div>
