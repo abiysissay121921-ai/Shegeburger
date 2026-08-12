@@ -233,7 +233,7 @@
         }
 
         /* ============================================================
-                   NAVIGATION — with improved visibility over hero
+                   NAVIGATION
                    ============================================================ */
         .navbar {
             position: fixed;
@@ -258,7 +258,6 @@
             padding: 0 24px;
         }
 
-        /* When scrolled, use the existing light background */
         .navbar.scrolled {
             height: var(--nav-height-scrolled);
             background: rgba(245, 237, 222, 0.95);
@@ -268,7 +267,6 @@
             box-shadow: var(--shadow-nav);
         }
 
-        /* Over the hero (non-scrolled), keep transparent but ensure visibility via text-shadow */
         .navbar:not(.scrolled) .nav-brand,
         .navbar:not(.scrolled) .nav-links a:not(.nav-cta) {
             text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
@@ -427,7 +425,6 @@
             display: none;
         }
 
-        /* mobile toggle - white over hero, dark when scrolled */
         .nav-toggle span {
             display: block;
             width: 26px;
@@ -485,7 +482,7 @@
         }
 
         /* ============================================================
-                   HERO — keep existing burger, minimal overlay
+                   HERO
                    ============================================================ */
         .hero {
             position: relative;
@@ -974,6 +971,7 @@
         .testimonials-section {
             background: var(--color-bg-secondary);
             overflow: hidden;
+            padding-bottom: 40px; /* reduced from 80px to bring footer up */
         }
 
         .testimonials-wrapper {
@@ -1382,19 +1380,19 @@
         }
 
         /* ============================================================
-                   FOOTER — moved slightly up (reduced padding)
+                   FOOTER — moved up (reduced top padding)
                    ============================================================ */
         .footer {
             background: var(--color-bg-footer);
             border-top: 1px solid rgba(0, 0, 0, 0.04);
-            padding: 40px 0 20px; /* reduced from 56px 0 20px */
+            padding: 24px 0 20px; /* top padding reduced from 56px to 24px */
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1.2fr;
             gap: 40px;
-            padding-bottom: 28px; /* reduced from 32px */
+            padding-bottom: 28px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.04);
         }
 
@@ -1725,12 +1723,11 @@
                 font-size: 0.8rem;
             }
 
-            /* Footer adjustment for tablet */
-            .footer {
-                padding: 32px 0 16px;
+            .testimonials-section {
+                padding-bottom: 32px;
             }
-            .footer-grid {
-                padding-bottom: 20px;
+            .footer {
+                padding-top: 20px;
             }
         }
 
@@ -1860,12 +1857,11 @@
                 font-size: 0.75rem;
             }
 
-            /* Footer adjustment for mobile */
-            .footer {
-                padding: 28px 0 14px;
+            .testimonials-section {
+                padding-bottom: 24px;
             }
-            .footer-grid {
-                padding-bottom: 16px;
+            .footer {
+                padding-top: 16px;
             }
         }
 
