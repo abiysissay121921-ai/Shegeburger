@@ -404,7 +404,6 @@
             overflow: hidden;
             margin-top: calc(-1 * var(--nav-height));
             padding-top: var(--nav-height);
-            /* --- TOASTED BREAD COLOR PALETTE --- */
             background: linear-gradient(160deg, #2B170C 0%, #5A2E16 25%, #8A4F24 50%, #B86F32 75%, #D89A4A 100%);
             background-attachment: fixed;
         }
@@ -564,15 +563,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* Hero image removed — replaced with a subtle decorative element */
-        .hero-image {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            animation: fadeUp 0.9s ease-out 0.15s both;
-        }
-
         .hero-image-wrapper {
             position: relative;
             width: 100%;
@@ -580,23 +570,14 @@
             aspect-ratio: 1 / 1;
             border-radius: 50%;
             overflow: hidden;
-            background: radial-gradient(circle at 30% 30%, rgba(216, 154, 74, 0.15), rgba(43, 23, 12, 0.3));
-            border: 1px solid rgba(216, 154, 74, 0.08);
+            border: 1px solid rgba(216, 154, 74, 0.15);
             box-shadow: 0 0 80px rgba(216, 154, 74, 0.08), 0 0 160px rgba(216, 154, 74, 0.03);
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        .hero-image-wrapper .hero-symbol {
-            font-family: var(--font-heading);
-            font-size: 7rem;
-            font-weight: 700;
-            color: rgba(243, 223, 192, 0.08);
-            letter-spacing: 0.1em;
-            user-select: none;
-            pointer-events: none;
-            text-shadow: 0 0 60px rgba(216, 154, 74, 0.05);
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .hero-image-wrapper::after {
@@ -716,10 +697,76 @@
         }
 
         /* ============================================================
-                   SIGNATURE BURGERS
+                   STORY SECTION
+                   ============================================================ */
+        .story-section {
+            background: var(--color-black);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-section::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(232, 93, 58, 0.04), transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .story-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow-card);
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+        }
+
+        .story-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(232, 93, 58, 0.06), transparent 60%);
+            pointer-events: none;
+        }
+
+        .story-content .section-title {
+            margin-bottom: 20px;
+        }
+
+        .story-content p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        .story-content .btn {
+            margin-top: 8px;
+        }
+
+        /* ============================================================
+                   SIGNATURE BURGERS (Home Page Specials)
                    ============================================================ */
         .signature-section {
-            background: var(--color-black);
+            background: var(--color-charcoal);
         }
 
         .signature-grid {
@@ -769,25 +816,6 @@
             transform: scale(1.05);
         }
 
-        .signature-card .badge {
-            position: absolute;
-            top: 14px;
-            right: 14px;
-            background: var(--color-orange);
-            color: var(--color-white);
-            padding: 4px 14px;
-            border-radius: 50px;
-            font-size: 0.65rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .signature-card .badge.gold {
-            background: var(--color-gold);
-            color: var(--color-black);
-        }
-
         .signature-card .card-body {
             padding: 22px 24px 24px;
             flex: 1;
@@ -819,36 +847,13 @@
             flex: 1;
         }
 
-        .signature-card .card-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 16px;
-            border-top: 1px solid rgba(255, 255, 255, 0.04);
-            margin-top: auto;
-        }
-
-        .signature-card .card-footer .price {
-            font-family: var(--font-heading);
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--color-gold);
-        }
-
-        .signature-card .card-footer .price small {
-            font-size: 0.7rem;
-            font-weight: 400;
-            color: var(--color-light-gray);
-        }
-
-        .signature-card .card-footer .btn {
-            padding: 8px 20px;
-            font-size: 0.78rem;
-            min-width: auto;
+        .signature-card .card-body .btn {
+            align-self: flex-start;
+            margin-top: 8px;
         }
 
         /* ============================================================
-                   FULL MENU WITH CATEGORIES
+                   FULL MENU WITH CATEGORIES (Menu Page)
                    ============================================================ */
         .full-menu-section {
             background: var(--color-charcoal);
@@ -1014,76 +1019,61 @@
         }
 
         /* ============================================================
-                   FOOD STORY
+                   CONTACT CTA SECTION
                    ============================================================ */
-        .story-section {
+        .contact-cta-section {
             background: var(--color-black);
-            position: relative;
-            overflow: hidden;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
         }
 
-        .story-section::before {
-            content: '';
-            position: absolute;
-            top: -20%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(232, 93, 58, 0.04), transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .story-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .story-image {
-            border-radius: var(--radius);
-            overflow: hidden;
-            position: relative;
-            box-shadow: var(--shadow-card);
-        }
-
-        .story-image img {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-        }
-
-        .story-image::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(232, 93, 58, 0.06), transparent 60%);
-            pointer-events: none;
-        }
-
-        .story-content .section-title {
-            margin-bottom: 20px;
-        }
-
-        .story-content p {
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.8;
-            margin-bottom: 16px;
-            font-size: 1rem;
-        }
-
-        .story-content .story-tagline {
-            font-family: var(--font-heading);
-            font-size: 1.2rem;
-            color: var(--color-orange);
-            margin-top: 8px;
+        .contact-cta-section .section-subtitle {
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* ============================================================
-                   WHY CHOOSE
+                   TESTIMONIALS
+                   ============================================================ */
+        .testimonials-section {
+            background: var(--color-charcoal);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: var(--color-dark);
+            padding: 30px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(232, 93, 58, 0.12);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonial-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        .testimonial-card .author {
+            margin-top: 16px;
+            font-weight: 600;
+            color: var(--color-white);
+        }
+
+        /* ============================================================
+                   WHY CHOOSE (About Page)
                    ============================================================ */
         .why-section {
             background: var(--color-dark);
@@ -1689,9 +1679,6 @@
             .hero-image-wrapper {
                 max-width: 280px;
             }
-            .hero-image-wrapper .hero-symbol {
-                font-size: 4rem;
-            }
 
             .hero-floating-badge {
                 padding: 10px 16px;
@@ -1787,6 +1774,13 @@
                 padding: 8px 18px;
                 font-size: 0.78rem;
             }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1811,9 +1805,6 @@
 
             .hero-image-wrapper {
                 max-width: 220px;
-            }
-            .hero-image-wrapper .hero-symbol {
-                font-size: 3rem;
             }
 
             .hero-floating-badge {
@@ -1918,6 +1909,10 @@
                 width: 40px;
                 height: 40px;
                 font-size: 1rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -2034,7 +2029,7 @@
                 <a data-page="about">About</a>
                 <a data-page="gallery">Gallery</a>
                 <a data-page="contact">Contact</a>
-                <a data-page="menu" class="nav-cta">
+                <a class="nav-cta order-now-btn">
                     <i class="fas fa-utensils"></i> Order Now
                 </a>
             </nav>
@@ -2075,7 +2070,7 @@
                     </p>
 
                     <div class="hero-actions">
-                        <a href="#" class="btn btn-primary" data-page="menu">
+                        <a href="#" data-page="menu" class="btn btn-primary">
                             Explore Our Menu <i class="fas fa-arrow-right arrow"></i>
                         </a>
                         <a href="tel:0945488888" class="btn btn-secondary">
@@ -2092,17 +2087,12 @@
                             <span class="number">100%</span>
                             <span class="label">Fresh Ingredients</span>
                         </div>
-                        <div class="hero-stats-item">
-                            <span class="number">⭐ 4.9</span>
-                            <span class="label">Customer Rating</span>
-                        </div>
                     </div>
                 </div>
 
                 <div class="hero-image">
                     <div class="hero-image-wrapper">
-                        <!-- Hero image removed — decorative symbol only -->
-                        <div class="hero-symbol" aria-hidden="true">S</div>
+                        <img src="imageba.jpg" alt="Shege Burger Hero Banner" loading="eager" />
                     </div>
 
                     <div class="hero-floating-badge" aria-hidden="true">
@@ -2144,13 +2134,31 @@
             </div>
         </div>
 
-        <!-- ===== SIGNATURE BURGERS ===== -->
+        <!-- ===== OUR STORY ===== -->
+        <section class="story-section section-padding" id="story">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-content animate-on-scroll">
+                        <span class="section-label">Our Story</span>
+                        <h2 class="section-title">A Bright Spot in Your <span class="highlight">Culinary Journey</span></h2>
+                        <p>Shege Burger — <strong>ሸገ በርገር</strong> — was born from a simple passion: to create the most memorable burger experience in Mekelle.</p>
+                        <p>Every patty is handmade, every bun toasted to perfection, every sauce crafted in-house. We source the freshest ingredients and treat every order with care.</p>
+                        <a href="#" data-page="menu" class="btn btn-primary">Explore Our Menu <i class="fas fa-arrow-right arrow"></i></a>
+                    </div>
+                    <div class="story-image animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&h=600&fit=crop&crop=center&auto=format" alt="Shege Burger Story" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== OUR SIGNATURE SPECIALS ===== -->
         <section class="signature-section section-padding" id="signature" aria-labelledby="signature-title">
             <div class="container">
                 <div class="text-center animate-on-scroll">
-                    <span class="section-label">Signature</span>
+                    <span class="section-label">Signature Specials</span>
                     <h2 id="signature-title" class="section-title">
-                        Our <span class="highlight">Signature</span> Burgers
+                        Our <span class="highlight">Signature</span> Specials
                     </h2>
                     <p class="section-subtitle">
                         The burgers that put Shege on the map. Bold, juicy, and unforgettable.
@@ -2159,6 +2167,48 @@
 
                 <div class="signature-grid" id="signatureGrid">
                     <!-- injected by JS -->
+                </div>
+
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="#" data-page="menu" class="btn btn-primary">View Full Menu <i class="fas fa-arrow-right arrow"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GET IN TOUCH ===== -->
+        <section class="contact-cta-section section-padding" id="contact-cta">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="section-label">Get In Touch</span>
+                    <h2 class="section-title">Have a Question or a <span class="highlight">Special Request?</span></h2>
+                    <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+                        We'd love to hear from you. Whether it's a question, a special request, or just some feedback — we're here for you.
+                    </p>
+                    <a href="#" data-page="contact" class="btn btn-primary" style="margin-top: 20px;">Contact Us <i class="fas fa-arrow-right arrow"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TESTIMONIALS ===== -->
+        <section class="testimonials-section section-padding" id="testimonials">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <span class="section-label">Testimonials</span>
+                    <h2 class="section-title">What Our <span class="highlight">Guests</span> Are Saying</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"The best burger I've had in Mekelle! The flavors are incredible and the service is top-notch."</p>
+                        <p class="author">— Guest</p>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"Shege Burger is a game-changer. The atmosphere is great, and the food is consistently amazing."</p>
+                        <p class="author">— Guest</p>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"I love the fresh ingredients and the bold flavors. Definitely my new favorite spot in town."</p>
+                        <p class="author">— Guest</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -2206,22 +2256,16 @@
     <div class="page" id="page-about">
 
         <!-- ===== FOOD STORY ===== -->
-        <section class="story-section section-padding" id="story" aria-labelledby="story-title">
+        <section class="story-section section-padding" id="story-about" aria-labelledby="story-about-title">
             <div class="container">
                 <div class="story-grid">
                     <div class="story-image animate-on-scroll">
-                        <img
-                        src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&h=600&fit=crop&crop=center&auto=format"
-                        alt="Shege Burger restaurant atmosphere"
-                        loading="lazy"
-                        width="800"
-                        height="600"
-                        />
+                        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&h=600&fit=crop&crop=center&auto=format" alt="Shege Burger restaurant atmosphere" loading="lazy" />
                     </div>
 
                     <div class="story-content animate-on-scroll">
                         <span class="section-label">Our Story</span>
-                        <h2 id="story-title" class="section-title">
+                        <h2 id="story-about-title" class="section-title">
                             Made for the <span class="highlight">Craving</span>
                         </h2>
                         <p>
@@ -2235,10 +2279,6 @@
                             and every sauce is crafted in-house. We source the freshest
                             ingredients from local suppliers and treat each order with the
                             care it deserves.
-                        </p>
-                        <p class="story-tagline">
-                            <i class="fas fa-quote-left" style="opacity:0.25;margin-right:8px;"></i>
-                            Good food, good vibes, good people.
                         </p>
                     </div>
                 </div>
@@ -2303,59 +2343,31 @@
 
                 <div class="gallery-grid">
                     <div class="gallery-item animate-on-scroll">
-                        <img
-                        src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&h=400&fit=crop&crop=center&auto=format"
-                        alt="Delicious Shege Burger with cheese and lettuce"
-                        loading="lazy"
-                        />
+                        <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&h=400&fit=crop&crop=center&auto=format" alt="Delicious Shege Burger with cheese and lettuce" loading="lazy" />
                         <div class="overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                     <div class="gallery-item animate-on-scroll">
-                        <img
-                        src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=400&fit=crop&crop=center&auto=format"
-                        alt="Crispy golden fries"
-                        loading="lazy"
-                        />
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=400&fit=crop&crop=center&auto=format" alt="Crispy golden fries" loading="lazy" />
                         <div class="overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                     <div class="gallery-item animate-on-scroll">
-                        <img
-                        src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&crop=center&auto=format"
-                        alt="Loaded burger with fresh toppings"
-                        loading="lazy"
-                        />
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&crop=center&auto=format" alt="Loaded burger with fresh toppings" loading="lazy" />
                         <div class="overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                     <div class="gallery-item animate-on-scroll">
-                        <img
-                        src="https://images.unsplash.com/photo-1586816001966-79b736744398?w=600&h=800&fit=crop&crop=center&auto=format"
-                        alt="Shege Burger special with bacon"
-                        loading="lazy"
-                        />
+                        <img src="https://images.unsplash.com/photo-1586816001966-79b736744398?w=600&h=800&fit=crop&crop=center&auto=format" alt="Shege Burger special with bacon" loading="lazy" />
                         <div class="overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                     <div class="gallery-item animate-on-scroll">
-                        <img
-                        src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=600&h=400&fit=crop&crop=center&auto=format"
-                        alt="Cold drinks and refreshments"
-                        loading="lazy"
-                        />
+                        <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=600&h=400&fit=crop&crop=center&auto=format" alt="Cold drinks and refreshments" loading="lazy" />
                         <div class="overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                     <div class="gallery-item animate-on-scroll">
-                        <img
-                        src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&h=400&fit=crop&crop=center&auto=format"
-                        alt="Cheesy burger close-up"
-                        loading="lazy"
-                        />
+                        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&h=400&fit=crop&crop=center&auto=format" alt="Cheesy burger close-up" loading="lazy" />
                         <div class="overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                     <div class="gallery-item animate-on-scroll">
-                        <img
-                        src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&h=400&fit=crop&crop=center&auto=format"
-                        alt="Shege Burger meal presentation"
-                        loading="lazy"
-                        />
+                        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&h=400&fit=crop&crop=center&auto=format" alt="Shege Burger meal presentation" loading="lazy" />
                         <div class="overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                 </div>
@@ -2428,700 +2440,588 @@
                                 <strong>Kebele 17, Mekelle</strong><br />
                                 መቐለ ቀበሌ 17
                             </p>
-                            <a href="https://maps.app.goo.gl/3WNJT1KBtgordyg29"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-primary btn-sm">
-                            <i class="fas fa-directions"></i> Get Directions
+                            <a href="https://maps.app.goo.gl/3WNJT1KBtgordyg29" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SOCIAL SECTION ===== -->
+        <section class="social-section" aria-labelledby="social-label">
+            <div class="container">
+                <div class="social-content">
+                    <span class="label" id="social-label">Follow the Shege Experience</span>
+                    <div class="links">
+                        <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== SOCIAL SECTION ===== -->
-    <section class="social-section" aria-labelledby="social-label">
+    </div><!-- /page-contact -->
+
+    <!-- ============================================================
+    FOOTER (shared across all pages)
+    ============================================================ -->
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <div class="social-content">
-                <span class="label" id="social-label">Follow the Shege Experience</span>
-                <div class="links">
-                    <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</div><!-- /page-contact -->
-
-<!-- ============================================================
-FOOTER (shared across all pages)
-============================================================ -->
-<footer class="footer" role="contentinfo">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <div class="brand">
-                    Shege Burger
-                    <span class="amharic">ሸገ በርገር</span>
-                </div>
-                <p class="tagline">
-                    "Bold burgers. Great flavor. Made for Mekelle."
-                </p>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div>
-                <h5>Explore</h5>
-                <ul>
-                    <li><a href="#" data-page="home">Home</a></li>
-                    <li><a href="#" data-page="menu">Menu</a></li>
-                    <li><a href="#" data-page="about">About</a></li>
-                    <li><a href="#" data-page="gallery">Gallery</a></li>
-                    <li><a href="#" data-page="contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h5>Visit Us</h5>
-                <ul>
-                    <li class="contact-item">
-                        <i class="fas fa-location-dot"></i>
-                        <span>Kebele 17, Mekelle</span>
-                    </li>
-                    <li class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:0945488888">0945488888</a>
-                    </li>
-                    <li class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <span>10:00 AM – 10:00 PM</span>
-                    </li>
-                    <li style="margin-top:8px;">
-                        <a href="https://maps.app.goo.gl/3WNJT1KBtgordyg29" target="_blank" rel="noopener" class="btn btn-dark btn-xs">
-                            <i class="fas fa-directions"></i> Get Directions
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand">
+                        Shege Burger
+                        <span class="amharic">ሸገ በርገር</span>
+                    </div>
+                    <p class="tagline">
+                        "Bold burgers. Great flavor. Made for Mekelle."
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
                         </a>
-                    </li>
-                </ul>
+                        <a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="#" data-page="home">Home</a></li>
+                        <li><a href="#" data-page="menu">Menu</a></li>
+                        <li><a href="#" data-page="about">About</a></li>
+                        <li><a href="#" data-page="gallery">Gallery</a></li>
+                        <li><a href="#" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5>Visit Us</h5>
+                    <ul>
+                        <li class="contact-item">
+                            <i class="fas fa-location-dot"></i>
+                            <span>Kebele 17, Mekelle</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:0945488888">0945488888</a>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM – 10:00 PM</span>
+                        </li>
+                        <li style="margin-top:8px;">
+                            <a href="https://maps.app.goo.gl/3WNJT1KBtgordyg29" target="_blank" rel="noopener" class="btn btn-dark btn-xs">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5>Follow</h5>
+                    <ul>
+                        <li><a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram" style="margin-right:8px;"></i> Instagram
+                            </a></li>
+                        <li><a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-tiktok" style="margin-right:8px;"></i> TikTok
+                            </a></li>
+                        <li style="margin-top:8px;color:var(--color-light-gray);font-size:0.85rem;">
+                            <i class="fas fa-tag" style="margin-right:8px;color:var(--color-orange);"></i> #ShegeBurger
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div>
-                <h5>Follow</h5>
-                <ul>
-                    <li><a href="https://www.instagram.com/shege_burger" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-instagram" style="margin-right:8px;"></i> Instagram
-                        </a></li>
-                    <li><a href="https://www.tiktok.com/@shege_burger" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-tiktok" style="margin-right:8px;"></i> TikTok
-                        </a></li>
-                    <li style="margin-top:8px;color:var(--color-light-gray);font-size:0.85rem;">
-                        <i class="fas fa-tag" style="margin-right:8px;color:var(--color-orange);"></i> #ShegeBurger
-                    </li>
-                </ul>
+            <div class="footer-bottom">
+                <span>
+                    &copy; 2026 Shege Burger — ሸገ በርገር. All rights reserved.
+                </span>
+                <span class="location-tag">
+                    <i class="fas fa-map-pin" style="margin-right:6px;color:var(--color-orange);"></i>
+                    Mekelle • Ethiopia
+                </span>
             </div>
         </div>
+    </footer>
 
-        <div class="footer-bottom">
-            <span>
-                &copy; 2026 Shege Burger — ሸገ በርገር. All rights reserved.
-            </span>
-            <span class="location-tag">
-                <i class="fas fa-map-pin" style="margin-right:6px;color:var(--color-orange);"></i>
-                Mekelle • Ethiopia
-            </span>
-        </div>
-    </div>
-</footer>
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        (function() {
+            'use strict';
 
-<!-- ============================================================
-JAVASCRIPT
-============================================================ -->
-<script>
-    (function() {
-        'use strict';
+            // ============================================================
+            // DATA
+            // ============================================================
 
-        // ============================================================
-        // DATA
-        // ============================================================
+            const signatureBurgers = [{
+                id: 1,
+                name: 'Classic Shege',
+                amharic: 'ክላሲክ ሸገ',
+                description: 'The perfect classic with juicy beef, fresh lettuce, tomato, and our signature sauce.',
+                image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=450&fit=crop&crop=center&auto=format'
+            }, {
+                id: 2,
+                name: 'Double Cheese',
+                amharic: 'ድርብ ቺዝ',
+                description: 'Two beef patties, double cheese, caramelized onions, and our smoky burger sauce.',
+                image: 'https://images.unsplash.com/photo-1553979459-d2229ba7438c?w=600&h=450&fit=crop&crop=center&auto=format'
+            }, {
+                id: 3,
+                name: 'Shege Special',
+                amharic: 'ሸገ ስፔሻል',
+                description: 'Our signature masterpiece: double patty, cheddar, bacon, fried egg, and secret Shege sauce.',
+                image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&h=450&fit=crop&crop=center&auto=format'
+            }, {
+                id: 4,
+                name: 'BBQ Bacon',
+                amharic: 'ቢቢኪዩ ቤከን',
+                description: 'Smoked bacon, cheddar, crispy onion rings, and sweet & smoky BBQ sauce.',
+                image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&h=450&fit=crop&crop=center&auto=format'
+            }];
 
-        const signatureBurgers = [{
-            id: 1,
-            name: 'Classic Shege',
-            amharic: 'ክላሲክ ሸገ',
-            description: 'The perfect classic with juicy beef, fresh lettuce, tomato, and our signature sauce.',
-            price: '250',
-            image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=450&fit=crop&crop=center&auto=format',
-            badge: 'Best Seller',
-            badgeType: 'gold'
-        }, {
-            id: 2,
-            name: 'Double Cheese',
-            amharic: 'ድርብ ቺዝ',
-            description: 'Two beef patties, double cheese, caramelized onions, and our smoky burger sauce.',
-            price: '320',
-            image: 'https://images.unsplash.com/photo-1553979459-d2229ba7438c?w=600&h=450&fit=crop&crop=center&auto=format',
-            badge: 'Popular',
-            badgeType: 'orange'
-        }, {
-            id: 3,
-            name: 'Shege Special',
-            amharic: 'ሸገ ስፔሻል',
-            description: 'Our signature masterpiece: double patty, cheddar, bacon, fried egg, and secret Shege sauce.',
-            price: '380',
-            image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&h=450&fit=crop&crop=center&auto=format',
-            badge: "Chef's Pick",
-            badgeType: 'gold'
-        }, {
-            id: 4,
-            name: 'BBQ Bacon',
-            amharic: 'ቢቢኪዩ ቤከን',
-            description: 'Smoked bacon, cheddar, crispy onion rings, and sweet & smoky BBQ sauce.',
-            price: '310',
-            image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&h=450&fit=crop&crop=center&auto=format',
-            badge: 'Fan Favorite',
-            badgeType: 'orange'
-        }];
+            const fullMenu = [{
+                id: 101,
+                name: 'Classic Shege',
+                amharic: 'ክላሲክ ሸገ',
+                description: 'Juicy beef patty with lettuce, tomato, onion, and signature sauce.',
+                price: '250',
+                image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=420&fit=crop&crop=center&auto=format',
+                category: 'burgers',
+                tags: ['Beef', 'Lettuce', 'Tomato']
+            }, {
+                id: 102,
+                name: 'Double Cheese',
+                amharic: 'ድርብ ቺዝ',
+                description: 'Two patties, double cheddar, caramelized onions, smoky sauce.',
+                price: '320',
+                image: 'https://images.unsplash.com/photo-1553979459-d2229ba7438c?w=600&h=420&fit=crop&crop=center&auto=format',
+                category: 'burgers',
+                tags: ['2x Beef', 'Double Cheese', 'Onions']
+            }, {
+                id: 103,
+                name: 'Spicy Jalapeño',
+                amharic: 'ቅመም ጃላፔኖ',
+                description: 'Bold and fiery with jalapeños, pepper jack, bacon, and spicy mayo.',
+                price: '290',
+                image: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&h=420&fit=crop&crop=center&auto=format',
+                category: 'burgers',
+                tags: ['Jalapeños', 'Pepper Jack', 'Bacon']
+            }, {
+                id: 104,
+                name: 'BBQ Bacon',
+                amharic: 'ቢቢኪዩ ቤከን',
+                description: 'Smoked bacon, cheddar, crispy onion rings, sweet & smoky BBQ sauce.',
+                price: '310',
+                image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&h=420&fit=crop&crop=center&auto=format',
+                category: 'burgers',
+                tags: ['Bacon', 'Cheddar', 'BBQ Sauce']
+            }, {
+                id: 105,
+                name: 'Mushroom Swiss',
+                amharic: 'ሙሽሩም ስዊስ',
+                description: 'Sautéed mushrooms, Swiss cheese, garlic aioli, fresh herbs.',
+                price: '280',
+                image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=420&fit=crop&crop=center&auto=format',
+                category: 'burgers',
+                tags: ['Mushrooms', 'Swiss Cheese', 'Garlic Aioli']
+            }, {
+                id: 106,
+                name: 'Shege Special',
+                amharic: 'ሸገ ስፔሻል',
+                description: 'Double patty, cheddar, bacon, fried egg, and secret Shege sauce.',
+                price: '380',
+                image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&h=420&fit=crop&crop=center&auto=format',
+                category: 'specials',
+                tags: ['2x Beef', 'Bacon', 'Fried Egg', 'Secret Sauce']
+            }, {
+                id: 107,
+                name: 'Crispy Chicken',
+                amharic: 'ክሪስፒ ቺከን',
+                description: 'Golden fried chicken breast, lettuce, tomato, and creamy herb mayo.',
+                price: '270',
+                image: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=600&h=420&fit=crop&crop=center&auto=format',
+                category: 'chicken',
+                tags: ['Chicken', 'Lettuce', 'Herb Mayo']
+            }, {
+                id: 108,
+                name: 'Spicy Chicken',
+                amharic: 'ቅመም ቺከን',
+                description: 'Spicy fried chicken, pepper jack, pickles, and sriracha aioli.',
+                price: '290',
+                image: 'https://images.unsplash.com/photo-1553909489-cd47e0907980?w=600&h=420&fit=crop&crop=center&auto=format',
+                category: 'chicken',
+                tags: ['Spicy Chicken', 'Pepper Jack', 'Sriracha']
+            }, {
+                id: 109,
+                name: 'Golden Fries',
+                amharic: 'ወርቃማ ቺፕስ',
+                description: 'Crispy golden fries, perfectly salted and served hot.',
+                price: '90',
+                image: 'https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=600&h=420&fit=crop&crop=center&auto=format',
+                category: 'sides',
+                tags: ['Fries', 'Salt']
+            }, {
+                id: 110,
+                name: 'Cheese Fries',
+                amharic: 'ቺዝ ቺፕስ',
+                description: 'Golden fries topped with melted cheddar and a sprinkle of herbs.',
+                price: '130',
+                image: 'https://images.unsplash.com/photo-1526367790999-0150786686a2?w=600&h=420&fit=crop&crop=center&auto=format',
+                category: 'sides',
+                tags: ['Fries', 'Cheddar', 'Herbs']
+            }, {
+                id: 111,
+                name: 'Onion Rings',
+                amharic: 'ሽንኩርት ቀለበት',
+                description: 'Crispy battered onion rings served with zesty dipping sauce.',
+                price: '110',
+                image: 'https://images.unsplash.com/photo-1639024471283-03518883512d?w=600&h=420&fit=crop&crop=center&auto=format',
+                category: 'sides',
+                tags: ['Onions', 'Batter', 'Dipping Sauce']
+            }, {
+                id: 112,
+                name: 'Milkshake',
+                amharic: 'ሚልክሼክ',
+                description: 'Creamy vanilla milkshake topped with whipped cream and a cherry.',
+                price: '150',
+                image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&h=420&fit=crop&crop=center&auto=format',
+                category: 'drinks',
+                tags: ['Vanilla', 'Whipped Cream']
+            }, {
+                id: 113,
+                name: 'Fresh Lemonade',
+                amharic: 'ትኩስ ሎሚ ጭማቂ',
+                description: 'Refreshing handmade lemonade with a hint of mint.',
+                price: '80',
+                image: 'https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=600&h=420&fit=crop&crop=center&auto=format',
+                category: 'drinks',
+                tags: ['Lemon', 'Mint']
+            }, {
+                id: 114,
+                name: 'Shege Combo',
+                amharic: 'ሸገ ኮምቦ',
+                description: 'Classic Shege burger, golden fries, and a drink of your choice.',
+                price: '420',
+                image: 'https://images.unsplash.com/photo-1550317138-10000687a72b?w=600&h=420&fit=crop&crop=center&auto=format',
+                category: 'specials',
+                tags: ['Burger', 'Fries', 'Drink']
+            }];
 
-        const fullMenu = [{
-            id: 101,
-            name: 'Classic Shege',
-            amharic: 'ክላሲክ ሸገ',
-            description: 'Juicy beef patty with lettuce, tomato, onion, and signature sauce.',
-            price: '250',
-            image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=420&fit=crop&crop=center&auto=format',
-            category: 'burgers',
-            tags: ['Beef', 'Lettuce', 'Tomato']
-        }, {
-            id: 102,
-            name: 'Double Cheese',
-            amharic: 'ድርብ ቺዝ',
-            description: 'Two patties, double cheddar, caramelized onions, smoky sauce.',
-            price: '320',
-            image: 'https://images.unsplash.com/photo-1553979459-d2229ba7438c?w=600&h=420&fit=crop&crop=center&auto=format',
-            category: 'burgers',
-            tags: ['2x Beef', 'Double Cheese', 'Onions']
-        }, {
-            id: 103,
-            name: 'Spicy Jalapeño',
-            amharic: 'ቅመም ጃላፔኖ',
-            description: 'Bold and fiery with jalapeños, pepper jack, bacon, and spicy mayo.',
-            price: '290',
-            image: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&h=420&fit=crop&crop=center&auto=format',
-            category: 'burgers',
-            tags: ['Jalapeños', 'Pepper Jack', 'Bacon']
-        }, {
-            id: 104,
-            name: 'BBQ Bacon',
-            amharic: 'ቢቢኪዩ ቤከን',
-            description: 'Smoked bacon, cheddar, crispy onion rings, sweet & smoky BBQ sauce.',
-            price: '310',
-            image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&h=420&fit=crop&crop=center&auto=format',
-            category: 'burgers',
-            tags: ['Bacon', 'Cheddar', 'BBQ Sauce']
-        }, {
-            id: 105,
-            name: 'Mushroom Swiss',
-            amharic: 'ሙሽሩም ስዊስ',
-            description: 'Sautéed mushrooms, Swiss cheese, garlic aioli, fresh herbs.',
-            price: '280',
-            image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=420&fit=crop&crop=center&auto=format',
-            category: 'burgers',
-            tags: ['Mushrooms', 'Swiss Cheese', 'Garlic Aioli']
-        }, {
-            id: 106,
-            name: 'Shege Special',
-            amharic: 'ሸገ ስፔሻል',
-            description: 'Double patty, cheddar, bacon, fried egg, and secret Shege sauce.',
-            price: '380',
-            image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&h=420&fit=crop&crop=center&auto=format',
-            category: 'specials',
-            tags: ['2x Beef', 'Bacon', 'Fried Egg', 'Secret Sauce']
-        }, {
-            id: 107,
-            name: 'Crispy Chicken',
-            amharic: 'ክሪስፒ ቺከን',
-            description: 'Golden fried chicken breast, lettuce, tomato, and creamy herb mayo.',
-            price: '270',
-            image: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=600&h=420&fit=crop&crop=center&auto=format',
-            category: 'chicken',
-            tags: ['Chicken', 'Lettuce', 'Herb Mayo']
-        }, {
-            id: 108,
-            name: 'Spicy Chicken',
-            amharic: 'ቅመም ቺከን',
-            description: 'Spicy fried chicken, pepper jack, pickles, and sriracha aioli.',
-            price: '290',
-            image: 'https://images.unsplash.com/photo-1553909489-cd47e0907980?w=600&h=420&fit=crop&crop=center&auto=format',
-            category: 'chicken',
-            tags: ['Spicy Chicken', 'Pepper Jack', 'Sriracha']
-        }, {
-            id: 109,
-            name: 'Golden Fries',
-            amharic: 'ወርቃማ ቺፕስ',
-            description: 'Crispy golden fries, perfectly salted and served hot.',
-            price: '90',
-            image: 'https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=600&h=420&fit=crop&crop=center&auto=format',
-            category: 'sides',
-            tags: ['Fries', 'Salt']
-        }, {
-            id: 110,
-            name: 'Cheese Fries',
-            amharic: 'ቺዝ ቺፕስ',
-            description: 'Golden fries topped with melted cheddar and a sprinkle of herbs.',
-            price: '130',
-            image: 'https://images.unsplash.com/photo-1526367790999-0150786686a2?w=600&h=420&fit=crop&crop=center&auto=format',
-            category: 'sides',
-            tags: ['Fries', 'Cheddar', 'Herbs']
-        }, {
-            id: 111,
-            name: 'Onion Rings',
-            amharic: 'ሽንኩርት ቀለበት',
-            description: 'Crispy battered onion rings served with zesty dipping sauce.',
-            price: '110',
-            image: 'https://images.unsplash.com/photo-1639024471283-03518883512d?w=600&h=420&fit=crop&crop=center&auto=format',
-            category: 'sides',
-            tags: ['Onions', 'Batter', 'Dipping Sauce']
-        }, {
-            id: 112,
-            name: 'Milkshake',
-            amharic: 'ሚልክሼክ',
-            description: 'Creamy vanilla milkshake topped with whipped cream and a cherry.',
-            price: '150',
-            image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&h=420&fit=crop&crop=center&auto=format',
-            category: 'drinks',
-            tags: ['Vanilla', 'Whipped Cream']
-        }, {
-            id: 113,
-            name: 'Fresh Lemonade',
-            amharic: 'ትኩስ ሎሚ ጭማቂ',
-            description: 'Refreshing handmade lemonade with a hint of mint.',
-            price: '80',
-            image: 'https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=600&h=420&fit=crop&crop=center&auto=format',
-            category: 'drinks',
-            tags: ['Lemon', 'Mint']
-        }, {
-            id: 114,
-            name: 'Shege Combo',
-            amharic: 'ሸገ ኮምቦ',
-            description: 'Classic Shege burger, golden fries, and a drink of your choice.',
-            price: '420',
-            image: 'https://images.unsplash.com/photo-1550317138-10000687a72b?w=600&h=420&fit=crop&crop=center&auto=format',
-            category: 'specials',
-            tags: ['Burger', 'Fries', 'Drink']
-        }];
+            // ============================================================
+            // RENDER SIGNATURE BURGERS (Home Page)
+            // ============================================================
+            const signatureGrid = document.getElementById('signatureGrid');
 
-        // ============================================================
-        // RENDER SIGNATURE BURGERS
-        // ============================================================
-        const signatureGrid = document.getElementById('signatureGrid');
+            function renderSignature() {
+                if (!signatureGrid) return;
 
-        function renderSignature() {
-            if (!signatureGrid) return;
-
-            signatureGrid.innerHTML = signatureBurgers.map(burger => {
-                const badgeClass = burger.badgeType === 'gold' ? 'gold' : '';
-                const badgeHtml = burger.badge ?
-                    `<span class="badge ${badgeClass}">${burger.badge}</span>` :
-                    '';
-
-                return `
-                        <article class="signature-card animate-on-scroll">
-                            <div class="card-image">
-                                <img
-                                    src="${burger.image}"
-                                    alt="${burger.name} burger"
-                                    loading="lazy"
-                                    width="600"
-                                    height="450"
-                                />
-                                ${badgeHtml}
-                            </div>
-                            <div class="card-body">
-                                <div class="name">
-                                    ${burger.name}
-                                    <span class="amharic">${burger.amharic}</span>
+                signatureGrid.innerHTML = signatureBurgers.map(burger => {
+                    return `
+                            <article class="signature-card animate-on-scroll">
+                                <div class="card-image">
+                                    <img src="${burger.image}" alt="${burger.name} burger" loading="lazy" width="600" height="450" />
                                 </div>
-                                <p class="description">${burger.description}</p>
-                                <div class="card-footer">
-                                    <span class="price">ETB ${burger.price} <small></small></span>
-                                    <a href="tel:0945488888" class="btn btn-primary btn-sm">
-                                        <i class="fas fa-phone"></i> Order
-                                    </a>
+                                <div class="card-body">
+                                    <div class="name">
+                                        ${burger.name}
+                                        <span class="amharic">${burger.amharic}</span>
+                                    </div>
+                                    <p class="description">${burger.description}</p>
                                 </div>
-                            </div>
-                        </article>
-                    `;
-            }).join('');
-        }
+                            </article>
+                        `;
+                }).join('');
+            }
 
-        renderSignature();
+            renderSignature();
 
-        // ============================================================
-        // RENDER FULL MENU
-        // ============================================================
-        const menuGridFull = document.getElementById('menuGridFull');
-        let currentCategory = 'all';
+            // ============================================================
+            // RENDER FULL MENU (Menu Page)
+            // ============================================================
+            const menuGridFull = document.getElementById('menuGridFull');
+            let currentCategory = 'all';
 
-        function renderFullMenu(category) {
-            if (!menuGridFull) return;
+            function renderFullMenu(category) {
+                if (!menuGridFull) return;
 
-            const filtered = category === 'all' ?
-                fullMenu :
-                fullMenu.filter(item => item.category === category);
+                const filtered = category === 'all' ?
+                    fullMenu :
+                    fullMenu.filter(item => item.category === category);
 
-            menuGridFull.innerHTML = filtered.map(item => {
-                const tagsHtml = item.tags.map(t =>
-                    `<span>${t}</span>`
-                ).join('');
+                menuGridFull.innerHTML = filtered.map(item => {
+                    const tagsHtml = item.tags.map(t =>
+                        `<span>${t}</span>`
+                    ).join('');
 
-                return `
-                        <article class="menu-item" data-category="${item.category}">
-                            <div class="item-image">
-                                <img
-                                    src="${item.image}"
-                                    alt="${item.name} burger"
-                                    loading="lazy"
-                                    width="600"
-                                    height="420"
-                                />
-                            </div>
-                            <div class="item-body">
-                                <div class="name">
-                                    ${item.name}
-                                    <span class="amharic">${item.amharic}</span>
+                    return `
+                            <article class="menu-item" data-category="${item.category}">
+                                <div class="item-image">
+                                    <img src="${item.image}" alt="${item.name} burger" loading="lazy" width="600" height="420" />
                                 </div>
-                                <p class="desc">${item.description}</p>
-                                <div class="tags">${tagsHtml}</div>
-                                <div class="item-footer">
-                                    <span class="price">ETB ${item.price} <small></small></span>
-                                    <a href="tel:0945488888" class="btn btn-primary btn-xs">
-                                        <i class="fas fa-phone"></i> Order
-                                    </a>
+                                <div class="item-body">
+                                    <div class="name">
+                                        ${item.name}
+                                        <span class="amharic">${item.amharic}</span>
+                                    </div>
+                                    <p class="desc">${item.description}</p>
+                                    <div class="tags">${tagsHtml}</div>
+                                    <div class="item-footer">
+                                        <span class="price">ETB ${item.price} <small></small></span>
+                                        <a href="#" class="btn btn-primary btn-xs order-now-btn">
+                                            <i class="fas fa-phone"></i> Order
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                    `;
-            }).join('');
-        }
+                            </article>
+                        `;
+                }).join('');
 
-        renderFullMenu('all');
-
-        // ============================================================
-        // MENU CATEGORY FILTERING
-        // ============================================================
-        const tabButtons = document.querySelectorAll('.tab-btn');
-
-        tabButtons.forEach(btn => {
-            btn.addEventListener('click', function() {
-                const category = this.dataset.category;
-
-                tabButtons.forEach(b => {
-                    b.classList.remove('active');
-                    b.setAttribute('aria-selected', 'false');
+                // Re-bind order now buttons inside the menu
+                document.querySelectorAll('#menuGridFull .order-now-btn').forEach(btn => {
+                    btn.removeEventListener('click', handleOrderNow);
+                    btn.addEventListener('click', handleOrderNow);
                 });
-                this.classList.add('active');
-                this.setAttribute('aria-selected', 'true');
+            }
 
-                currentCategory = category;
-                renderFullMenu(category);
+            renderFullMenu('all');
 
-                const newItems = menuGridFull.querySelectorAll('.menu-item');
-                newItems.forEach((el, i) => {
-                    el.style.opacity = '0';
-                    el.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-                        el.style.opacity = '1';
-                        el.style.transform = 'translateY(0)';
-                    }, 50 + i * 50);
+            // ============================================================
+            // MENU CATEGORY FILTERING
+            // ============================================================
+            const tabButtons = document.querySelectorAll('.tab-btn');
+
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.dataset.category;
+
+                    tabButtons.forEach(b => {
+                        b.classList.remove('active');
+                        b.setAttribute('aria-selected', 'false');
+                    });
+                    this.classList.add('active');
+                    this.setAttribute('aria-selected', 'true');
+
+                    currentCategory = category;
+                    renderFullMenu(category);
+
+                    const newItems = menuGridFull.querySelectorAll('.menu-item');
+                    newItems.forEach((el, i) => {
+                        el.style.opacity = '0';
+                        el.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                            el.style.opacity = '1';
+                            el.style.transform = 'translateY(0)';
+                        }, 50 + i * 50);
+                    });
                 });
             });
-        });
 
-        // ============================================================
-        // PAGE ROUTING — show/hide pages
-        // ============================================================
-        const pages = {
-            home: document.getElementById('page-home'),
-            menu: document.getElementById('page-menu'),
-            about: document.getElementById('page-about'),
-            gallery: document.getElementById('page-gallery'),
-            contact: document.getElementById('page-contact')
-        };
+            // ============================================================
+            // PAGE ROUTING
+            // ============================================================
+            const pages = {
+                home: document.getElementById('page-home'),
+                menu: document.getElementById('page-menu'),
+                about: document.getElementById('page-about'),
+                gallery: document.getElementById('page-gallery'),
+                contact: document.getElementById('page-contact')
+            };
 
-        const navLinks = document.querySelectorAll('.nav-links a[data-page], .footer a[data-page], .nav-brand[data-page], a[data-page]');
+            function showPage(pageId) {
+                // hide all pages
+                Object.keys(pages).forEach(key => {
+                    if (pages[key]) {
+                        pages[key].classList.remove('active');
+                    }
+                });
 
-        function showPage(pageId) {
-            // hide all pages
-            Object.keys(pages).forEach(key => {
-                if (pages[key]) {
-                    pages[key].classList.remove('active');
+                // show target
+                if (pages[pageId]) {
+                    pages[pageId].classList.add('active');
                 }
-            });
 
-            // show target
-            if (pages[pageId]) {
-                pages[pageId].classList.add('active');
+                // update nav active state
+                document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
+                    link.classList.toggle('active', link.dataset.page === pageId);
+                });
+
+                // scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                // close mobile nav
+                if (navLinksMobile) {
+                    navLinksMobile.classList.remove('open');
+                    navToggle.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    body.classList.remove('no-scroll');
+                }
             }
 
-            // update nav active state
-            document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
-                link.classList.toggle('active', link.dataset.page === pageId);
-            });
-
-            // scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // close mobile nav
-            if (navLinksMobile) {
-                navLinksMobile.classList.remove('open');
-                navToggle.classList.remove('active');
-                navToggle.setAttribute('aria-expanded', 'false');
-                body.classList.remove('no-scroll');
-            }
-        }
-
-        // nav click handler
-        document.querySelectorAll('.nav-links a[data-page], .footer a[data-page], .nav-brand[data-page], a[data-page]').forEach(el => {
-            el.addEventListener('click', function(e) {
+            // Navigation click handler
+            function handleNavigation(e) {
+                e.preventDefault();
                 const page = this.dataset.page;
                 if (page) {
-                    e.preventDefault();
                     showPage(page);
                 }
+            }
+
+            // Order Now click handler
+            function handleOrderNow(e) {
+                e.preventDefault();
+                window.location.href = 'tel:0945488888';
+            }
+
+            // Bind navigation links
+            document.querySelectorAll('a[data-page]').forEach(link => {
+                link.addEventListener('click', handleNavigation);
             });
-        });
 
-        // "Order Now" nav CTA goes to menu page (but call is handled separately)
-        document.querySelector('.nav-cta')?.addEventListener('click', function(e) {
-            // The nav-cta has data-page="menu" so it will navigate to menu
-            // but we also want it to call. The click handler above will handle navigation.
-            // We'll also add a direct call for safety.
-            window.location.href = 'tel:0945488888';
-        });
+            // Bind Order Now buttons
+            document.querySelectorAll('.order-now-btn').forEach(btn => {
+                btn.addEventListener('click', handleOrderNow);
+            });
 
-        // Also make all Order Now buttons call the number (they already have href="tel:0945488888")
-        // But we need to ensure any "Order Now" text buttons that aren't links also work.
-        document.querySelectorAll('.btn-primary, .btn, .nav-cta').forEach(btn => {
-            if (btn.textContent.trim().toLowerCase().includes('order') ||
-                btn.textContent.trim().toLowerCase().includes('order now') ||
-                btn.classList.contains('nav-cta')) {
-                // If it's not already a tel: link, make it one
-                if (!btn.closest('a') || !btn.closest('a').href?.startsWith('tel:')) {
-                    // Wrap in a link or add click handler
-                    if (btn.closest('a')) {
-                        // It's a link with href not tel
-                        const link = btn.closest('a');
-                        if (!link.href.startsWith('tel:')) {
-                            link.addEventListener('click', function(e) {
-                                e.preventDefault();
-                                window.location.href = 'tel:0945488888';
-                            });
+            // ============================================================
+            // NAVIGATION TOGGLE
+            // ============================================================
+            const navToggle = document.getElementById('navToggle');
+            const navLinksMobile = document.getElementById('navLinks');
+            const body = document.body;
+
+            if (navToggle && navLinksMobile) {
+                navToggle.addEventListener('click', function() {
+                    const isOpen = navLinksMobile.classList.toggle('open');
+                    this.classList.toggle('active');
+                    this.setAttribute('aria-expanded', isOpen);
+                    body.classList.toggle('no-scroll', isOpen);
+                });
+
+                navLinksMobile.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        navLinksMobile.classList.remove('open');
+                        navToggle.classList.remove('active');
+                        navToggle.setAttribute('aria-expanded', 'false');
+                        body.classList.remove('no-scroll');
+                    });
+                });
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && navLinksMobile.classList.contains('open')) {
+                        navLinksMobile.classList.remove('open');
+                        navToggle.classList.remove('active');
+                        navToggle.setAttribute('aria-expanded', 'false');
+                        body.classList.remove('no-scroll');
+                        navToggle.focus();
+                    }
+                });
+            }
+
+            // ============================================================
+            // SCROLL EFFECT: navbar
+            // ============================================================
+            const navbar = document.getElementById('navbar');
+
+            function updateNavbar() {
+                const currentScroll = window.scrollY;
+                if (currentScroll > 30) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }
+
+            window.addEventListener('scroll', updateNavbar, { passive: true });
+            window.addEventListener('resize', updateNavbar, { passive: true });
+            updateNavbar();
+
+            // ============================================================
+            // SCROLL ANIMATIONS (Intersection Observer)
+            // ============================================================
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
                         }
-                    } else {
-                        // standalone button
-                        btn.addEventListener('click', function(e) {
-                            e.preventDefault();
-                            window.location.href = 'tel:0945488888';
-                        });
-                    }
-                }
-            }
-        });
-
-        // Also ensure any "Order" buttons inside cards work
-        document.querySelectorAll('.signature-card .btn, .menu-item .btn').forEach(btn => {
-            if (btn.textContent.trim().toLowerCase().includes('order')) {
-                // These already have href="tel:0945488888" from rendering
-                // but if they don't, add it
-                if (btn.closest('a') && !btn.closest('a').href.startsWith('tel:')) {
-                    btn.closest('a').addEventListener('click', function(e) {
-                        e.preventDefault();
-                        window.location.href = 'tel:0945488888';
                     });
-                }
-            }
-        });
-
-        // ============================================================
-        // NAVIGATION TOGGLE
-        // ============================================================
-        const navToggle = document.getElementById('navToggle');
-        const navLinksMobile = document.getElementById('navLinks');
-        const body = document.body;
-
-        if (navToggle && navLinksMobile) {
-            navToggle.addEventListener('click', function() {
-                const isOpen = navLinksMobile.classList.toggle('open');
-                this.classList.toggle('active');
-                this.setAttribute('aria-expanded', isOpen);
-                body.classList.toggle('no-scroll', isOpen);
-            });
-
-            navLinksMobile.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', function() {
-                    navLinksMobile.classList.remove('open');
-                    navToggle.classList.remove('active');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    body.classList.remove('no-scroll');
+                }, {
+                    threshold: 0.12,
+                    rootMargin: '0px 0px -30px 0px'
                 });
-            });
 
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && navLinksMobile.classList.contains('open')) {
-                    navLinksMobile.classList.remove('open');
-                    navToggle.classList.remove('active');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    body.classList.remove('no-scroll');
-                    navToggle.focus();
-                }
-            });
-        }
-
-        // ============================================================
-        // SCROLL EFFECT: navbar
-        // ============================================================
-        const navbar = document.getElementById('navbar');
-
-        function updateNavbar() {
-            const currentScroll = window.scrollY;
-            if (currentScroll > 30) {
-                navbar.classList.add('scrolled');
+                animateElements.forEach(el => observer.observe(el));
             } else {
-                navbar.classList.remove('scrolled');
+                animateElements.forEach(el => el.classList.add('visible'));
             }
-        }
 
-        window.addEventListener('scroll', updateNavbar, { passive: true });
-        window.addEventListener('resize', updateNavbar, { passive: true });
-        updateNavbar();
-
-        // ============================================================
-        // SCROLL ANIMATIONS (Intersection Observer)
-        // ============================================================
-        const animateElements = document.querySelectorAll('.animate-on-scroll');
-
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, {
-                threshold: 0.12,
-                rootMargin: '0px 0px -30px 0px'
-            });
-
-            animateElements.forEach(el => observer.observe(el));
-        } else {
-            animateElements.forEach(el => el.classList.add('visible'));
-        }
-
-        // ============================================================
-        // PERFORMANCE
-        // ============================================================
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(() => {
-                document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-                    img.decoding = 'async';
-                });
-            });
-        }
-
-        console.log('🍔 Shege Burger — ሸገ በርገር | Premium Burgers in Mekelle, Ethiopia');
-        console.log('📍 Kebele 17, Mekelle | 📞 For Delivery: 0945488888 & 0954588888');
-        console.log('📞 Order Now: 0945488888');
-
-        // ============================================================
-        // FIX: Ensure all Order Now buttons call the correct number
-        // ============================================================
-        // Additional pass: find any element with text containing "Order" and make it call
-        document.querySelectorAll('*').forEach(el => {
-            const text = el.textContent?.trim() || '';
-            if (text.toLowerCase().includes('order now') || text.toLowerCase() === 'order') {
-                if (el.closest('a') && !el.closest('a').href.startsWith('tel:')) {
-                    el.closest('a').addEventListener('click', function(e) {
-                        e.preventDefault();
-                        window.location.href = 'tel:0945488888';
+            // ============================================================
+            // PERFORMANCE
+            // ============================================================
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(() => {
+                    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                        img.decoding = 'async';
                     });
-                } else if (!el.closest('a')) {
-                    el.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        window.location.href = 'tel:0945488888';
-                    });
-                    el.style.cursor = 'pointer';
-                }
+                });
             }
-        });
 
-        // ============================================================
-        // FIX: Home page should not show menu content - already handled by page system
-        // ============================================================
+            console.log('🍔 Shege Burger — ሸገ በርገር | Premium Burgers in Mekelle, Ethiopia');
+            console.log('📍 Kebele 17, Mekelle | 📞 For Delivery: 0945488888 & 0954588888');
+            console.log('📞 Order Now: 0945488888');
 
-        // ============================================================
-        // FIX: Ensure all phone numbers in footer and contact show both delivery numbers
-        // ============================================================
-        // Already updated in the HTML
+        })();
+    </script>
 
-        console.log('✅ All changes applied:');
-        console.log('  1. Delivery numbers: 0945488888 & 0954588888');
-        console.log('  2. Auto-call number: 0945488888');
-        console.log('  3. All Order Now → 0945488888');
-        console.log('  4. Hero image removed');
-        console.log('  5. Hero color: toasted bread palette');
-        console.log('  6. Page separation: Home, Menu, About, Gallery, Contact');
-        console.log('  7. Responsive: all working');
-
-    })();
-</script>
-
-<!-- ============================================================
-STRUCTURED DATA (JSON-LD)
-============================================================ -->
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Restaurant",
-        "name": "Shege Burger",
-        "alternateName": "ሸገ በርገር",
-        "description": "Premium burger restaurant in Mekelle, Ethiopia. Fresh ingredients, bold flavors, and a great atmosphere.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Mekelle",
-            "addressRegion": "Tigray",
-            "addressCountry": "Ethiopia",
-            "streetAddress": "Kebele 17"
-        },
-        "telephone": "+251945488888",
-        "priceRange": "ETB 200–400",
-        "servesCuisine": "Burger, Fast Food, Ethiopian",
-        "hasMenu": "https://www.shegeburger.com/#full-menu",
-        "openingHours": "Mo-Su 10:00-22:00",
-        "sameAs": [
-            "https://www.instagram.com/shege_burger",
-            "https://www.tiktok.com/@shege_burger"
-        ],
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 13.4932,
-            "longitude": 39.4753
-        },
-        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&h=630&fit=crop&auto=format"
-    }
-</script>
+    <!-- ============================================================
+    STRUCTURED DATA (JSON-LD)
+    ============================================================ -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Restaurant",
+            "name": "Shege Burger",
+            "alternateName": "ሸገ በርገር",
+            "description": "Premium burger restaurant in Mekelle, Ethiopia. Fresh ingredients, bold flavors, and a great atmosphere.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Mekelle",
+                "addressRegion": "Tigray",
+                "addressCountry": "Ethiopia",
+                "streetAddress": "Kebele 17"
+            },
+            "telephone": "+251945488888",
+            "priceRange": "ETB 200–400",
+            "servesCuisine": "Burger, Fast Food, Ethiopian",
+            "hasMenu": "https://www.shegeburger.com/#full-menu",
+            "openingHours": "Mo-Su 10:00-22:00",
+            "sameAs": [
+                "https://www.instagram.com/shege_burger",
+                "https://www.tiktok.com/@shege_burger"
+            ],
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 13.4932,
+                "longitude": 39.4753
+            },
+            "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&h=630&fit=crop&auto=format"
+        }
+    </script>
 
 </body>
 </html>
